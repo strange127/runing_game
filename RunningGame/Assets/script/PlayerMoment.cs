@@ -1,25 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMoment : MonoBehaviour
-{
+{  
+    [Header("General Settings")]
     public PlayerType Type;
     public powerUp booster = powerUp.none;
-
-
     public PlayerState state;
     private CharacterController controler;
     public float speed;
     public float maxspeed;
     public float speedmuliplyer;
     public Vector3 velocity;
+    private float timer=0;
 
 
 
 
-
+    [Header("Running")]
     #region RuningState
     private bool isgrounded;
     public float gravity;
@@ -28,6 +30,7 @@ public class PlayerMoment : MonoBehaviour
     public Transform groundcheck;
     public float jumpHight;
     #endregion
+    [Header("Swimming")]
     #region SwimingState
     public bool insarface;
     public float swiminggravity;
@@ -35,7 +38,9 @@ public class PlayerMoment : MonoBehaviour
     public float waterdistace;
     public Transform serfacecheck;
     public float diveforce;
+    [SerializeField] Slider oxygenbar;
     #endregion
+    [Header("Cycling")]
     #region cycling
     [SerializeField] private float angleofrotation = 10;
     [SerializeField] private float acc = 0.5f;
@@ -67,12 +72,27 @@ public class PlayerMoment : MonoBehaviour
         }
         else if (state == PlayerState.Swiming)
         {
+            oxygenbar = GameObject.Find("oxybar").GetComponent<Slider>();
+            oxygenbar.transform.localScale = new Vector3(6, 6, 6);
+            oxygenbar.enabled = true;
             SpeedControler();
+            swimmingtimer();
+            if(Input.touchCount>0 && Input.touches[0].phase == TouchPhase.Began)
+              oxygenbar.value += 3;
+            
+#if UNITY_EDITOR
+            if (Input.GetKeyDown(KeyCode.P))
+               oxygenbar.value += 3;
+            
+#endif
+
             insarface = Physics.CheckSphere(serfacecheck.position, waterdistace, Watermask);
+            if (oxygenbar.value == 0)
+                speed = 0;
+            
             if (insarface && velocity.y > 0)
-            {
                 velocity.y = 2f;
-            }
+            
             if (transform.position.y < 0)
                 velocity.y += swiminggravity * Time.deltaTime;
             else
@@ -104,6 +124,7 @@ public class PlayerMoment : MonoBehaviour
 
         }
     }
+
     private IEnumerator Speed()
     {
         yield return new WaitForSeconds(1f);
@@ -169,7 +190,21 @@ public class PlayerMoment : MonoBehaviour
                 }
             }
         }
+       
+
     }
+    
+    void swimmingtimer()//swimming timer
+    {
+        //oxygenbar depletion 
+        timer += Time.deltaTime;
+        if (timer > 0.5)//for how much time
+        {
+            oxygenbar.value -= 6; //amount of oxygen
+            timer = 0;
+        }
+    }
+
     void Sensour()
     {
         RaycastHit hit;
