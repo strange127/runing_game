@@ -10,7 +10,7 @@ public class Level : MonoBehaviour
     }
 
     public void LoadStartMenu() {
-        SceneManager.LoadScene("Start Menu");
+        SceneManager.LoadScene("Modes");
     }
 
  public void LoadSettingsMenu() {
