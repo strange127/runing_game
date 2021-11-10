@@ -361,32 +361,28 @@ public class PlayerMoment : MonoBehaviour
                     booster = powerUp.none;
             }
         }
-        if (power.collider.tag == "nonobs")
-        {
-            Debug.Log("collide");
-            Destroy(power.collider.gameObject);
-            booster = powerUp.noobsticle;
+        //if (power.collider.tag == "nonobs")
+        //{
+        //    Debug.Log("collide");
+        //    Destroy(power.collider.gameObject);
+        //    booster = powerUp.noobsticle;
 
-            StartCoroutine(poweruptimer());
-        }
-        if (power.collider.CompareTag("speedbooster"))
-        {
-            Destroy(power.collider.gameObject);
-            booster = powerUp.Speedbooster;
-            StartCoroutine(poweruptimer());
-        }
-        if (power.collider.CompareTag("shield"))
-        {
-            Destroy(power.collider.gameObject);
-            booster = powerUp.shield;
-            StartCoroutine(poweruptimer());
-        }
+        //    StartCoroutine(poweruptimer());
+        //}
+        //if (power.collider.CompareTag("speedbooster"))
+        //{
+        //    Destroy(power.collider.gameObject);
+        //    booster = powerUp.Speedbooster;
+        //    StartCoroutine(poweruptimer());
+        //}
+        //if (power.collider.CompareTag("shield"))
+        //{
+        //    Destroy(power.collider.gameObject);
+        //    booster = powerUp.shield;
+        //    StartCoroutine(poweruptimer());
+        //}
     }
-    IEnumerator poweruptimer()
-    {
-        yield return new WaitForSeconds(2);
-        booster = powerUp.none;
-    }
+   
 
 }
 
