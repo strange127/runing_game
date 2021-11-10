@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Duration : MonoBehaviour
+public class Duration
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public static int shildduration;
+    public static int bostduratio;
+    public static int noobsticaleduration;
 }

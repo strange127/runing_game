@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class UiContains : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int speedbostersaved;
+    public int shildbostersaved;
+    public int noobsticalsaved;
+    public void ShopItemParchase(powerUp power)
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //money will be minus
+        if(power == powerUp.Speedbooster)
+        {
+            PlayerPrefs.SetInt("Speedbooster", PlayerPrefs.GetInt("Speedbooster") + 1);
+        }else if(power == powerUp.shield)
+        {
+            PlayerPrefs.SetInt("shildbooster", PlayerPrefs.GetInt("shildbooster") + 1);
+        }else if(power == powerUp.noobsticle)
+        {
+            PlayerPrefs.SetInt("noobsticle", PlayerPrefs.GetInt("noobsticle") + 1);
+        }
     }
 }

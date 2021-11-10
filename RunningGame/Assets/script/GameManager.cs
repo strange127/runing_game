@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     private int MaxPlayer = 5;
-    public GameObject Player;
+    public GameObject PlayerSpawnObject;
+    public PlayerMoment plalyermoment;
     public GameObject PlayerStandingPoint;
     public PlayerCamera Camera;
 
@@ -179,7 +180,7 @@ public class GameManager : MonoBehaviour
         {
             pos = new Vector3(pos.x + 10, pos.y, pos.z);
             Vector3 standingpoint = new Vector3(pos.x, pos.y - 2, pos.z);
-            GameObject obj = Instantiate(Player, pos, Quaternion.identity);
+            GameObject obj = Instantiate(PlayerSpawnObject, pos, Quaternion.identity);
             Instantiate(PlayerStandingPoint, standingpoint, Quaternion.identity);
             if (i != playno)
             {
@@ -188,7 +189,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 obj.GetComponent<PlayerMoment>().Type = PlayerType.Player;
-
+                plalyermoment = obj.GetComponent<PlayerMoment>();
                 //   Button1.onClick.AddListener(() => obj.GetComponent<PlayerMoment>().click());
                 //  Button1.onClick.AddListener(() => obj.GetComponent<PlayerMoment>().click());
                 Camera.Target = obj;
