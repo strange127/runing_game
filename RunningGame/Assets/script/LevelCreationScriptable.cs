@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelCreationScriptable : ScriptableObject
 {
     [Header("Basic")]
+    public int level;
     public Vector3 PlayerSpawnPos;
     public float MinDistance;
     public float MaxDistance;
