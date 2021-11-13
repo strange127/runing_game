@@ -1,21 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class LoadingScreen : MonoBehaviour
 {
     public LevelCreationScriptable[] selectedLevel;
     public GameObject loadingScreen;
     public string loadScenence;
+    public Button PlayGame;
     private void Awake()
     {
-        //SceneManager.LoadSceneAsync((int)0, LoadSceneMode.Additive);
+        loadingScreen.SetActive(true);
+        async = SceneManager.LoadSceneAsync((int)1, LoadSceneMode.Additive);
+        StartCoroutine(StartMenu());
+    }
+    IEnumerator StartMenu()
+    {
+        while (!async.isDone)
+        {
+            yield return null;
+        }
+        loadingScreen.SetActive(false);
+        PlayGame = GameObject.Find("Canvas/MainMenu/Play").GetComponent<Button>();
+        PlayGame.onClick.AddListener(() => LoadingScence(1));
     }
     AsyncOperation async;
     public void LoadingScence(int level)
     {
         loadingScreen.SetActive(true);
-        async = SceneManager.LoadSceneAsync((int)1, LoadSceneMode.Additive);
+        async = SceneManager.UnloadSceneAsync((int)1);
+        async = SceneManager.LoadSceneAsync((int)2, LoadSceneMode.Additive);
         StartCoroutine(GetScenceLoadProgress(level));
        
     }
@@ -31,10 +46,11 @@ public class LoadingScreen : MonoBehaviour
             if(selectedLevel[i].level == lvel)
             {
                 GameManager.instance.AutoLevelMaking = selectedLevel[i];
+                GameManager.instance.LevelCreate();
                 break;
             }
         }
-        async = SceneManager.UnloadSceneAsync((int)0);
+     
         while (!async.isDone)
         {
             yield return null;

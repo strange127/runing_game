@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6cf26ae81907e4d81125ee5f5f1d53, type: 3}
   m_Name: Lvl-1
   m_EditorClassIdentifier: 
+  level: 1
   PlayerSpawnPos: {x: 10, y: 0, z: 0}
   MinDistance: 15
   MaxDistance: 20

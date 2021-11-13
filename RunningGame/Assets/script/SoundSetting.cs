@@ -8,8 +8,17 @@ public class SoundSetting : MonoBehaviour
     public Image soundOff;
     public float volumeVlaue;
     public bool ismuted;
+    public AudioClip[] BackGroundSound;
+    public AudioSource backgroundAudio;
+
+    private void Awake()
+    {
+        backgroundAudio.clip = BackGroundSound[Random.Range(0, BackGroundSound.Length)];
+        backgroundAudio.Play();
+    }
     private void Start()
     {
+       
         if(!PlayerPrefs.HasKey("Muted"))
         {
             PlayerPrefs.SetInt("Muted", 1);
@@ -23,7 +32,13 @@ public class SoundSetting : MonoBehaviour
         AudioListener.pause = ismuted;
         
     }
-   public void ChangeSoundVoulume()
+    private void Update()
+    {
+        ChangeSoundVoulume();
+        if (Input.GetKeyDown(KeyCode.G))
+            SoundButton();
+    }
+    public void ChangeSoundVoulume()
     {
         AudioListener.volume = volumeVlaue;
     }
@@ -33,6 +48,7 @@ public class SoundSetting : MonoBehaviour
         AudioListener.pause = !AudioListener.pause;
         Save();
         UpdateButtonIcon();
+        
     }
     void UpdateButtonIcon()
     {
