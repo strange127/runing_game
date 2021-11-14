@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6cf26ae81907e4d81125ee5f5f1d53, type: 3}
+  m_Name: Lvl-1 8
+  m_EditorClassIdentifier: 
+  level: 1
+  PlayerSpawnPos: {x: 10, y: 0, z: 0}
+  MinDistance: 15
+  MaxDistance: 20
+  LevelState: 0100000000000000
+  ObstacleCount: 0a00000010000000
+  RunningObstackleToSpawn:
+  - {fileID: 3989314764399396367, guid: 5fdde811a8b539a43be21c969ace6036, type: 3}
+  RununingField:
+  - {fileID: 8283240614504153882, guid: a0a1cbc006033f44bbb5b76a75717a15, type: 3}
+  SwimingObstackleToSpawn:
+  - {fileID: 919132149155446097, guid: 7810f6efab7819847bf0eadb908b3854, type: 3}
+  SwimingFileldField:
+  - {fileID: 8228847553654101836, guid: 6e1e204a9ae8b0a409e7d1bbeb033f3d, type: 3}
+  curves: 
+  straightField: []
