@@ -8,6 +8,7 @@ public enum state { active, deactive, current }
 public class pinsproperties : MonoBehaviour { 
 
     public bool Hascompleted;
+    public int level;
     public Image pinimage;
     public Color colour;
     public state mystate=state.deactive;
@@ -31,9 +32,18 @@ public class pinsproperties : MonoBehaviour {
         if(mystate == state.current)
         {
             anim.SetBool("currentstate", true);
+            
         }
-       
-        
+        if (mystate == state.deactive)
+        {
+            anim.Play("default");
+        }
+
+
+    }
+    public void onclickcity()
+    {
+
     }
 
 

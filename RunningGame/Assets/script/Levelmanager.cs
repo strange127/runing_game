@@ -10,18 +10,21 @@ public class Levelmanager : MonoBehaviour
     private void Awake()
     {
         for(int i = 0; i < pins.Length; i++)
-        {
-            if (i == 0)
+        {    if (i == 0)
                 pins[i].mystate = state.current;
-            if (pins[i - 1].Hascompleted == true)
+           else if (i>0 && pins[i - 1].Hascompleted == true)
             {
                 pins[i - 1].mystate = state.active;
                  pins[i].mystate = state.current;
             }
-           
 
+            pins[i].level = i;
         }
+        
     }
+
+  
+
     void Start()
     {
         
