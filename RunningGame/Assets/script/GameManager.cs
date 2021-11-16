@@ -6,27 +6,29 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     private int MaxPlayer = 5;
-    public GameObject PlayerSpawnObject;
-    public PlayerMoment plalyermoment;
-    public GameObject PlayerStandingPoint;
-    public PlayerCamera Camera;
-
     public LevelCreationScriptable AutoLevelMaking;
+    [HideInInspector]public PlayerMoment plalyermoment;
+    [SerializeField]private GameObject PlayerSpawnObject;
+    [SerializeField]private GameObject PlayerStandingPoint;
+    private PlayerCamera PlayerFlowCamera;
+    private float Size;
+    private int FieldID;
+    public Transform SpawnHOlder;
     private void Awake()
     {
-
+        AutoLevelMaking = null;
         if (instance == null)
         {
             instance = this;
         }
         MaxPlayer = 5;
-        LevelCreate();
+      
 
     }
-    public Transform SpawnHOlder;
 
-    void LevelCreate()
+    public void LevelCreate()
     {
+        PlayerFlowCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerCamera>(); 
         PlayerSpawn();
         SpawnField();
 
@@ -35,7 +37,7 @@ public class GameManager : MonoBehaviour
     void RunningField(int obstacke)
     {
         int obstacklespawnid = Random.Range(0, AutoLevelMaking.RunningObstackleToSpawn.Length);
-
+        print("abc");
         Vector3 pos = AutoLevelMaking.PlayerSpawnPos;
         for (int i = 0; i < 5; i++)
         {
@@ -95,8 +97,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
-    private float Size;
-    private int FieldID;
+
     void SpawnField()
     {
         for (int j = 0; j < AutoLevelMaking.LevelState.Length; j++)
@@ -192,7 +193,7 @@ public class GameManager : MonoBehaviour
                 plalyermoment = obj.GetComponent<PlayerMoment>();
                 //   Button1.onClick.AddListener(() => obj.GetComponent<PlayerMoment>().click());
                 //  Button1.onClick.AddListener(() => obj.GetComponent<PlayerMoment>().click());
-                Camera.Target = obj;
+                PlayerFlowCamera.Target = obj;
             }
 
         }
