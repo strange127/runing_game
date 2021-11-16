@@ -411,7 +411,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2812199424867f04ba143c78e6a58ab8, type: 2}
   - {fileID: 11400000, guid: 09e2b181821951c48aac81435201dfb9, type: 2}
   loadingScreen: {fileID: 216823145}
-  levelLoad: 2
+  levelLoad: 1
 --- !u!4 &1133820820
 Transform:
   m_ObjectHideFlags: 0
