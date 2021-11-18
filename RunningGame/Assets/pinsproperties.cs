@@ -49,9 +49,28 @@ public class pinsproperties : MonoBehaviour {
     public void clickme()
     {
         Debug.Log("click");
-        india.rectTransform.pivot = pinpointloc.position;
-      
-    }
+     
+       if(pinpointloc.position.x >= 0 && pinpointloc.position.y>=0)
+        {
+            india.rectTransform.pivot = new Vector2(0.71f, 0.66f);
+            india.rectTransform.localScale = new Vector3(3.4f, 3.4f, 3.4f);
+        }
+       if (pinpointloc.position.x < 0 && pinpointloc.position.x > -96 && pinpointloc.position.y > 0 && pinpointloc.position.y < 185.9)
+        {
+            india.rectTransform.pivot = new Vector2(0.34f, 0.62f);
+            india.rectTransform.localScale = new Vector3(3.5f, 3.5f, 3.5f);
+        }
+        if (pinpointloc.position.x < 0  && pinpointloc.position.y < 0)
+        {
+            india.rectTransform.pivot = new Vector2(0.38f, 0.11f);
+            india.rectTransform.localScale = new Vector3(2.6f,2.4f,2.9f);
+        }
+        if (pinpointloc.position.x < -96 && pinpointloc.position.y > 185.9)
+        {
+            india.rectTransform.pivot = new Vector2(0.36f, 1f);
+            india.rectTransform.localScale = new Vector3(3.1f, 3.1f, 3.1f);
+        }
+        }
     public void onclickcity()
     {
 
