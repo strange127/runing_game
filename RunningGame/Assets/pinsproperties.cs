@@ -13,10 +13,14 @@ public class pinsproperties : MonoBehaviour {
     public Color colour;
     public state mystate=state.deactive;
     public Animator anim;
+    [SerializeField] private Image india;
+    [SerializeField]private Transform pinpointloc;
     private void Awake()
     {
         anim = gameObject.GetComponent<Animator>();
         pinimage = gameObject.GetComponent<Image>();
+        pinpointloc = gameObject.GetComponent<Transform>();
+        india = GameObject.Find("India").GetComponent<Image>();
         colour = pinimage.color;
         
     }
@@ -40,6 +44,13 @@ public class pinsproperties : MonoBehaviour {
         }
 
 
+    }
+
+    public void clickme()
+    {
+        Debug.Log("click");
+        india.rectTransform.pivot = pinpointloc.position;
+      
     }
     public void onclickcity()
     {
