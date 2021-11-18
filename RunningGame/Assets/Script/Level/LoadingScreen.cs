@@ -12,35 +12,38 @@ public class LoadingScreen : MonoBehaviour
     private void Awake()
     {
         loadingScreen.SetActive(true);
-        async = SceneManager.LoadSceneAsync((int)1, LoadSceneMode.Additive);
+        startingScence.Add(SceneManager.LoadSceneAsync(1, LoadSceneMode.Single));
+     //   startingScence.Add(SceneManager.UnloadSceneAsync(0));
         StartCoroutine(StartMenu());
     }
     IEnumerator StartMenu()
     {
-        while (!async.isDone)
+        for (int i = 0; i < async.Count; i++)
         {
-            yield return null;
+            while (!startingScence[i].isDone)
+            {
+                yield return null;
+            }
+
         }
+
         loadingScreen.SetActive(false);
         PlayGame = GameObject.Find("Canvas/MainMenu/Play").GetComponent<Button>();
         PlayGame.onClick.AddListener(() => LoadingScence(levelLoad));
     }
-    AsyncOperation async;
+    List<AsyncOperation> async;
+    public List<AsyncOperation> startingScence;
     public void LoadingScence(int level)
     {
         loadingScreen.SetActive(true);
-        async = SceneManager.UnloadSceneAsync((int)1);
-        async = SceneManager.LoadSceneAsync((int)2, LoadSceneMode.Additive);
+      
+        async.Add(SceneManager.UnloadSceneAsync((int)1));
+        async.Add(SceneManager.LoadSceneAsync((int)2, LoadSceneMode.Additive));
         StartCoroutine(GetScenceLoadProgress(level));
        
     }
     public IEnumerator GetScenceLoadProgress(int lvel)
     {
-        while (!async.isDone)
-        {
-            yield return null;
-        }
-
         for (int i = 0; i < selectedLevel.Length; i++)
         {
             if(selectedLevel[i].level == lvel)
@@ -50,11 +53,16 @@ public class LoadingScreen : MonoBehaviour
                 break;
             }
         }
-     
-        while (!async.isDone)
+        for (int i = 0; i < async.Count; i++)
         {
-            yield return null;
+            while (!async[i].isDone)
+            {
+                yield return null;
+            }
         }
+
+     
+
         loadingScreen.SetActive(false);
 
     }
