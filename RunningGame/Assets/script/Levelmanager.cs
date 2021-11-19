@@ -6,6 +6,9 @@ public class Levelmanager : MonoBehaviour
 {  
     [SerializeField]
     pinsproperties[] pins;
+    [SerializeField] Transform india;
+    [SerializeField] GameObject paneloff;
+    private float value = 1.3f;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -28,6 +31,19 @@ public class Levelmanager : MonoBehaviour
     void Start()
     {
         
+    }
+   public void back()
+    {
+        if (india.localScale.x < 1.5)
+        {
+            paneloff.SetActive(false);
+        }
+        if (india.localScale.x > 1.5)
+        {
+            india.localScale = new Vector3(1.3f, 1.3f, 1.3f);
+
+
+        }
     }
 
     // Update is called once per frame
