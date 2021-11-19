@@ -76,27 +76,31 @@ public class GameManager : MonoBehaviour
     //}
 
     private List<GameObject> Road = new List<GameObject>();
-    void CyclingField()
+    void CyclingField(int i ,int j)
     {
-        for (int i = 0; i < AutoLevelMaking.curves.Length; i++)
-        {
+      
             if (i == 0)
             {
                 Road.Add(Instantiate(AutoLevelMaking.straightField[0], new Vector3(AutoLevelMaking.PlayerSpawnPos.x + 5, AutoLevelMaking.PlayerSpawnPos.y - 2, Size), Quaternion.identity, SpawnHOlder));
             }
             else
             {
-                Road.Add(Instantiate(AutoLevelMaking.straightField[i], Road[i - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
-                Road[i - 1].GetComponent<Filed>().curentRotation.y = Road[i - 1].transform.eulerAngles.y;
 
 
-                print(Road[i - 1].GetComponent<Filed>().curentRotation.y);
-                float y = Road[i - 1].GetComponent<Filed>().Roration.y + Road[i - 1].GetComponent<Filed>().curentRotation.y;
+                Road.Add(Instantiate(AutoLevelMaking.straightField[i], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
+
+            
+              
+                Road[j - 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
+
+
+                print(Road[j - 1].GetComponent<Filed>().curentRotation.y);
+                float y = Road[j - 1].GetComponent<Filed>().Roration.y + Road[j - 1].GetComponent<Filed>().curentRotation.y;
                 print(y + " " + i);
                 //  Road[i].transform.rotation =Quaternion.eu Road[i - 1].GetComponent<ScriptRotation>().Roration + Road[i - 1].GetComponent<ScriptRotation>().curentRotation;
-                Road[i].transform.Rotate(0, y, 0);
+                Road[j].transform.Rotate(0, y, 0);
             }
-        }
+        
 
     }
     Vector3 pos ;
@@ -159,7 +163,8 @@ public class GameManager : MonoBehaviour
                 }
                 else if (AutoLevelMaking.LevelState[j] == PlayerState.cycling)
                 {
-                    CyclingField();
+                    CyclingField(i,j);
+                    i++;
                 }
             }
 
@@ -168,6 +173,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
+    int i;
     void PlayerSpawn()
     {
         int playno = Random.Range(0, 5);
