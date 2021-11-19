@@ -77,20 +77,27 @@ public class PlayerMoment : MonoBehaviour
             oxygenbar.enabled = true;
             SpeedControler();
             swimmingtimer();
-    
+            if(Input.touchCount>0 && Input.touches[0].phase == TouchPhase.Began)
+              oxygenbar.value += 3;
+            
+#if UNITY_EDITOR
+            if (Input.GetKeyDown(KeyCode.P))
+               oxygenbar.value += 3;
+            
+#endif
 
             insarface = Physics.CheckSphere(serfacecheck.position, waterdistace, Watermask);
             if (oxygenbar.value == 0)
                 speed = 0;
             
-            if ( velocity.y < -3)
+            if (insarface && velocity.y > 0)
                 velocity.y = -3f;
             
-            if (transform.position.y < -5)
+            if (transform.position.y < -3)
                 velocity.y += swiminggravity * Time.deltaTime;
-            else if(transform.position.y > -5.5)
+            else
                 velocity.y -= swiminggravity * Time.deltaTime;
-            Diving();
+            //Diving();
             controler.Move(velocity * Time.deltaTime);
         }
         else if (state == PlayerState.cycling)
@@ -161,47 +168,31 @@ public class PlayerMoment : MonoBehaviour
             }
         }
     }
-    void Diving()
-    {
-     
-        
-        if (Type == PlayerType.Player)
-        {
-           
-            if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-                speed += 3;
-
-#if UNITY_EDITOR
-                
-            if (Input.GetKey(KeyCode.P))
-                speed += 0.5f;
-
-#endif
-            
-        }
-        
-        else if (Type == PlayerType.AirtificialInteligence)    
-        {
-        
-         
-                  
-                        
-             
-            int rang = Random.Range(0, 1000);
-               
-            if (rang < 10)  
-            {
-              
-                speed += .5f;
-               
-            }
-                    
-               
-        }
-        
+    //void Diving()
+    //{
+    //    if (insarface)
+    //    {
+    //        if (Input.GetButtonDown("Jump") && Type == PlayerType.Player)
+    //            velocity.y -= Mathf.Sqrt(diveforce * -2f * swiminggravity);
+    //        else if (Type == PlayerType.AirtificialInteligence)
+    //        {
+    //            RaycastHit hit;
+    //            if (Physics.Raycast(transform.position, Vector3.forward, out hit, 1.25f))
+    //            {
+    //                if (hit.collider.gameObject.CompareTag("Obstakle"))
+    //                {
+    //                    int rang = Random.Range(0, 250);
+    //                    if (rang < 10)
+    //                    {
+    //                        velocity.y -= Mathf.Sqrt(diveforce * -2f * swiminggravity);
+    //                    }
+    //                }
+    //            }
+    //        }
+    //    }
        
 
-    }
+    //}
     
     void swimmingtimer()//swimming timer
     {
@@ -209,7 +200,7 @@ public class PlayerMoment : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > 0.5)//for how much time
         {
-            speed --; //amount of oxygen
+            speed-- ; //amount of oxygen
             timer = 0;
         }
     }
@@ -218,6 +209,10 @@ public class PlayerMoment : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 startingpos = this.transform.position;
+
+
+
+    
         if (Physics.Raycast(startingpos, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
         {
 
@@ -329,23 +324,22 @@ public class PlayerMoment : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-       
+        if (other.CompareTag("Obstakle"))
+        {
+            if (booster == powerUp.none)
+                speed = 0f;
+            //    print(other.gameObject.GetComponentInChildren<CapsuleCollider>().isTrigger);
+            other.gameObject.GetComponentInChildren<CapsuleCollider>().isTrigger = true;
+        }
         if (other.CompareTag("ChnageToSwimer"))
         {
             state = PlayerState.Swiming;
-            //playe swim jumping animation
-            speed = 0;
         }
-        else if (other.CompareTag("ChangeToCycling"))
+        if (other.CompareTag("ChangeToCycling"))
         {
             state = PlayerState.cycling;
             speed = 0;
-            //playe getingon cycle animation.
             clicked = false;
-        }
-        else if (other.CompareTag("ChangeToRunner"))
-        {
-            state = PlayerState.Running;
         }
     }
     private void OnControllerColliderHit(ControllerColliderHit power)
@@ -354,19 +348,15 @@ public class PlayerMoment : MonoBehaviour
         if (power.collider.tag == "Obstakle")
         {
 
-            if (booster == powerUp.none)
-                speed = 0f;
-       //     print(power.gameObject.GetComponentInChildren<CapsuleCollider>().isTrigger);
-         //   power.gameObject.GetComponentInChildren<CapsuleCollider>().isTrigger = true;
-            //if (booster == powerUp.noobsticle)
-            //    power.collider.GetComponent<CapsuleCollider>().isTrigger = true;
+            if (booster == powerUp.noobsticle)
+                power.collider.GetComponent<CapsuleCollider>().isTrigger = true;
 
-            //if (booster == powerUp.shield)
-            //{
-            //    power.collider.GetComponent<CapsuleCollider>().isTrigger = true;
-            //    if (power.collider == null)
-            //        booster = powerUp.none;
-            //}
+            if (booster == powerUp.shield)
+            {
+                power.collider.GetComponent<CapsuleCollider>().isTrigger = true;
+                if (power.collider == null)
+                    booster = powerUp.none;
+            }
         }
         //if (power.collider.tag == "nonobs")
         //{

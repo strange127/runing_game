@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-        DontDestroyOnLoad(this.gameObject);
         MaxPlayer = 5;
       
 
@@ -76,27 +75,25 @@ public class GameManager : MonoBehaviour
     //}
 
     private List<GameObject> Road = new List<GameObject>();
-    void CyclingField(int i ,int j)
+    void CyclingField(int i,int j)
     {
-      
+
+        print(i+ j);
             if (i == 0)
             {
-                Road.Add(Instantiate(AutoLevelMaking.straightField[0], new Vector3(AutoLevelMaking.PlayerSpawnPos.x + 5, AutoLevelMaking.PlayerSpawnPos.y - 2, Size), Quaternion.identity, SpawnHOlder));
+                Road.Add(Instantiate(AutoLevelMaking.straightField[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
+      
+                return;
             }
             else
             {
-
-
-                Road.Add(Instantiate(AutoLevelMaking.straightField[i], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
-
-            
-              
-                Road[j - 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
+                Road.Add(Instantiate(AutoLevelMaking.straightField[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
+                Road[j- 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
 
 
                 print(Road[j - 1].GetComponent<Filed>().curentRotation.y);
-                float y = Road[j - 1].GetComponent<Filed>().Roration.y + Road[j - 1].GetComponent<Filed>().curentRotation.y;
-                print(y + " " + i);
+                float y = Road[j - 1].GetComponent<Filed>().Roration.y + Road[j- 1].GetComponent<Filed>().curentRotation.y;
+           //     print(y + " " + i);
                 //  Road[i].transform.rotation =Quaternion.eu Road[i - 1].GetComponent<ScriptRotation>().Roration + Road[i - 1].GetComponent<ScriptRotation>().curentRotation;
                 Road[j].transform.Rotate(0, y, 0);
             }
@@ -104,8 +101,10 @@ public class GameManager : MonoBehaviour
 
     }
     Vector3 pos ;
+    int i;
     void SpawnField()
     {
+        i = 0;
         for (int j = 0; j < AutoLevelMaking.LevelState.Length; j++)
         {
             
@@ -120,6 +119,7 @@ public class GameManager : MonoBehaviour
                     FieldID = Random.Range(0, AutoLevelMaking.RununingField.Length);
                     pos = new Vector3(pos.x + 30, pos.y, pos.z);
                     GameObject obj = Instantiate(AutoLevelMaking.RununingField[FieldID], new Vector3(pos.x, pos.y - 2, pos.z), Quaternion.identity, SpawnHOlder.GetChild(0));
+                    Road.Add(obj);
                     obj.transform.localScale = new Vector3(1, 1, Size);
                     pos = obj.GetComponent<Filed>().pos.position;
 
@@ -130,6 +130,7 @@ public class GameManager : MonoBehaviour
                     FieldID = Random.Range(0, AutoLevelMaking.SwimingFileldField.Length);
                     pos = new Vector3(40, pos.y, pos.z);
                     GameObject obj = Instantiate(AutoLevelMaking.SwimingFileldField[FieldID], new Vector3(pos.x, pos.y - 2, pos.z), Quaternion.identity, SpawnHOlder.GetChild(0));
+                    Road.Add(obj);
                     pos = obj.GetComponent<Filed>().pos.position;
                 }
 
@@ -144,6 +145,7 @@ public class GameManager : MonoBehaviour
                     Size = AutoLevelMaking.MaxDistance * AutoLevelMaking.ObstacleCount[0];
                     pos = new Vector3(40, pos.y, pos.z);
                     GameObject obj = Instantiate(AutoLevelMaking.RununingField[FieldID], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity, SpawnHOlder.GetChild(0));
+                    Road.Add(obj);
                     obj.transform.localScale = new Vector3(1, 1, Size);
                     pos = obj.GetComponent<Filed>().pos.position;
                
@@ -156,7 +158,8 @@ public class GameManager : MonoBehaviour
                    
                       //  pos = new Vector3(pos.x + 30, pos.y, Size + 100 / 2);
                         GameObject obj = Instantiate(AutoLevelMaking.SwimingFileldField[FieldID], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity, SpawnHOlder.GetChild(0));
-                       pos = obj.GetComponent<Filed>().pos.position;
+                    Road.Add(obj);
+                    pos = obj.GetComponent<Filed>().pos.position;
                     // obj.transform.localScale = new Vector3(10, 0.5f, newplatformsize);
 
                     //Size = newplatformsize + Size;
@@ -173,7 +176,6 @@ public class GameManager : MonoBehaviour
         }
 
     }
-    int i;
     void PlayerSpawn()
     {
         int playno = Random.Range(0, 5);

@@ -71,7 +71,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6431546114521036744}
-  - component: {fileID: 2639201365347929077}
+  - component: {fileID: 7977543935483588989}
+  - component: {fileID: 8304799093312846669}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Obstakle
@@ -94,7 +95,20 @@ Transform:
   m_Father: {fileID: 3989314764399396363}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!136 &2639201365347929077
+--- !u!65 &7977543935483588989
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6149936368306241226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 2.3136098, y: 3.246935, z: 0.27305457}
+  m_Center: {x: 1.0448846, y: 8.371889e-15, z: 0}
+--- !u!136 &8304799093312846669
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,10 +118,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.12842873
-  m_Height: 3.0267355
+  m_Radius: 0.19144642
+  m_Height: 3.0509644
   m_Direction: 1
-  m_Center: {x: 2.036991, y: -0.015372864, z: 0.039728697}
+  m_Center: {x: 2.0347404, y: 0.022863425, z: 0}
 --- !u!1 &6493231013097400362
 GameObject:
   m_ObjectHideFlags: 0
