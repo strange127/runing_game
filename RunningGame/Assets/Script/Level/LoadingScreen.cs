@@ -9,6 +9,7 @@ public class LoadingScreen : MonoBehaviour
     public GameObject loadingScreen;
     private Button PlayGame;
     public int levelLoad;
+    AsyncOperation async;
     private void Awake()
     {
         loadingScreen.SetActive(true);
@@ -23,14 +24,18 @@ public class LoadingScreen : MonoBehaviour
         }
         loadingScreen.SetActive(false);
         PlayGame = GameObject.Find("Canvas/MainMenu/Play").GetComponent<Button>();
-        PlayGame.onClick.AddListener(() => LoadingScence(levelLoad));
+        PlayGame.onClick.AddListener(() => LoadingScence(1));
     }
-    AsyncOperation async;
+    public void Loaded()
+    {
+        async = SceneManager.UnloadSceneAsync((int)1);
+        async = SceneManager.LoadSceneAsync((int)2, LoadSceneMode.Additive);
+    }
     public void LoadingScence(int level)
     {
         loadingScreen.SetActive(true);
+        async = SceneManager.LoadSceneAsync((int)3, LoadSceneMode.Additive);
         async = SceneManager.UnloadSceneAsync((int)1);
-        async = SceneManager.LoadSceneAsync((int)2, LoadSceneMode.Additive);
         StartCoroutine(GetScenceLoadProgress(level));
        
     }
@@ -51,10 +56,7 @@ public class LoadingScreen : MonoBehaviour
             }
         }
      
-        while (!async.isDone)
-        {
-            yield return null;
-        }
+
         loadingScreen.SetActive(false);
 
     }

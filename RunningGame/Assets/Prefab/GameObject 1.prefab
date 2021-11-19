@@ -106,9 +106,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1438755611165380765}
+  - component: {fileID: 8255955356463123779}
   m_Layer: 0
   m_Name: POS
-  m_TagString: Untagged
+  m_TagString: ChangeToRunner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,6 +128,19 @@ Transform:
   m_Father: {fileID: 3996004292571919167}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8255955356463123779
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3576681049964827226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 12.122073, z: 0.02975338}
+  m_Center: {x: 0, y: 2.519101, z: -0.112562045}
 --- !u!1 &4878887855723282523
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,9 +345,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3996004292571919167}
   - component: {fileID: 3635656577330005658}
+  - component: {fileID: 1261766305480668891}
   m_Layer: 0
   m_Name: GameObject 1
-  m_TagString: Untagged
+  m_TagString: ChnageToSwimer
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,6 +396,19 @@ MonoBehaviour:
   Roration: {x: 0, y: 0, z: 0}
   pos: {fileID: 1438755611165380765}
   curentRotation: {x: 0, y: 0, z: 0}
+--- !u!65 &1261766305480668891
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228847553654101836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 11.339436, z: 0.03365875}
+  m_Center: {x: 0, y: 2.1542656, z: 0.04037826}
 --- !u!1 &8839660565551563741
 GameObject:
   m_ObjectHideFlags: 0
