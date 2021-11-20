@@ -9,6 +9,7 @@ TagManager:
   - Obstakle
   - ChnageToSwimer
   - ChangeToCycling
+  - ChangeToRunner
   layers:
   - Default
   - TransparentFX

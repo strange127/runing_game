@@ -91,13 +91,13 @@ public class PlayerMoment : MonoBehaviour
                 speed = 0;
             
             if (insarface && velocity.y > 0)
-                velocity.y = 2f;
+                velocity.y = -3f;
             
-            if (transform.position.y < 0)
+            if (transform.position.y < -3)
                 velocity.y += swiminggravity * Time.deltaTime;
             else
                 velocity.y -= swiminggravity * Time.deltaTime;
-            Diving();
+            //Diving();
             controler.Move(velocity * Time.deltaTime);
         }
         else if (state == PlayerState.cycling)
@@ -168,31 +168,31 @@ public class PlayerMoment : MonoBehaviour
             }
         }
     }
-    void Diving()
-    {
-        if (insarface)
-        {
-            if (Input.GetButtonDown("Jump") && Type == PlayerType.Player)
-                velocity.y -= Mathf.Sqrt(diveforce * -2f * swiminggravity);
-            else if (Type == PlayerType.AirtificialInteligence)
-            {
-                RaycastHit hit;
-                if (Physics.Raycast(transform.position, Vector3.forward, out hit, 1.25f))
-                {
-                    if (hit.collider.gameObject.CompareTag("Obstakle"))
-                    {
-                        int rang = Random.Range(0, 250);
-                        if (rang < 10)
-                        {
-                            velocity.y -= Mathf.Sqrt(diveforce * -2f * swiminggravity);
-                        }
-                    }
-                }
-            }
-        }
+    //void Diving()
+    //{
+    //    if (insarface)
+    //    {
+    //        if (Input.GetButtonDown("Jump") && Type == PlayerType.Player)
+    //            velocity.y -= Mathf.Sqrt(diveforce * -2f * swiminggravity);
+    //        else if (Type == PlayerType.AirtificialInteligence)
+    //        {
+    //            RaycastHit hit;
+    //            if (Physics.Raycast(transform.position, Vector3.forward, out hit, 1.25f))
+    //            {
+    //                if (hit.collider.gameObject.CompareTag("Obstakle"))
+    //                {
+    //                    int rang = Random.Range(0, 250);
+    //                    if (rang < 10)
+    //                    {
+    //                        velocity.y -= Mathf.Sqrt(diveforce * -2f * swiminggravity);
+    //                    }
+    //                }
+    //            }
+    //        }
+    //    }
        
 
-    }
+    //}
     
     void swimmingtimer()//swimming timer
     {
@@ -200,7 +200,7 @@ public class PlayerMoment : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > 0.5)//for how much time
         {
-            oxygenbar.value -= 6; //amount of oxygen
+            speed-- ; //amount of oxygen
             timer = 0;
         }
     }
@@ -212,10 +212,7 @@ public class PlayerMoment : MonoBehaviour
 
 
 
-        if (Physics.Raycast(startingpos, transform.forward, out hit, sensorLenth))
-        {
-
-        }
+    
         if (Physics.Raycast(startingpos, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
         {
 
@@ -331,7 +328,7 @@ public class PlayerMoment : MonoBehaviour
         {
             if (booster == powerUp.none)
                 speed = 0f;
-            print(other.gameObject.GetComponentInChildren<CapsuleCollider>().isTrigger);
+            //    print(other.gameObject.GetComponentInChildren<CapsuleCollider>().isTrigger);
             other.gameObject.GetComponentInChildren<CapsuleCollider>().isTrigger = true;
         }
         if (other.CompareTag("ChnageToSwimer"))
