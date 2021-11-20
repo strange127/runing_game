@@ -17,11 +17,15 @@ public class pinsproperties : MonoBehaviour {
     [SerializeField] private Image india;
     [SerializeField]private Transform pinpointloc;
     [SerializeField] private region regn;
+    [SerializeField] LoadingScreen gamemanager;
+    public bool big = false;
+ private int pressed =0;
     private void Awake()
     {
         anim = gameObject.GetComponent<Animator>();
         pinimage = gameObject.GetComponent<Image>();
         pinpointloc = gameObject.GetComponent<Transform>();
+        gamemanager = GameObject.Find("GameManager").GetComponent<LoadingScreen>();
         india = GameObject.Find("India").GetComponent<Image>();
         colour = pinimage.color;
         
@@ -53,33 +57,42 @@ public class pinsproperties : MonoBehaviour {
 
     public void clickme()
     {
-        Debug.Log("click");
-     
-       if(regn==region.east)
-        {
-            india.rectTransform.pivot = new Vector2(0.71f, 0.66f);
-            india.rectTransform.localScale = new Vector3(3f, 3f, 3f);
-        }
-       if (regn==region.west)
-        {
-            india.rectTransform.pivot = new Vector2(0.34f, 0.62f);
-            india.rectTransform.localScale = new Vector3(3.5f, 3.5f, 3.5f);
-        }
-        if (regn==region.south)
-        {
-            india.rectTransform.pivot = new Vector2(0.38f, 0.11f);
-            india.rectTransform.localScale = new Vector3(2.3f,2.4f,2.9f);
-        }
-        if (regn==region.north)
-        {
-            india.rectTransform.pivot = new Vector2(0.36f, 1f);
-            india.rectTransform.localScale = new Vector3(3.1f, 3.1f, 3.1f);
-        }
-        }
-    public void onclickcity()
-    {
+        Debug.Log("click" + level + "  "+pressed);
+       
+            if (regn == region.east)
+            {
+                india.rectTransform.pivot = new Vector2(0.71f, 0.66f);
+                india.rectTransform.localScale = new Vector3(3f, 3f, 3f);
+                pressed++;
 
-    }
+            }
+            if (regn == region.west)
+            {
+                india.rectTransform.pivot = new Vector2(0.34f, 0.62f);
+                india.rectTransform.localScale = new Vector3(3.5f, 3.5f, 3.5f);
+                pressed++;
+            }
+            if (regn == region.south)
+            {
+                india.rectTransform.pivot = new Vector2(0.38f, 0.11f);
+                india.rectTransform.localScale = new Vector3(2.3f, 2.4f, 2.9f);
+                pressed++;
+            }
+            if (regn == region.north)
+            {
+                india.rectTransform.pivot = new Vector2(0.36f, 1f);
+                india.rectTransform.localScale = new Vector3(3.1f, 3.1f, 3.1f);
+                pressed++;
+            }
+
+        if (pressed > 1)
+        {
+            gamemanager.LoadingScence(level);
+            pressed = 0;
+        }
+        
+        }
+   
 
 
 }
