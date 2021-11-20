@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     private PlayerCamera PlayerFlowCamera;
     private float Size;
     private int FieldID;
+    public UiContains UI;
     public Transform SpawnHOlder;
     private void Awake()
     {

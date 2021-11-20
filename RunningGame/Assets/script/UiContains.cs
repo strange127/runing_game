@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class UiContains : MonoBehaviour
 {
     public int speedbostersaved;
     public int shildbostersaved;
     public int noobsticalsaved;
+    public Button leftbutton;
+    public Button rightbutton;
+
     public void ShopItemParchase(powerUp power)
     {
 
