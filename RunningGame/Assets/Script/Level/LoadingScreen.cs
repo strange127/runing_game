@@ -35,7 +35,7 @@ public class LoadingScreen : MonoBehaviour
     {
         loadingScreen.SetActive(true);
         async = SceneManager.LoadSceneAsync((int)3, LoadSceneMode.Additive);
-        async = SceneManager.UnloadSceneAsync((int)1);
+        async = SceneManager.UnloadSceneAsync((int)2);
         StartCoroutine(GetScenceLoadProgress(level));
        
     }
