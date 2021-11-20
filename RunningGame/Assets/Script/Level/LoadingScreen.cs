@@ -24,7 +24,7 @@ public class LoadingScreen : MonoBehaviour
         }
         loadingScreen.SetActive(false);
         PlayGame = GameObject.Find("Canvas/MainMenu/Play").GetComponent<Button>();
-        PlayGame.onClick.AddListener(() => LoadingScence(1));
+        PlayGame.onClick.AddListener(() => Loaded());
     }
     public void Loaded()
     {

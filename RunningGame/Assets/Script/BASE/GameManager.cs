@@ -77,28 +77,48 @@ public class GameManager : MonoBehaviour
     private List<GameObject> Road = new List<GameObject>();
     void CyclingField(int i,int j)
     {
+            print(i+ j);
 
-        print(i+ j);
-            if (i == 0)
-            {
-                Road.Add(Instantiate(AutoLevelMaking.straightField[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
+        if(AutoLevelMaking.curves[i] == CyclingCurve.Right)
+        {
+            Road.Add(Instantiate(AutoLevelMaking.RightCurve[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
+            Road[j - 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
+            float y = Road[j - 1].GetComponent<Filed>().Roration.y + Road[j - 1].GetComponent<Filed>().curentRotation.y;
+            Road[j].transform.Rotate(0, y, 0);
+        }
+        else if(AutoLevelMaking.curves[i] == CyclingCurve.Left)
+        {
+            Road.Add(Instantiate(AutoLevelMaking.LeftCurve[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
+            Road[j - 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
+            float y = Road[j - 1].GetComponent<Filed>().Roration.y + Road[j - 1].GetComponent<Filed>().curentRotation.y;
+            Road[j].transform.Rotate(0, y, 0);
+        }
+        else if(AutoLevelMaking.curves[i] == CyclingCurve.Straight)
+        {
+            Road.Add(Instantiate(AutoLevelMaking.straightField[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
+            Road[j - 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
+            float y = Road[j - 1].GetComponent<Filed>().Roration.y + Road[j - 1].GetComponent<Filed>().curentRotation.y;
+            Road[j].transform.Rotate(0, y, 0);
+        }
+           // if (i == 0)
+           // {
+
+           //     Road.Add(Instantiate(AutoLevelMaking.straightField[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
       
-                return;
-            }
-            else
-            {
-                Road.Add(Instantiate(AutoLevelMaking.straightField[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
-                Road[j- 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
+           //     return;
+           // }
+           // else
+           // {
+           //     Road.Add(Instantiate(AutoLevelMaking.straightField[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
+           //     Road[j- 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
 
 
-                print(Road[j - 1].GetComponent<Filed>().curentRotation.y);
-                float y = Road[j - 1].GetComponent<Filed>().Roration.y + Road[j- 1].GetComponent<Filed>().curentRotation.y;
-           //     print(y + " " + i);
-                //  Road[i].transform.rotation =Quaternion.eu Road[i - 1].GetComponent<ScriptRotation>().Roration + Road[i - 1].GetComponent<ScriptRotation>().curentRotation;
-                Road[j].transform.Rotate(0, y, 0);
-            }
-        
-
+           //     print(Road[j - 1].GetComponent<Filed>().curentRotation.y);
+           //     float y = Road[j - 1].GetComponent<Filed>().Roration.y + Road[j- 1].GetComponent<Filed>().curentRotation.y;
+           ////     print(y + " " + i);
+           //     //  Road[i].transform.rotation =Quaternion.eu Road[i - 1].GetComponent<ScriptRotation>().Roration + Road[i - 1].GetComponent<ScriptRotation>().curentRotation;
+           //     Road[j].transform.Rotate(0, y, 0);
+           // }
     }
     Vector3 pos ;
     int i;

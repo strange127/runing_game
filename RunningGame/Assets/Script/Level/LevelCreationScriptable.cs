@@ -22,7 +22,6 @@ public class LevelCreationScriptable : ScriptableObject
 
     [Space(5)]
     [Header("Swiming Race")]
-    public GameObject[] SwimingObstackleToSpawn;
     public GameObject[] SwimingFileldField;
 
 
@@ -32,4 +31,6 @@ public class LevelCreationScriptable : ScriptableObject
     [Header("Cycling Race")]
     public CyclingCurve[] curves;
     public GameObject[] straightField;
+    public GameObject[] LeftCurve;
+    public GameObject[] RightCurve;
 }
