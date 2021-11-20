@@ -13,7 +13,7 @@ public class LoadingScreen : MonoBehaviour
     private void Awake()
     {
         loadingScreen.SetActive(true);
-        async = SceneManager.LoadSceneAsync((int)1, LoadSceneMode.Additive);
+        async = SceneManager.LoadSceneAsync((int)ScenceConect.StartMenu, LoadSceneMode.Additive);
         StartCoroutine(StartMenu());
     }
     IEnumerator StartMenu()
@@ -24,18 +24,18 @@ public class LoadingScreen : MonoBehaviour
         }
         loadingScreen.SetActive(false);
         PlayGame = GameObject.Find("Canvas/MainMenu/Play").GetComponent<Button>();
-        PlayGame.onClick.AddListener(() => Loaded());
+        PlayGame.onClick.AddListener(() => LoadingScence(1));
     }
     public void Loaded()
     {
-        async = SceneManager.UnloadSceneAsync((int)1);
-        async = SceneManager.LoadSceneAsync((int)2, LoadSceneMode.Additive);
+        async = SceneManager.LoadSceneAsync((int)ScenceConect.LevelSelction, LoadSceneMode.Additive);
+        async = SceneManager.UnloadSceneAsync((int)ScenceConect.StartMenu);
     }
     public void LoadingScence(int level)
     {
         loadingScreen.SetActive(true);
-        async = SceneManager.LoadSceneAsync((int)3, LoadSceneMode.Additive);
-        async = SceneManager.UnloadSceneAsync((int)1);
+        async = SceneManager.LoadSceneAsync((int)ScenceConect.Game, LoadSceneMode.Additive);
+        async = SceneManager.UnloadSceneAsync((int)ScenceConect.StartMenu);
         StartCoroutine(GetScenceLoadProgress(level));
        
     }
