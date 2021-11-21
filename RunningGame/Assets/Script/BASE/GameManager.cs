@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
     private int FieldID;
     public UiContains UI;
     public Transform SpawnHOlder;
+    public Collider filalline;
+    private List<GameObject> Road = new List<GameObject>();
+    public int Posstion;
+
     private void Awake()
     {
         AutoLevelMaking = null;
@@ -32,7 +36,10 @@ public class GameManager : MonoBehaviour
         PlayerFlowCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerCamera>(); 
         PlayerSpawn();
         SpawnField();
-
+      
+        Road[AutoLevelMaking.LevelState.Length-1].GetComponent<Filed>().pos.gameObject.tag = "Finished";
+      
+        
     }
 
     void RunningField()
@@ -75,11 +82,10 @@ public class GameManager : MonoBehaviour
     //    //}
     //}
 
-    private List<GameObject> Road = new List<GameObject>();
+   
     void CyclingField(int i,int j)
     {
-            print(i+ j);
-
+         
         if(AutoLevelMaking.curves[i] == CyclingCurve.Right)
         {
             Road.Add(Instantiate(AutoLevelMaking.RightCurve[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
@@ -120,6 +126,7 @@ public class GameManager : MonoBehaviour
            //     //  Road[i].transform.rotation =Quaternion.eu Road[i - 1].GetComponent<ScriptRotation>().Roration + Road[i - 1].GetComponent<ScriptRotation>().curentRotation;
            //     Road[j].transform.Rotate(0, y, 0);
            // }
+       
     }
     Vector3 pos ;
     int i;
@@ -191,11 +198,7 @@ public class GameManager : MonoBehaviour
                     i++;
                 }
             }
-
-
-
         }
-
     }
     void PlayerSpawn()
     {

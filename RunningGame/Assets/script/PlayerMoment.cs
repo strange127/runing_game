@@ -38,7 +38,8 @@ public class PlayerMoment : MonoBehaviour
     public float waterdistace;
     public Transform serfacecheck;
     public float diveforce;
-    [SerializeField] Slider oxygenbar;
+    private GameObject oxygenbar;
+    private GameObject Fill;
     #endregion
     [Header("Cycling")]
     #region cycling
@@ -52,11 +53,17 @@ public class PlayerMoment : MonoBehaviour
     #endregion
     private void Start()
     {
+        curotrineconnect = true;
         anime = GetComponentInChildren<Animator>();
-        oxygenbar = GameObject.Find("oxybar").GetComponent<Slider>();
         controler = GetComponent<CharacterController>();
-        GameManager.instance.UI.leftbutton.onClick.AddListener(() => click());
-        GameManager.instance.UI.rightbutton.onClick.AddListener(() => click());
+        if (Type == PlayerType.Player)
+        {
+            oxygenbar = GameObject.Find("Canvas/oxybar");
+            Fill = GameObject.Find("Canvas/oxybar/Fill");
+            oxygenbar.gameObject.SetActive(false);
+        }
+      //  GameManager.instance.UI.leftbutton.onClick.AddListener(() => click());
+       // GameManager.instance.UI.rightbutton.onClick.AddListener(() => click());
     }
     private void Update()
     {
@@ -78,19 +85,20 @@ public class PlayerMoment : MonoBehaviour
         }
         else if (state == PlayerState.Swiming)
         {
-         
-        //    oxygenbar.transform.localScale = new Vector3(6, 6, 6);
-            oxygenbar.enabled = true;
-            
-            
+
+            //oxygenbar.transform.localScale = new Vector3(6, 6, 6);
+            // oxygenbar.gameObject.SetActive(true);
+          
+
             anime.SetBool("Swiming",true);
             anime.SetBool("Running", false);
 
 
 
 #if UNITY_EDITOR
-            if (Input.GetKeyDown(KeyCode.P))
-               speed += 1;
+
+            if (Input.GetKeyDown(KeyCode.P)&&Type == PlayerType.Player)
+               speed += acc;
             
 #endif
 
@@ -98,20 +106,23 @@ public class PlayerMoment : MonoBehaviour
 
 
 
-            if (velocity.y < -3)
-                velocity.y = -3f;
+            if (velocity.y < -4)
+                velocity.y = -4f;
 
             if (transform.position.y < -5)
                 velocity.y += swiminggravity * Time.deltaTime;
             else if (transform.position.y > -5.5)
                 velocity.y -= swiminggravity * Time.deltaTime;
-            Diving();
+
+
             swimmingtimer();
+            Diving();
             SpeedControler();
             controler.Move(velocity * Time.deltaTime);
         }
         else if (state == PlayerState.cycling)
         {
+           
             anime.SetBool("Swiming", false);
             isgrounded = Physics.CheckSphere(groundcheck.position, distnce, groundMask);
             if (isgrounded && velocity.y < 0)
@@ -120,20 +131,16 @@ public class PlayerMoment : MonoBehaviour
             }
             if (clicked == false)
             {
-
-
                 speed -= acc * Time.deltaTime;
                 if (speed < 0)
                     speed = 0;
-
-
-
             }
             Cycling();
             velocity.y += gravity * Time.deltaTime;
             controler.Move(velocity * Time.deltaTime);
 
         }
+        SpeedControler();
     }
 
     private IEnumerator Speed()
@@ -160,8 +167,14 @@ public class PlayerMoment : MonoBehaviour
     {
         if (isgrounded)
         {
+            #if UNITY_EDITOR
             if (Input.GetButtonDown("Jump") && Type == PlayerType.Player)
                 velocity.y = Mathf.Sqrt(jumpHight * -2f * gravity);
+#endif
+            if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && Type == PlayerType.Player)
+            {
+                velocity.y = Mathf.Sqrt(jumpHight * -2f * gravity);
+            }
             else if (Type == PlayerType.AirtificialInteligence)
             {
                 RaycastHit hit;
@@ -179,12 +192,19 @@ public class PlayerMoment : MonoBehaviour
             }
         }
     }
+    bool curotrineconnect = true;
     void Diving()
     {
 
-        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && Type == PlayerType.Player) 
+        if (Type == PlayerType.Player) 
         {
-            speed++;
+            float FILL = (float)speed / maxspeed;
+            //  float FILL = (float)speed / maxspeed;
+            print(FILL);
+           
+            if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+                speed+=acc;
+            Fill.GetComponent<Image>().fillAmount = FILL;
           //  velocity.y -= Mathf.Sqrt(diveforce * -2f * swiminggravity);
         }
         else if (Type == PlayerType.AirtificialInteligence)
@@ -192,18 +212,28 @@ public class PlayerMoment : MonoBehaviour
             int rang = Random.Range(0, 1000);
             if (rang < inteligent) 
             {
-                speed++;        
+                if (curotrineconnect)
+                    StartCoroutine(NPCDivingSpeed());   
             } 
         }
     }
-
+    IEnumerator NPCDivingSpeed()
+    {
+        curotrineconnect = false;
+        yield return new WaitForSeconds(.1f);
+        
+        speed+=acc;
+        curotrineconnect = true;
+    
+    
+    }
     void swimmingtimer()//swimming timer
     {
         //oxygenbar depletion 
         timer += Time.deltaTime;
         if (timer > 0.5)//for how much time
         {
-            speed--; //amount of oxygen
+            speed-= acc; //amount of oxygen
             timer = 0;
         }
     }
@@ -302,7 +332,10 @@ public class PlayerMoment : MonoBehaviour
     {
         if (speed < maxspeed)
         {
-            speed += speedmuliplyer * Time.deltaTime;
+            if (state == PlayerState.Running)
+            {
+                speed += speedmuliplyer * Time.deltaTime;
+            }
 
             if (booster != powerUp.Speedbooster)
             {
@@ -313,9 +346,12 @@ public class PlayerMoment : MonoBehaviour
                 }
 
             }
-           
+            if (speed <= 0)
+            {
+                speed = 0;
+            }
         }
-
+        
         if (booster == powerUp.Speedbooster)
         {
             speed = maxspeed + 2;
@@ -331,26 +367,47 @@ public class PlayerMoment : MonoBehaviour
                 speed = 0f;
             //    print(other.gameObject.GetComponentInChildren<CapsuleCollider>().isTrigger);
             other.gameObject.GetComponentInChildren<CapsuleCollider>().isTrigger = true;
+
         }
-        if (other.CompareTag("ChnageToSwimer"))
+       else if (other.CompareTag("ChnageToSwimer"))
         {
             state = PlayerState.Swiming;
-         
+            if (Type == PlayerType.Player)
+            {
+                oxygenbar.gameObject.SetActive(true);
+            }
+
         }
-        if (other.CompareTag("ChangeToCycling"))
+        else if (other.CompareTag("ChangeToCycling"))
         {
             if(state != PlayerState.cycling)
             {
                 state = PlayerState.cycling;
                 speed = 0;
+                if (Type == PlayerType.Player)
+                {
+                    oxygenbar.gameObject.SetActive(false);
+                }
             }
           
           
             clicked = false;
         }
-        if (other.CompareTag("ChangeToRunner"))
+        else if (other.CompareTag("ChangeToRunner"))
         {
             state = PlayerState.Running;
+            if (Type == PlayerType.Player)
+            {
+                oxygenbar.gameObject.SetActive(false);
+            }
+        }else if (other.CompareTag("Finished"))
+        {
+            GameManager.instance.Posstion++;
+            if(Type== PlayerType.Player)
+            {
+
+                //Open windows panel
+            }
         }
     }
     private void OnControllerColliderHit(ControllerColliderHit power)

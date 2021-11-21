@@ -16,7 +16,7 @@ MonoBehaviour:
   PlayerSpawnPos: {x: 10, y: 0, z: 0}
   MinDistance: 15
   MaxDistance: 20
-  LevelState: 00000000000000000200000002000000020000000200000002000000
+  LevelState: 000000000000000002000000
   ObstacleCount: 0a00000010000000
   RunningObstackleToSpawn:
   - {fileID: 3989314764399396367, guid: 5fdde811a8b539a43be21c969ace6036, type: 3}
@@ -24,7 +24,7 @@ MonoBehaviour:
   - {fileID: 7940015119814366133, guid: 6d6868e5dc95eeb49b0dbfba00d99ef9, type: 3}
   SwimingFileldField:
   - {fileID: 8228847553654101836, guid: 6e1e204a9ae8b0a409e7d1bbeb033f3d, type: 3}
-  curves: 0100000000000000020000000000000001000000
+  curves: 01000000
   straightField:
   - {fileID: 7940015119814366133, guid: b079503b862786847bc0a4992cdb637c, type: 3}
   LeftCurve:
