@@ -123,36 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &130272929
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 130272930}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &130272930
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130272929}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 317.031, y: 841.15027, z: -732.62726}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &213094711
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +388,7 @@ GameObject:
   - component: {fileID: 1133820819}
   - component: {fileID: 1133820823}
   - component: {fileID: 1133820822}
+  - component: {fileID: 1133820824}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -471,8 +442,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AutoLevelMaking: {fileID: 0}
   plalyermoment: {fileID: 0}
-  PlayerSpawnObject: {fileID: 765139122957576980, guid: 476249fcc3eb14b488ca78191ae4df61, type: 3}
+  PlayerSpawnObject: {fileID: 5119269989532996602, guid: ce6a5a1b1b2e6fb48a31d64f95115b46, type: 3}
   PlayerStandingPoint: {fileID: 8283240614504153882, guid: a0a1cbc006033f44bbb5b76a75717a15, type: 3}
+  UI: {fileID: 1133820824}
   SpawnHOlder: {fileID: 1893464120}
 --- !u!82 &1133820822
 AudioSource:
@@ -592,6 +564,23 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b6e24ec87760a8c48bcd827439983f89, type: 3}
   - {fileID: 8300000, guid: debeecf0316c4ba0bad3ef66dd6355e5, type: 3}
   backgroundAudio: {fileID: 1133820822}
+--- !u!114 &1133820824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133820818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432b12ddf4b84a24db26374ba7666f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedbostersaved: 0
+  shildbostersaved: 0
+  noobsticalsaved: 0
+  leftbutton: {fileID: 0}
+  rightbutton: {fileID: 0}
 --- !u!1 &1195271159
 GameObject:
   m_ObjectHideFlags: 0

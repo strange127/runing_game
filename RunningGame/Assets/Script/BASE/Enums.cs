@@ -28,6 +28,13 @@ public enum powerUp
     shield,
     noobsticle
 }
+public enum ScenceConect
+{
+    GameManger =0,
+    StartMenu =1,
+    LevelSelction =2,
+    Game =3
+}
 
 
 

@@ -18,8 +18,8 @@ public class PlayerMoment : MonoBehaviour
     public Vector3 velocity;
     private float timer=0;
 
-
-
+    public Animator anime;
+    public int inteligent =5;
 
     [Header("Running")]
     #region RuningState
@@ -52,7 +52,11 @@ public class PlayerMoment : MonoBehaviour
     #endregion
     private void Start()
     {
+        anime = GetComponentInChildren<Animator>();
+        oxygenbar = GameObject.Find("oxybar").GetComponent<Slider>();
         controler = GetComponent<CharacterController>();
+        GameManager.instance.UI.leftbutton.onClick.AddListener(() => click());
+        GameManager.instance.UI.rightbutton.onClick.AddListener(() => click());
     }
     private void Update()
     {
@@ -60,6 +64,8 @@ public class PlayerMoment : MonoBehaviour
         controler.Move(move * speed * Time.deltaTime);
         if (state == PlayerState.Running)
         {
+            anime.SetBool("Swiming", false);
+            anime.SetBool("Running", true);
             SpeedControler();
             isgrounded = Physics.CheckSphere(groundcheck.position, distnce, groundMask);
             if (isgrounded && velocity.y < 0)
@@ -72,36 +78,41 @@ public class PlayerMoment : MonoBehaviour
         }
         else if (state == PlayerState.Swiming)
         {
-            oxygenbar = GameObject.Find("oxybar").GetComponent<Slider>();
-            oxygenbar.transform.localScale = new Vector3(6, 6, 6);
+         
+        //    oxygenbar.transform.localScale = new Vector3(6, 6, 6);
             oxygenbar.enabled = true;
-            SpeedControler();
-            swimmingtimer();
-            if(Input.touchCount>0 && Input.touches[0].phase == TouchPhase.Began)
-              oxygenbar.value += 3;
             
+            
+            anime.SetBool("Swiming",true);
+            anime.SetBool("Running", false);
+
+
+
 #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.P))
-               oxygenbar.value += 3;
+               speed += 1;
             
 #endif
 
             insarface = Physics.CheckSphere(serfacecheck.position, waterdistace, Watermask);
-            if (oxygenbar.value == 0)
-                speed = 0;
-            
-            if (insarface && velocity.y > 0)
+
+
+
+            if (velocity.y < -3)
                 velocity.y = -3f;
-            
-            if (transform.position.y < -3)
+
+            if (transform.position.y < -5)
                 velocity.y += swiminggravity * Time.deltaTime;
-            else
+            else if (transform.position.y > -5.5)
                 velocity.y -= swiminggravity * Time.deltaTime;
-            //Diving();
+            Diving();
+            swimmingtimer();
+            SpeedControler();
             controler.Move(velocity * Time.deltaTime);
         }
         else if (state == PlayerState.cycling)
         {
+            anime.SetBool("Swiming", false);
             isgrounded = Physics.CheckSphere(groundcheck.position, distnce, groundMask);
             if (isgrounded && velocity.y < 0)
             {
@@ -154,12 +165,12 @@ public class PlayerMoment : MonoBehaviour
             else if (Type == PlayerType.AirtificialInteligence)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, Vector3.forward, out hit, 5f))
+                if (Physics.Raycast(transform.position, Vector3.forward, out hit, 3f))
                 {
                     if (hit.collider.gameObject.CompareTag("Obstakle"))
                     {
-                        int rang = Random.Range(0, 250);
-                        if (rang < 200)
+                        int rang = Random.Range(0, 1000);
+                        if (rang < inteligent)
                         {
                             velocity.y = Mathf.Sqrt(jumpHight * -2f * gravity);
                         }
@@ -168,39 +179,31 @@ public class PlayerMoment : MonoBehaviour
             }
         }
     }
-    //void Diving()
-    //{
-    //    if (insarface)
-    //    {
-    //        if (Input.GetButtonDown("Jump") && Type == PlayerType.Player)
-    //            velocity.y -= Mathf.Sqrt(diveforce * -2f * swiminggravity);
-    //        else if (Type == PlayerType.AirtificialInteligence)
-    //        {
-    //            RaycastHit hit;
-    //            if (Physics.Raycast(transform.position, Vector3.forward, out hit, 1.25f))
-    //            {
-    //                if (hit.collider.gameObject.CompareTag("Obstakle"))
-    //                {
-    //                    int rang = Random.Range(0, 250);
-    //                    if (rang < 10)
-    //                    {
-    //                        velocity.y -= Mathf.Sqrt(diveforce * -2f * swiminggravity);
-    //                    }
-    //                }
-    //            }
-    //        }
-    //    }
-       
+    void Diving()
+    {
 
-    //}
-    
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && Type == PlayerType.Player) 
+        {
+            speed++;
+          //  velocity.y -= Mathf.Sqrt(diveforce * -2f * swiminggravity);
+        }
+        else if (Type == PlayerType.AirtificialInteligence)
+        {
+            int rang = Random.Range(0, 1000);
+            if (rang < inteligent) 
+            {
+                speed++;        
+            } 
+        }
+    }
+
     void swimmingtimer()//swimming timer
     {
         //oxygenbar depletion 
         timer += Time.deltaTime;
         if (timer > 0.5)//for how much time
         {
-            speed-- ; //amount of oxygen
+            speed--; //amount of oxygen
             timer = 0;
         }
     }
@@ -301,26 +304,24 @@ public class PlayerMoment : MonoBehaviour
         {
             speed += speedmuliplyer * Time.deltaTime;
 
-
-            if (speed > maxspeed)
+            if (booster != powerUp.Speedbooster)
             {
-                speed = maxspeed;
+                if (speed > maxspeed)
+                {
+                    speed = maxspeed;
+
+                }
 
             }
-
-            if (booster == powerUp.Speedbooster)
-            {
-                speed = maxspeed + 1;
-            }
+           
         }
-        if (booster == powerUp.none)
+
+        if (booster == powerUp.Speedbooster)
         {
-            if (speed > maxspeed)
-            {
-                speed = maxspeed;
-
-            }
+            speed = maxspeed + 2;
         }
+
+
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -334,12 +335,22 @@ public class PlayerMoment : MonoBehaviour
         if (other.CompareTag("ChnageToSwimer"))
         {
             state = PlayerState.Swiming;
+         
         }
         if (other.CompareTag("ChangeToCycling"))
         {
-            state = PlayerState.cycling;
-            speed = 0;
+            if(state != PlayerState.cycling)
+            {
+                state = PlayerState.cycling;
+                speed = 0;
+            }
+          
+          
             clicked = false;
+        }
+        if (other.CompareTag("ChangeToRunner"))
+        {
+            state = PlayerState.Running;
         }
     }
     private void OnControllerColliderHit(ControllerColliderHit power)
@@ -358,26 +369,7 @@ public class PlayerMoment : MonoBehaviour
                     booster = powerUp.none;
             }
         }
-        //if (power.collider.tag == "nonobs")
-        //{
-        //    Debug.Log("collide");
-        //    Destroy(power.collider.gameObject);
-        //    booster = powerUp.noobsticle;
-
-        //    StartCoroutine(poweruptimer());
-        //}
-        //if (power.collider.CompareTag("speedbooster"))
-        //{
-        //    Destroy(power.collider.gameObject);
-        //    booster = powerUp.Speedbooster;
-        //    StartCoroutine(poweruptimer());
-        //}
-        //if (power.collider.CompareTag("shield"))
-        //{
-        //    Destroy(power.collider.gameObject);
-        //    booster = powerUp.shield;
-        //    StartCoroutine(poweruptimer());
-        //}
+      
     }
    
 
