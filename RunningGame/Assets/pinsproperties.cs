@@ -30,7 +30,16 @@ public class pinsproperties : MonoBehaviour {
         colour = pinimage.color;
         
     }
-
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey("SaveGame")) 
+        {
+            if (level == PlayerPrefs.GetInt("SaveGame"))
+            {
+                mystate = state.current;
+            }
+        }
+    }
     private void Update()
     {
         if (mystate == state.active)

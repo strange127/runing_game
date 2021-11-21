@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public UiContains UI;
     public Transform SpawnHOlder;
     public Collider filalline;
+    public int coin;
+    public int levelLoad;
     private List<GameObject> Road = new List<GameObject>();
     public int Posstion;
 
@@ -27,8 +29,11 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
         MaxPlayer = 5;
-      
 
+        if (PlayerPrefs.HasKey("SaveGame"))
+        {
+            levelLoad = PlayerPrefs.GetInt("SaveGame");
+        }
     }
 
     public void LevelCreate()
@@ -41,7 +46,7 @@ public class GameManager : MonoBehaviour
       
         
     }
-
+    public GameObject Coin;
     void RunningField()
     {
         int obstacklespawnid = Random.Range(0, AutoLevelMaking.RunningObstackleToSpawn.Length);
@@ -56,8 +61,8 @@ public class GameManager : MonoBehaviour
                 float dis = Random.Range(AutoLevelMaking.MinDistance, AutoLevelMaking.MaxDistance);
                 pos = new Vector3(pos.x, pos.y, pos.z + dis);
 
-
-                Instantiate(AutoLevelMaking.RunningObstackleToSpawn[obstacklespawnid], pos, Quaternion.identity, SpawnHOlder);
+                Instantiate(Coin, new Vector3(pos.x, pos.y + 2, pos.z), Quaternion.identity,SpawnHOlder.GetChild(1));
+                Instantiate(AutoLevelMaking.RunningObstackleToSpawn[obstacklespawnid], pos, Quaternion.identity, SpawnHOlder.GetChild(1));
             }
             pos = new Vector3(pos.x, pos.y, postion.z);
         }
@@ -208,11 +213,12 @@ public class GameManager : MonoBehaviour
         {
             pos = new Vector3(pos.x + 10, pos.y, pos.z);
             Vector3 standingpoint = new Vector3(pos.x, pos.y - 2, pos.z);
-            GameObject obj = Instantiate(PlayerSpawnObject, pos, Quaternion.identity);
+            GameObject obj = Instantiate(PlayerSpawnObject, pos, Quaternion.identity,SpawnHOlder.GetChild(2));
             Instantiate(PlayerStandingPoint, standingpoint, Quaternion.identity);
             if (i != playno)
             {
                 obj.GetComponent<PlayerMoment>().Type = PlayerType.AirtificialInteligence;
+                obj.GetComponentInChildren<SkinnedMeshRenderer>().materials[2].color = Color.red;
             }
             else
             {

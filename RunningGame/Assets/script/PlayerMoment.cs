@@ -17,6 +17,7 @@ public class PlayerMoment : MonoBehaviour
     public float speedmuliplyer;
     public Vector3 velocity;
     private float timer=0;
+    public Transform Target;
 
     public Animator anime;
     public int inteligent =5;
@@ -122,6 +123,11 @@ public class PlayerMoment : MonoBehaviour
         }
         else if (state == PlayerState.cycling)
         {
+
+            if (Target)
+            {
+                transform.LookAt(Target.position);
+            }
            
             anime.SetBool("Swiming", false);
             isgrounded = Physics.CheckSphere(groundcheck.position, distnce, groundMask);

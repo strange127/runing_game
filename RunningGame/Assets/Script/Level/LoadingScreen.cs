@@ -8,7 +8,7 @@ public class LoadingScreen : MonoBehaviour
     public LevelCreationScriptable[] selectedLevel;
     public GameObject loadingScreen;
     private Button PlayGame;
-    public int levelLoad;
+
     AsyncOperation async;
     private void Awake()
     {
@@ -33,6 +33,10 @@ public class LoadingScreen : MonoBehaviour
     }
     public void LoadingScence(int level)
     {
+        if (GameManager.instance.levelLoad < level)
+        {
+            PlayerPrefs.SetInt("SaveGame", level);
+        }
         loadingScreen.SetActive(true);
         async = SceneManager.LoadSceneAsync((int)3, LoadSceneMode.Additive);
         async = SceneManager.UnloadSceneAsync((int)2);
