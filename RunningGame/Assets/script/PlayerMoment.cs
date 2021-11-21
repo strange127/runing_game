@@ -18,7 +18,7 @@ public class PlayerMoment : MonoBehaviour
     public Vector3 velocity;
     private float timer=0;
 
-
+    public Animator anime;
     public int inteligent =5;
 
     [Header("Running")]
@@ -52,6 +52,7 @@ public class PlayerMoment : MonoBehaviour
     #endregion
     private void Start()
     {
+        anime = GetComponentInChildren<Animator>();
         oxygenbar = GameObject.Find("oxybar").GetComponent<Slider>();
         controler = GetComponent<CharacterController>();
         GameManager.instance.UI.leftbutton.onClick.AddListener(() => click());
@@ -63,6 +64,8 @@ public class PlayerMoment : MonoBehaviour
         controler.Move(move * speed * Time.deltaTime);
         if (state == PlayerState.Running)
         {
+            anime.SetBool("Swiming", false);
+            anime.SetBool("Running", true);
             SpeedControler();
             isgrounded = Physics.CheckSphere(groundcheck.position, distnce, groundMask);
             if (isgrounded && velocity.y < 0)
@@ -78,11 +81,13 @@ public class PlayerMoment : MonoBehaviour
          
         //    oxygenbar.transform.localScale = new Vector3(6, 6, 6);
             oxygenbar.enabled = true;
-            SpeedControler();
-            swimmingtimer();
-         
             
             
+            anime.SetBool("Swiming",true);
+            anime.SetBool("Running", false);
+
+
+
 #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.P))
                speed += 1;
@@ -90,20 +95,24 @@ public class PlayerMoment : MonoBehaviour
 #endif
 
             insarface = Physics.CheckSphere(serfacecheck.position, waterdistace, Watermask);
-       
-            
-            if (insarface && velocity.y > 0)
+
+
+
+            if (velocity.y < -3)
                 velocity.y = -3f;
-            
-            if (transform.position.y < -3)
+
+            if (transform.position.y < -5)
                 velocity.y += swiminggravity * Time.deltaTime;
-            else if (transform.position.y > -4)
+            else if (transform.position.y > -5.5)
                 velocity.y -= swiminggravity * Time.deltaTime;
             Diving();
+            swimmingtimer();
+            SpeedControler();
             controler.Move(velocity * Time.deltaTime);
         }
         else if (state == PlayerState.cycling)
         {
+            anime.SetBool("Swiming", false);
             isgrounded = Physics.CheckSphere(groundcheck.position, distnce, groundMask);
             if (isgrounded && velocity.y < 0)
             {
@@ -326,13 +335,22 @@ public class PlayerMoment : MonoBehaviour
         if (other.CompareTag("ChnageToSwimer"))
         {
             state = PlayerState.Swiming;
-            speed = 0;
+         
         }
         if (other.CompareTag("ChangeToCycling"))
         {
-            state = PlayerState.cycling;
-            speed = 0;
+            if(state != PlayerState.cycling)
+            {
+                state = PlayerState.cycling;
+                speed = 0;
+            }
+          
+          
             clicked = false;
+        }
+        if (other.CompareTag("ChangeToRunner"))
+        {
+            state = PlayerState.Running;
         }
     }
     private void OnControllerColliderHit(ControllerColliderHit power)
