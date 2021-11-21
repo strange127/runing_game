@@ -5,7 +5,19 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     public int usableitem;
-    
+    public void Item(int value)
+    {
+        if(value == 0)
+        {
+            ShopItemUse(powerUp.shield);
+        }else if (value == 1)
+        {
+            ShopItemUse(powerUp.Speedbooster);
+        }else if(value == 2)
+        {
+
+        }
+    }
     public void ShopItemUse(powerUp power)
     {
         if (usableitem > 0)
