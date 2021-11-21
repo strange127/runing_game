@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Animations;
 public enum state { active, deactive, current }
 public enum region { north,south,west,east}
+public enum map { worldmap,india }
 
 public class pinsproperties : MonoBehaviour { 
 
@@ -13,7 +14,9 @@ public class pinsproperties : MonoBehaviour {
     public Image pinimage;
     public Color colour;
     public state mystate=state.deactive;
+    [SerializeField] private map curmap;
     public Animator anim;
+    [SerializeField] private GameObject panel;
     [SerializeField] private Image india;
     [SerializeField]private Transform pinpointloc;
     [SerializeField] private region regn;
@@ -22,12 +25,15 @@ public class pinsproperties : MonoBehaviour {
  private int pressed =0;
     private void Awake()
     {
+        if (curmap == map.india)
+            india = GameObject.Find("India").GetComponent<Image>();
+        
         anim = gameObject.GetComponent<Animator>();
-        pinimage = gameObject.GetComponent<Image>();
+      //  pinimage = gameObject.GetComponent<Image>();
         pinpointloc = gameObject.GetComponent<Transform>();
         gamemanager = GameObject.Find("GameManager").GetComponent<LoadingScreen>();
-        india = GameObject.Find("India").GetComponent<Image>();
-        colour = pinimage.color;
+       
+       // colour = pinimage.color;
         
     }
 
@@ -38,7 +44,7 @@ public class pinsproperties : MonoBehaviour {
             gameObject.GetComponent<Button>().interactable = true;
             anim.SetBool("currentstate", false);
             anim.SetBool("activestate",true);
-            pinimage.color = new Color32(1, 1, 1, 1);
+           // pinimage.color = new Color32(1, 1, 1, 1);
         }
         if(mystate == state.current)
         {
