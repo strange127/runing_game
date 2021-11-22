@@ -7,7 +7,7 @@ public class PauseManager : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
 
-    public void PauseGame()
+    public void Pause()
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
@@ -21,5 +21,9 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneID);
+    }
+    public void QuitGame()
+    {
+        Debug.Log("Quitting Game");
     }
 }
