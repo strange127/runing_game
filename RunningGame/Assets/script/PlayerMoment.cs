@@ -17,7 +17,7 @@ public class PlayerMoment : MonoBehaviour
     public float speedmuliplyer;
     public Vector3 velocity;
     private float timer=0;
-
+    [SerializeField] GameObject congratspanel;
     public Animator anime;
     public int inteligent =5;
 
@@ -52,9 +52,10 @@ public class PlayerMoment : MonoBehaviour
 
     #endregion
     private void Start()
-    {
+    {   
         curotrineconnect = true;
         anime = GetComponentInChildren<Animator>();
+        congratspanel = GameObject.Find("Completed").GetComponent<GameObject>();
         controler = GetComponent<CharacterController>();
         if (Type == PlayerType.Player)
         {
@@ -141,6 +142,13 @@ public class PlayerMoment : MonoBehaviour
 
         }
         SpeedControler();
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            GameManager.instance.congratspanel.SetActive(true);
+        }
+
+
+
     }
 
     private IEnumerator Speed()
@@ -406,7 +414,7 @@ public class PlayerMoment : MonoBehaviour
             if(Type== PlayerType.Player)
             {
 
-                //Open windows panel
+                GameManager.instance.congratspanel.SetActive(true);
             }
         }
     }

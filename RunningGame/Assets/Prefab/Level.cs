@@ -2,10 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Animations;
 
 public class Level : MonoBehaviour
 {
- public void ModesMenu() {
+    [SerializeField] Animator anim;
+
+
+
+    public void shop()
+    {
+        anim.SetBool("Stop",false);
+    }
+    public void shopback()
+    {
+        anim.SetBool("Stop",true);
+        
+    }
+    public void ModesMenu() {
         SceneManager.LoadScene(0);
     }
 
