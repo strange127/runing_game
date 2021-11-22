@@ -21,7 +21,7 @@ public class PlayerMoment : MonoBehaviour
     public Animator anime;
     public int inteligent =5;
     public float test;
-
+    public Transform Target;
     [Header("Running")]
     #region RuningState
     private bool isgrounded;

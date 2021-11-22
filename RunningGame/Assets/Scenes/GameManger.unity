@@ -615,7 +615,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2812199424867f04ba143c78e6a58ab8, type: 2}
   - {fileID: 0}
   loadingScreen: {fileID: 216823145}
-  levelLoad: 2
 --- !u!4 &1133820820
 Transform:
   m_ObjectHideFlags: 0
@@ -651,7 +650,11 @@ MonoBehaviour:
   UI: {fileID: 1133820824}
   SpawnHOlder: {fileID: 1893464120}
   filalline: {fileID: 0}
+  coin: 0
+  levelLoad: 0
   Posstion: 0
+  test: 0
+  Coin: {fileID: 0}
 --- !u!82 &1133820822
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1624,7 +1627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &8063706507642123442
 MonoBehaviour:
   m_ObjectHideFlags: 0
