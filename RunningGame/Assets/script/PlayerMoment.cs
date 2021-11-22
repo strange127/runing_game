@@ -20,6 +20,7 @@ public class PlayerMoment : MonoBehaviour
     [SerializeField] GameObject congratspanel;
     public Animator anime;
     public int inteligent =5;
+    public float test;
 
     [Header("Running")]
     #region RuningState
@@ -415,6 +416,7 @@ public class PlayerMoment : MonoBehaviour
             {
 
                 GameManager.instance.congratspanel.SetActive(true);
+                test = 123;
             }
         }
     }
