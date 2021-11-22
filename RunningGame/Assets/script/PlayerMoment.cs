@@ -18,7 +18,7 @@ public class PlayerMoment : MonoBehaviour
     public Vector3 velocity;
     private float timer=0;
     public Transform Target;
-
+    public int abc;
     public Animator anime;
     public int inteligent =5;
 

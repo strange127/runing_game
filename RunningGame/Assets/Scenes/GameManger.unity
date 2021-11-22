@@ -509,6 +509,7 @@ MonoBehaviour:
   coin: 0
   levelLoad: 0
   Posstion: 0
+  test: 0
   Coin: {fileID: 0}
 --- !u!82 &1133820822
 AudioSource:
