@@ -17,10 +17,10 @@ public class PlayerMoment : MonoBehaviour
     public float speedmuliplyer;
     public Vector3 velocity;
     private float timer=0;
-    public Transform Target;
-    public int abc;
+    [SerializeField] GameObject congratspanel;
     public Animator anime;
     public int inteligent =5;
+    public float test;
 
     [Header("Running")]
     #region RuningState
@@ -53,9 +53,10 @@ public class PlayerMoment : MonoBehaviour
 
     #endregion
     private void Start()
-    {
+    {   
         curotrineconnect = true;
         anime = GetComponentInChildren<Animator>();
+        congratspanel = GameObject.Find("Completed").GetComponent<GameObject>();
         controler = GetComponent<CharacterController>();
         if (Type == PlayerType.Player)
         {
@@ -123,11 +124,6 @@ public class PlayerMoment : MonoBehaviour
         }
         else if (state == PlayerState.cycling)
         {
-
-            if (Target)
-            {
-                transform.LookAt(Target.position);
-            }
            
             anime.SetBool("Swiming", false);
             isgrounded = Physics.CheckSphere(groundcheck.position, distnce, groundMask);
@@ -147,6 +143,13 @@ public class PlayerMoment : MonoBehaviour
 
         }
         SpeedControler();
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            GameManager.instance.congratspanel.SetActive(true);
+        }
+
+
+
     }
 
     private IEnumerator Speed()
@@ -412,7 +415,8 @@ public class PlayerMoment : MonoBehaviour
             if(Type== PlayerType.Player)
             {
 
-                //Open windows panel
+                GameManager.instance.congratspanel.SetActive(true);
+                test = 123;
             }
         }
     }
