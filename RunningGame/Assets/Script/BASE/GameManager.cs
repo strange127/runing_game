@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector]public PlayerMoment plalyermoment;
     [SerializeField]private GameObject PlayerSpawnObject;
     [SerializeField]private GameObject PlayerStandingPoint;
+    public GameObject congratspanel;
     private PlayerCamera PlayerFlowCamera;
     private float Size;
     private int FieldID;
