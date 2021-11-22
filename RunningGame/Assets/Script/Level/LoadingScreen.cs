@@ -5,23 +5,32 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class LoadingScreen : MonoBehaviour
 {
+    public static LoadingScreen Loading;
     public LevelCreationScriptable[] selectedLevel;
     public GameObject loadingScreen;
     private Button PlayGame;
 
-    AsyncOperation async;
+    public AsyncOperation async;
+
+    public int curentsecne;
+    public int previousscen;
     private void Awake()
     {
+   
+        Loading = this;
         loadingScreen.SetActive(true);
-        async = SceneManager.LoadSceneAsync((int)1, LoadSceneMode.Additive);
+        async = SceneManager.LoadSceneAsync((int)ScenceConect.StartMenu, LoadSceneMode.Additive);
+        previousscen = (int)ScenceConect.StartMenu - 1;
+        curentsecne = (int)ScenceConect.StartMenu;
         StartCoroutine(StartMenu());
     }
-    IEnumerator StartMenu()
+    public IEnumerator StartMenu()
     {
         while (!async.isDone)
         {
             yield return null;
         }
+       // async = SceneManager.UnloadSceneAsync((int)ScenceConect.LevelSelction);
         loadingScreen.SetActive(false);
         PlayGame = GameObject.Find("Canvas/MainMenu/Play").GetComponent<Button>();
         PlayGame.onClick.AddListener(() => Loaded());
@@ -29,7 +38,20 @@ public class LoadingScreen : MonoBehaviour
     public void Loaded()
     {
         async = SceneManager.UnloadSceneAsync((int)1);
-        async = SceneManager.LoadSceneAsync((int)2, LoadSceneMode.Additive);
+        async = SceneManager.LoadSceneAsync((int)ScenceConect.LevelSelction, LoadSceneMode.Additive);
+        
+        curentsecne = (int)ScenceConect.LevelSelction;
+        previousscen = (int)ScenceConect.LevelSelction - 1;
+        StartCoroutine(LoadLevelSelction());
+    }
+    IEnumerator LoadLevelSelction()
+    {
+        while (!async.isDone)
+        {
+            yield return null;
+        }
+        Button buton = GameObject.Find("LevelSelctionCanvas/Panel-worldmap/worldmap/Backbutton").GetComponent<Button>();
+        buton.onClick.AddListener(() => BackButton());
     }
     public void LoadingScence(int level)
     {
@@ -39,10 +61,19 @@ public class LoadingScreen : MonoBehaviour
         }
         loadingScreen.SetActive(true);
         async = SceneManager.LoadSceneAsync((int)3, LoadSceneMode.Additive);
+        curentsecne = (int)3;
+        previousscen = 2;
         async = SceneManager.UnloadSceneAsync((int)2);
         StartCoroutine(GetScenceLoadProgress(level));
        
     }
+    public void BackButton()
+    {
+        async = SceneManager.UnloadSceneAsync(curentsecne);
+        async = SceneManager.LoadSceneAsync(previousscen, LoadSceneMode.Additive);
+        StartCoroutine(StartMenu());
+    }
+    
     public IEnumerator GetScenceLoadProgress(int lvel)
     {
         while (!async.isDone)

@@ -17,7 +17,6 @@ public class PlayerMoment : MonoBehaviour
     public float speedmuliplyer;
     public Vector3 velocity;
     private float timer=0;
-    [SerializeField] GameObject congratspanel;
     public Animator anime;
     public int inteligent =5;
     public float test;
@@ -56,7 +55,7 @@ public class PlayerMoment : MonoBehaviour
     {   
         curotrineconnect = true;
         anime = GetComponentInChildren<Animator>();
-        congratspanel = GameObject.Find("Completed").GetComponent<GameObject>();
+        //congratspanel = GameObject.Find("Completed").GetComponent<GameObject>();
         controler = GetComponent<CharacterController>();
         if (Type == PlayerType.Player)
         {
@@ -64,8 +63,10 @@ public class PlayerMoment : MonoBehaviour
             Fill = GameObject.Find("Canvas/oxybar/Fill");
             oxygenbar.gameObject.SetActive(false);
         }
-      //  GameManager.instance.UI.leftbutton.onClick.AddListener(() => click());
-       // GameManager.instance.UI.rightbutton.onClick.AddListener(() => click());
+        GameManager.instance.UI.leftbutton.onClick.AddListener(() => click());
+        GameManager.instance.UI.rightbutton.onClick.AddListener(() => click());
+        //GameManager.instance.UI.leftbutton.gameObject.SetActive(false);
+        //GameManager.instance.UI.rightbutton.gameObject.SetActive(false);
     }
     private void Update()
     {
@@ -314,6 +315,7 @@ public class PlayerMoment : MonoBehaviour
 
             else if (Type == PlayerType.AirtificialInteligence)
             {
+
                 if (clicked == true)
                 {
                     StartCoroutine(Speed());
@@ -396,6 +398,8 @@ public class PlayerMoment : MonoBehaviour
                 if (Type == PlayerType.Player)
                 {
                     oxygenbar.gameObject.SetActive(false);
+                    GameManager.instance.UI.leftbutton.gameObject.SetActive(true);
+                    GameManager.instance.UI.rightbutton.gameObject.SetActive(true);
                 }
             }
           

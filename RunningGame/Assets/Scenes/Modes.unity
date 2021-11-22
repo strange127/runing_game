@@ -5643,6 +5643,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -5763,7 +5767,7 @@ GameObject:
   - component: {fileID: 1760668161}
   - component: {fileID: 1760668160}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: LevelSelctionCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
