@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public int levelLoad;
     private List<GameObject> Road = new List<GameObject>();
     public int Posstion;
-    public int test;
+
 
     private void Awake()
     {

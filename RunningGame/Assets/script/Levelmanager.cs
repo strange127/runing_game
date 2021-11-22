@@ -10,7 +10,7 @@ public class Levelmanager : MonoBehaviour
     [SerializeField] Transform india;
     [SerializeField] GameObject paneloff;
     [SerializeField] GameObject panelon;
-    AsyncOperation async;
+
  
     // Start is called before the first frame update
     private void Awake()
@@ -48,10 +48,11 @@ public class Levelmanager : MonoBehaviour
     }
     public void worldback()
     {
-        async = SceneManager.UnloadSceneAsync((int)2);
-        async = SceneManager.LoadSceneAsync((int)1);
+        LoadingScreen.Loading.async = SceneManager.LoadSceneAsync((int)ScenceConect.StartMenu,LoadSceneMode.Additive);
+       /// StartCoroutine(StartMenu());
+      
     }
-
+   
     // Update is called once per frame
     void Update()
     {
