@@ -88,39 +88,41 @@ public class PlayerMoment : MonoBehaviour
         }
         else if (state == PlayerState.Swiming)
         {
-
-            //oxygenbar.transform.localScale = new Vector3(6, 6, 6);
-            // oxygenbar.gameObject.SetActive(true);
-          
+            velocity.y = -7;
 
             anime.SetBool("Swiming",true);
             anime.SetBool("Running", false);
-
-
-
 #if UNITY_EDITOR
 
             if (Input.GetKeyDown(KeyCode.P)&&Type == PlayerType.Player)
                speed += acc;
             
 #endif
-
-            insarface = Physics.CheckSphere(serfacecheck.position, waterdistace, Watermask);
-
-
             if (clicked == false)
             {
                 speed -= acc * Time.deltaTime;
                 if (speed < 0)
                     speed = 0;
             }
-            if (velocity.y < -3)
-                velocity.y = -3f;
+            if (transform.localPosition.y < -9)
+            {
+                velocity.y = 2;
+            }
+            else
+            {
+                velocity.y = -2;
+            }
+            //else if(transform.position.y < -9)
+            //{
+            //    velocity.y -= swiminggravity * Time.deltaTime;
+            //}
+            //if (velocity.y < -3)
+            //    velocity.y = -3f;
 
-            if (transform.position.y < -5)
-                velocity.y += swiminggravity * Time.deltaTime;
-            else if (transform.position.y > -5.5)
-                velocity.y -= swiminggravity * Time.deltaTime;
+            //if (transform.position.y < -5)
+            //    velocity.y += swiminggravity * Time.deltaTime;
+            //else if (transform.position.y > -5.5)
+            //    velocity.y -= swiminggravity * Time.deltaTime;
             Diving();
             controler.Move(velocity * Time.deltaTime);
 
@@ -229,10 +231,12 @@ public class PlayerMoment : MonoBehaviour
         {
             float FILL = (float)speed / maxspeed;
             //  float FILL = (float)speed / maxspeed;
-            print(FILL);
-           
-            if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-                speed+=acc;
+      
+            if (speed < maxspeed)
+            {
+                if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+                    speed += acc;
+            }
             Fill.GetComponent<Image>().fillAmount = FILL;
           //  velocity.y -= Mathf.Sqrt(diveforce * -2f * swiminggravity);
         }
@@ -254,43 +258,56 @@ public class PlayerMoment : MonoBehaviour
             
         }
     }
-    IEnumerator NPCDivingSpeed()
-    {
-        curotrineconnect = false;
-        yield return new WaitForSeconds(.1f);
-        
-        speed+=acc;
-        curotrineconnect = true;
-    
-    
-    }
-    void swimmingtimer()//swimming timer
-    {
-        //oxygenbar depletion 
-        timer += Time.deltaTime;
-        if (timer > 0.5)//for how much time
-        {
-            speed-= acc; //amount of oxygen
-            timer = 0;
-        }
-    }
+
 
     void Sensour()
     {
         RaycastHit hit;
         Vector3 startingpos = this.transform.position;
 
+        //if ((Physics.Raycast(startingpos, Quaternion.AngleAxis(0, transform.up) * transform.forward, out hit, sensorLenth)))
+        //{
+        //    if (!hit.collider.CompareTag("Coin"))
+        //    {
+                
+        //        if (Physics.Raycast(startingpos, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
+        //        {
+
+        //            controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
+        //            return;
+        //        }
+        //        else if (Physics.Raycast(startingpos, Quaternion.AngleAxis(-sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
+        //        {
+        //            controler.transform.Rotate(0, angleofrotation * Time.deltaTime, 0);
+        //            return;
+
+        //        }
+        //        controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
+
+        //    }
+        //}
 
 
-    
         if (Physics.Raycast(startingpos, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
         {
+            if (!hit.collider.CompareTag("Coin"))
+            {
 
-            controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
+                controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
+            }
+
+
         }
-        if (Physics.Raycast(startingpos, Quaternion.AngleAxis(-sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
+        else if (Physics.Raycast(startingpos, Quaternion.AngleAxis(-sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
         {
-            controler.transform.Rotate(0, angleofrotation * Time.deltaTime, 0);
+
+            if (!hit.collider.CompareTag("Coin"))
+            {
+
+                controler.transform.Rotate(0, angleofrotation * Time.deltaTime, 0);
+            }
+
+
 
         }
 
@@ -423,10 +440,12 @@ public class PlayerMoment : MonoBehaviour
 
                 state = PlayerState.cycling;
                 speed = 0;
-                Instantiate(Cyclingobj, transform.position, Quaternion.identity, this.transform);
+                GameObject obj= Instantiate(Cyclingobj, transform.position, Quaternion.identity, this.transform);
+           //     transform.rotation = Quaternion.Euler(Vector3.zero);
                 transform.GetChild(0).gameObject.SetActive(false);
                 if (Type == PlayerType.Player)
                 {
+                    //make player color green
                     oxygenbar.gameObject.SetActive(false);
                     GameManager.instance.UI.leftbutton.gameObject.SetActive(true);
                     GameManager.instance.UI.rightbutton.gameObject.SetActive(true);

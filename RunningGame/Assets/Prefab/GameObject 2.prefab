@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1905694133669559987}
   - component: {fileID: 2493368687586484086}
   - component: {fileID: 7800848829564636019}
-  - component: {fileID: 397094203182212024}
   m_Layer: 0
   m_Name: GameObject 2
   m_TagString: Player
@@ -83,7 +82,7 @@ MonoBehaviour:
   groundcheck: {fileID: 1905694133669559987}
   jumpHight: 5
   insarface: 0
-  swiminggravity: 9
+  swiminggravity: -1
   Watermask:
     serializedVersion: 2
     m_Bits: 16
@@ -93,21 +92,8 @@ MonoBehaviour:
   angleofrotation: 10
   acc: 0.5
   clicked: 0
-  sensourAngle: 30
-  sensorLenth: 20
---- !u!65 &397094203182212024
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5119269989532996602}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.7042193, z: 1}
-  m_Center: {x: 0, y: 0.85729104, z: 0}
+  sensourAngle: 20
+  sensorLenth: 30
 --- !u!1001 &2280724058849373033
 PrefabInstance:
   m_ObjectHideFlags: 0

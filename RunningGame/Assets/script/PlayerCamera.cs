@@ -8,13 +8,17 @@ public class PlayerCamera : MonoBehaviour
     public float CameraMomentSpeed;
     public float Ycontroler;
     public float ZControler;
-    public void Update()
+    public void Start()
     {
+        StartCoroutine(CameraSet());
+    }
+    IEnumerator CameraSet()
+    {
+        yield return new WaitUntil(() => Target);
         if (Target)
         {
             this.transform.parent = Target.transform;
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(Target.transform.position.x, Target.transform.position.y + Ycontroler, Target.transform.position.z + ZControler), CameraMomentSpeed);
+            transform.localPosition = new Vector3(0, Ycontroler, ZControler);
         }
-
     }
 }
