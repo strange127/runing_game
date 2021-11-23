@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.1/staging' branch; Version is '2021.1.7f1 (d91830b65d9b) revision 14227504'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home Single Language; OS build 19042.1288; Version 2009; 64bit' Language: 'en' Physical Memory: 16205 MB
+OS: 'Windows 10 Home Single Language; OS build 19042.1348; Version 2009; 64bit' Language: 'en' Physical Memory: 16205 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -11,19 +11,19 @@ C:\Program Files\Unity\Hub\Editor\2021.1.7f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/koush/OneDrive/Desktop/UnityCreate Games/olampick Game
+C:/Users/koush/OneDrive/Desktop/onlinestoge/runing_game/RunningGame
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65425
-Successfully changed project path to: C:/Users/koush/OneDrive/Desktop/UnityCreate Games/olampick Game
-C:/Users/koush/OneDrive/Desktop/UnityCreate Games/olampick Game
+63220
+Successfully changed project path to: C:/Users/koush/OneDrive/Desktop/onlinestoge/runing_game/RunningGame
+C:/Users/koush/OneDrive/Desktop/onlinestoge/runing_game/RunningGame
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 79.77 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 94.88 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.7f1 (d91830b65d9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/koush/OneDrive/Desktop/UnityCreate Games/olampick Game/Assets
+[Subsystems] Discovering subsystems at path C:/Users/koush/OneDrive/Desktop/onlinestoge/runing_game/RunningGame/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -35,55 +35,1653 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56352
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56196
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003345 seconds.
+Registered in 0.001691 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 77.05 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 85.58 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.859 seconds
+- Completed reload, in  1.439 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002577 seconds.
+Registered in 0.005523 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\UnityCreate Games\olampick Game\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\UnityCreate Games\olampick Game\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.846 seconds
+- Completed reload, in  0.938 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2783 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 114.4 MB.
-System memory in use after: 114.5 MB.
+Unloading 3380 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 133.8 MB.
+System memory in use after: 133.9 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3240.
-Total: 1.723200 ms (FindLiveObjects: 0.191200 ms CreateObjectMapping: 0.106100 ms MarkObjects: 1.365400 ms  DeleteObjects: 0.060000 ms)
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3802.
+Total: 2.579900 ms (FindLiveObjects: 0.223400 ms CreateObjectMapping: 0.134200 ms MarkObjects: 2.088900 ms  DeleteObjects: 0.107700 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/STADIUM/Material.004.mat
-  artifactKey: Guid(c9018a99c7e0aea44aa5ef97a745ade0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/STADIUM/Material.004.mat using Guid(c9018a99c7e0aea44aa5ef97a745ade0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8334024c9231e8828d4945e398e1158') in 0.142098 seconds 
+  path: Assets/Prefab/CYCle.prefab
+  artifactKey: Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/CYCle.prefab using Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03850534ab428796c9e1c36b5fababbc') in 0.117968 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000712 seconds.
-  path: Assets/STADIUM/Material.008.mat
-  artifactKey: Guid(7f51697bb9f5e9546b147f28920041c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/STADIUM/Material.008.mat using Guid(7f51697bb9f5e9546b147f28920041c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86b773992ce31124b6bdcf60979e8293') in 0.015359 seconds 
+  Time since last request: 0.000313 seconds.
+  path: Assets/Prefab/GameObject 2.prefab
+  artifactKey: Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 2.prefab using Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc563b261ec255ee555d12890f147281') in 0.033657 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005700 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.919 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.5 MB.
+System memory in use after: 147.7 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3812.
+Total: 2.552600 ms (FindLiveObjects: 0.300600 ms CreateObjectMapping: 0.190900 ms MarkObjects: 2.001000 ms  DeleteObjects: 0.059400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006746 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.025 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.5 MB.
+System memory in use after: 147.7 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3814.
+Total: 2.287900 ms (FindLiveObjects: 0.230000 ms CreateObjectMapping: 0.191800 ms MarkObjects: 1.822400 ms  DeleteObjects: 0.042900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006552 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.979 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.6 MB.
+System memory in use after: 147.8 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3816.
+Total: 2.798500 ms (FindLiveObjects: 0.267100 ms CreateObjectMapping: 0.169700 ms MarkObjects: 2.259500 ms  DeleteObjects: 0.101400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005907 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.023 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.01 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.6 MB.
+System memory in use after: 147.8 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3818.
+Total: 2.391100 ms (FindLiveObjects: 0.249200 ms CreateObjectMapping: 0.155700 ms MarkObjects: 1.938500 ms  DeleteObjects: 0.046800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005624 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.026 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.6 MB.
+System memory in use after: 147.8 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3820.
+Total: 2.734000 ms (FindLiveObjects: 0.271000 ms CreateObjectMapping: 0.162900 ms MarkObjects: 2.230200 ms  DeleteObjects: 0.069000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006238 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.024 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.6 MB.
+System memory in use after: 147.8 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3822.
+Total: 2.687900 ms (FindLiveObjects: 0.274800 ms CreateObjectMapping: 0.196900 ms MarkObjects: 2.162100 ms  DeleteObjects: 0.051800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005835 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.976 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.6 MB.
+System memory in use after: 147.8 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3824.
+Total: 2.173400 ms (FindLiveObjects: 0.243300 ms CreateObjectMapping: 0.151900 ms MarkObjects: 1.674700 ms  DeleteObjects: 0.102400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000466 seconds.
-  path: Assets/STADIUM/Material.006.mat
-  artifactKey: Guid(636b92e24d17b134dbc6acea1537d8de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/STADIUM/Material.006.mat using Guid(636b92e24d17b134dbc6acea1537d8de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcac6fa34c4cfc6ebb9c56e94ec84fa6') in 0.009809 seconds 
+  Time since last request: 1751.506542 seconds.
+  path: Assets/Prefab/GameObject 2.prefab
+  artifactKey: Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 2.prefab using Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96dbcb73628a2f0f5dc27906f540281c') in 0.103515 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.224104 seconds.
+  path: Assets/Prefab/GameObject 2.prefab
+  artifactKey: Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 2.prefab using Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e042a50f18b7ecea43bca72f5b179e96') in 0.030542 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.602772 seconds.
+  path: Assets/Prefab/GameObject 2.prefab
+  artifactKey: Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 2.prefab using Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e447fa8af869793d652c403409b709c9') in 0.030775 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005714 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.060 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.94 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.6 MB.
+System memory in use after: 147.8 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3827.
+Total: 2.694200 ms (FindLiveObjects: 0.281100 ms CreateObjectMapping: 0.189800 ms MarkObjects: 2.163100 ms  DeleteObjects: 0.058900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 216.458075 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70a597ca5d7ef21564ecdecd87d69af2') in 0.223745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.578017 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9baca35af4d513337fd3ec707214482') in 0.068585 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.139530 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '414a22c0996e6dd262800b7c755f4cad') in 0.124113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.323186 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5cef956277ceff4d0ee3334bdb8a399') in 0.101942 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.114493 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd47f609e40ec3e697789ec033e04153e') in 0.095151 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.710984 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a658ad109ebc0a932d2c83bccdbece86') in 0.113298 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.099780 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9b3ef88a2a6930ac719e45a5c381dde') in 0.093776 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.961762 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6820f433de4c1909b75804b695494855') in 0.070835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.730453 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95c59d818cc429e809d5a08739cde293') in 0.057433 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.403483 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e0fc5dccd624744eb4a6285e41dafc1') in 0.088579 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.222185 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fec793cfb12e1467e83f8618d402fd74') in 0.090132 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.000328 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c310ae808ba79f0c55ad9490b09654c6') in 0.262388 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.203571 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '251d55cb126c051347ab707d8e7212b9') in 0.095821 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.720221 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffc07e4ce3ff371b990ce8e0d3f5f459') in 0.090785 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.554307 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a31bc703d0380b1c4de63a1b3784ab4') in 0.099739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.755382 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de99c1372cf26121b2a51ae87e084fc6') in 0.091275 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.695882 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a058e3c00cbbb7f82ee3bbbb7c19f870') in 0.093431 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.538597 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f456ff8e6c135bb248177c5cbe9e9538') in 0.098197 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.918149 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08a34c96d5187de0ad96f08449e89520') in 0.076757 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.037875 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26f251decbc3bb311d63295e8fa5ff2c') in 0.092440 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.046884 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '673bd0537cdba852b282ec6631ab37cd') in 0.094677 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005834 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.040 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.8 MB.
+System memory in use after: 148.0 MB.
+
+Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 3831.
+Total: 2.509900 ms (FindLiveObjects: 0.314600 ms CreateObjectMapping: 0.297300 ms MarkObjects: 1.842300 ms  DeleteObjects: 0.054500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 165.786356 seconds.
+  path: Assets/Prefab/GameObject 2.prefab
+  artifactKey: Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 2.prefab using Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5586b7d18de1aa1f64dcad39ac25cb3d') in 0.074346 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 94.990861 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c1e3a972297d88e3ce7cdd92cd7b9f1') in 0.090284 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.883543 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f99cf5ae495b64eb014c60a35a3337a6') in 0.094098 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.757964 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c967daefe506967b7e7504e9851a44a') in 0.099190 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.981155 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20cd2a2369b94824865a30dcb404c9b9') in 0.090820 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.978821 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87257135d6416ba706b048b7bbc7a51c') in 0.074810 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.030531 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90e931a7c68b6128fa1b503cd3140dbd') in 0.093801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.171579 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d3623915154f9f2d70803a955742b83') in 0.077637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.153926 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba2c7a8f61dc8b360ba864f06b9974aa') in 0.088455 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.550434 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdee50fb7f2ceb7edacfedb97bc5b069') in 0.090384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.347584 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dd1c8d7d6403e301c6b93f998dc8553') in 0.094219 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.103317 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e96a780d44be8e949f6e75248ddf8fe') in 0.090970 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.024906 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '654b42adcfac39191edeb40d4a00f2b0') in 0.093072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.916283 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '004092bf38e4fcd489caa83bdfae2005') in 0.090334 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.617331 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12f3a82ab4591b17d40ee53b473f913c') in 0.098730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.711775 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08d9eb77633d4b154f43bc2d8965ce40') in 0.092107 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.929804 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58f3cdef3676fc624bec523e03f6dd04') in 0.178096 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.838836 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b06a347343700280c181e766dee8584a') in 0.133542 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.949728 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd8c554c4e450018a2ca3cad40aed5b') in 0.118488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.755465 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b147a3da087022e6218ca7c400067ac8') in 0.132391 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.448564 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e33e7e474189bd7dcae106547c3ff7a') in 0.130341 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.110625 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f745d91a93f84bfb23b956dacc2d36e0') in 0.128334 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.509342 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d3c74cb3931eb46ddaf15165aad35b1') in 0.128665 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.480916 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd22c777bddcdd550eff7148eee7edcad') in 0.202825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.263523 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c15370fcbf916f6f4305c92aea9240b5') in 0.124646 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005994 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.003 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.0 MB.
+System memory in use after: 148.2 MB.
+
+Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 3834.
+Total: 2.168600 ms (FindLiveObjects: 0.223900 ms CreateObjectMapping: 0.171400 ms MarkObjects: 1.728500 ms  DeleteObjects: 0.044100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 104.533051 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '823a6e4de1d41cdd96b8af85a0329dfc') in 0.136928 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.689005 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01f78c8402f9a408a663d4951e3d37ad') in 0.092817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.207274 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e23084268ba03abcdd050743cc02177c') in 0.090635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.122505 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4b54acd9230a11223864eddd0301cb6') in 0.090793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.795957 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2077a8ef0ff4331cfbeef2e780b2fe14') in 0.096447 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.972681 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd445fbdc386f643f6f79f871caa8d7b9') in 0.094350 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.717664 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71763ed27a4bf0485113932705a86853') in 0.082315 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.541985 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab2ae907e5e582a0612c9c3b01ce76eb') in 0.082325 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005972 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.026 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.1 MB.
+System memory in use after: 148.3 MB.
+
+Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 3837.
+Total: 2.376600 ms (FindLiveObjects: 0.286500 ms CreateObjectMapping: 0.259500 ms MarkObjects: 1.777200 ms  DeleteObjects: 0.052200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 92.698523 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd086ad99f1679f5a639e1b24aee0103') in 0.135518 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.277152 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3e372a845b724ba7de921c4cba70572') in 0.094429 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.285945 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7e8f9f1ff958013ea338684407d7023') in 0.077276 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.553321 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa2f9f1b7752de99aadaa8b624246a95') in 0.098844 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007720 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.050 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.1 MB.
+System memory in use after: 148.3 MB.
+
+Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 3840.
+Total: 2.482000 ms (FindLiveObjects: 0.216300 ms CreateObjectMapping: 0.146100 ms MarkObjects: 2.006400 ms  DeleteObjects: 0.112600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005571 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.007 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.1 MB.
+System memory in use after: 148.3 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3842.
+Total: 2.369900 ms (FindLiveObjects: 0.248900 ms CreateObjectMapping: 0.184300 ms MarkObjects: 1.886600 ms  DeleteObjects: 0.048900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005602 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.036 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.1 MB.
+System memory in use after: 148.3 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3844.
+Total: 2.161900 ms (FindLiveObjects: 0.225000 ms CreateObjectMapping: 0.145900 ms MarkObjects: 1.684400 ms  DeleteObjects: 0.105700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 585.256984 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24a0add0511f6130e0055037eb64f4db') in 0.144175 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.638314 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ac4d58a8e637e3e54163388bc05cbdc') in 0.093876 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.637777 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f3c9f4f0eac3bd4d17d260f5911a9dc') in 0.079876 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.003395 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7729e5f7ba6d32a62f22e8a0a84d6368') in 0.122826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.813150 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '256c360547072ea9d6887646e70bc511') in 0.105430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.365344 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72de425b4032404265ef99d0d6393b67') in 0.101838 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.307701 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b42c6f64f0e78609359b39b8e978c5bc') in 0.101818 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.162712 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd6e31e812bc119f3ddb08bf2b04b459') in 0.082231 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.417080 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dcdc802ad78f4ee6395edd343e8fd6d') in 0.093256 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.766712 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31e79ae8c482769e8534210151a13889') in 0.091352 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.365002 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb2e1f772e1760b879f037c753077c04') in 0.091525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.949623 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c85c6112bf225b6b80e7aea7a55b6926') in 0.096690 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.396769 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da4bb680161ace8c24bc131e58e0b89c') in 0.114579 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.787838 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea642a5abcde20c2a1a2be4f088a389e') in 0.095460 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.395908 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74f90f130f6886f18e66d66db92e8f4e') in 0.128057 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.287029 seconds.
+  path: Assets/Content/Level/Lvl-1 1.asset
+  artifactKey: Guid(2812199424867f04ba143c78e6a58ab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Content/Level/Lvl-1 1.asset using Guid(2812199424867f04ba143c78e6a58ab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff137d50aa45fd91fddb8cd494d2e427') in 0.015936 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 63.096799 seconds.
+  path: Assets/Model/Bicycle Anime_10.blend
+  artifactKey: Guid(f9bfbef2039edba4aaffe7b5ef2f95b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Model/Bicycle Anime_10.blend using Guid(f9bfbef2039edba4aaffe7b5ef2f95b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8ec73f02415c5c64c3b5a652ec8b149') in 0.162752 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Model/Bicycle Anime_11.fbx
+  artifactKey: Guid(efa0e2c428f85ce489f9225b88bef89f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Model/Bicycle Anime_11.fbx using Guid(efa0e2c428f85ce489f9225b88bef89f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a6e1a62fc00da115e3c07194d87e198') in 0.193246 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Model/cYCLE.prefab
+  artifactKey: Guid(e14b9394f13338a4a846796eaf6a226a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Model/cYCLE.prefab using Guid(e14b9394f13338a4a846796eaf6a226a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea8204b3344dd3d20ab03b4f8e4a0884') in 0.032412 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Model/JumpingAnimSets.fbx
+  artifactKey: Guid(b86e453a61869644c9599ccd452c94f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Model/JumpingAnimSets.fbx using Guid(b86e453a61869644c9599ccd452c94f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72d4fd6452c75552920fcd9008253690') in 0.005402 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006230 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.109 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.6 MB.
+System memory in use after: 148.8 MB.
+
+Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 3884.
+Total: 2.328800 ms (FindLiveObjects: 0.235100 ms CreateObjectMapping: 0.169100 ms MarkObjects: 1.874400 ms  DeleteObjects: 0.049400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 11.087423 seconds.
+  path: Assets/Prefab/GameObject 2.prefab
+  artifactKey: Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 2.prefab using Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ea12a27604950307f5bc5e0bf25bdb1') in 0.078179 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006340 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.075 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.6 MB.
+System memory in use after: 148.8 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3887.
+Total: 2.493400 ms (FindLiveObjects: 0.262100 ms CreateObjectMapping: 0.263200 ms MarkObjects: 1.903300 ms  DeleteObjects: 0.063900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 66.948247 seconds.
+  path: Assets/Prefab/GameObject 2.prefab
+  artifactKey: Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 2.prefab using Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bb22363c732072a414c5cda588b44af') in 0.078291 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007946 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.335 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.6 MB.
+System memory in use after: 148.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3890.
+Total: 2.119900 ms (FindLiveObjects: 0.238700 ms CreateObjectMapping: 0.148600 ms MarkObjects: 1.623900 ms  DeleteObjects: 0.107900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005614 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.039 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.6 MB.
+System memory in use after: 148.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3892.
+Total: 2.067300 ms (FindLiveObjects: 0.276800 ms CreateObjectMapping: 0.160300 ms MarkObjects: 1.559000 ms  DeleteObjects: 0.070600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006002 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.059 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.93 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.7 MB.
+System memory in use after: 148.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3894.
+Total: 2.959200 ms (FindLiveObjects: 0.292800 ms CreateObjectMapping: 0.332400 ms MarkObjects: 2.270300 ms  DeleteObjects: 0.062900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 144.947050 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c97c40cfbac62fb0f74dfa9d70d8f10a') in 0.119628 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.208317 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b014553cf6bc064ea6b72f473515481') in 0.089778 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.976272 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '459f34e8d83f54aee26d0f6892f6d0dc') in 0.103926 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.529709 seconds.
+  path: Assets/Prefab/GameObject 1.prefab
+  artifactKey: Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 1.prefab using Guid(6e1e204a9ae8b0a409e7d1bbeb033f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fe552ac6066ceebaa3b29cdcdb90fee') in 0.097345 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005984 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.36 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.065 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.7 MB.
+System memory in use after: 148.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3897.
+Total: 2.728600 ms (FindLiveObjects: 0.345300 ms CreateObjectMapping: 0.145600 ms MarkObjects: 2.131300 ms  DeleteObjects: 0.105400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006214 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.049 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.7 MB.
+System memory in use after: 148.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3899.
+Total: 2.394000 ms (FindLiveObjects: 0.272800 ms CreateObjectMapping: 0.159600 ms MarkObjects: 1.857400 ms  DeleteObjects: 0.103400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006769 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.144 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.7 MB.
+System memory in use after: 148.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3901.
+Total: 3.136800 ms (FindLiveObjects: 0.241300 ms CreateObjectMapping: 0.149100 ms MarkObjects: 2.611300 ms  DeleteObjects: 0.133900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006095 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.068 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.7 MB.
+System memory in use after: 148.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3903.
+Total: 2.378800 ms (FindLiveObjects: 0.235100 ms CreateObjectMapping: 0.134500 ms MarkObjects: 1.917300 ms  DeleteObjects: 0.091100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005650 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.099 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.7 MB.
+System memory in use after: 148.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3905.
+Total: 2.481500 ms (FindLiveObjects: 0.308000 ms CreateObjectMapping: 0.172800 ms MarkObjects: 1.900100 ms  DeleteObjects: 0.099800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005534 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.118 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.7 MB.
+System memory in use after: 148.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3907.
+Total: 2.215900 ms (FindLiveObjects: 0.263700 ms CreateObjectMapping: 0.152500 ms MarkObjects: 1.737500 ms  DeleteObjects: 0.061400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005856 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.104 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.7 MB.
+System memory in use after: 148.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3909.
+Total: 2.404500 ms (FindLiveObjects: 0.333900 ms CreateObjectMapping: 0.161400 ms MarkObjects: 1.847500 ms  DeleteObjects: 0.060600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005911 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.128 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.7 MB.
+System memory in use after: 148.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3911.
+Total: 3.352600 ms (FindLiveObjects: 0.234500 ms CreateObjectMapping: 0.154800 ms MarkObjects: 2.831500 ms  DeleteObjects: 0.130500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005752 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.143 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.7 MB.
+System memory in use after: 148.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3913.
+Total: 2.180000 ms (FindLiveObjects: 0.279300 ms CreateObjectMapping: 0.164100 ms MarkObjects: 1.658400 ms  DeleteObjects: 0.077500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006699 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.229 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.7 MB.
+System memory in use after: 148.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3915.
+Total: 2.376900 ms (FindLiveObjects: 0.254400 ms CreateObjectMapping: 0.234200 ms MarkObjects: 1.838900 ms  DeleteObjects: 0.048400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 1244.213486 seconds.
+  path: Assets/Prefab/CYCle.prefab
+  artifactKey: Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/CYCle.prefab using Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a45d2166f5b020e15b1a7f5bc56754d9') in 0.096552 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.023803 seconds.
+  path: Assets/Prefab/CYCle.prefab
+  artifactKey: Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/CYCle.prefab using Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce44f5863aba27c1337a6db460f93fd8') in 0.032894 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.792546 seconds.
+  path: Assets/Prefab/CYCle.prefab
+  artifactKey: Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/CYCle.prefab using Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5afc4176cc46e2250bb8f8683a4ac75') in 0.029595 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.974708 seconds.
+  path: Assets/Prefab/CYCle.prefab
+  artifactKey: Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/CYCle.prefab using Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1a6baace551bf520181712886888cc2') in 0.028800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.028847 seconds.
+  path: Assets/Prefab/CYCle.prefab
+  artifactKey: Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/CYCle.prefab using Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67d7179274aad1e502df1e22acb11127') in 0.031356 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.714695 seconds.
+  path: Assets/Prefab/CYCle.prefab
+  artifactKey: Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/CYCle.prefab using Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96920d50a0a171f338f03bebf5581ad0') in 0.028463 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.912408 seconds.
+  path: Assets/Prefab/CYCle.prefab
+  artifactKey: Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/CYCle.prefab using Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de7f2f1ee5983c40b485da98698b1bbb') in 0.027300 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.045195 seconds.
+  path: Assets/Prefab/CYCle.prefab
+  artifactKey: Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/CYCle.prefab using Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be869d2cb34cb4de0936416be52a8bea') in 0.028575 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005872 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.238 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.93 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.0 MB.
+System memory in use after: 149.2 MB.
+
+Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 3918.
+Total: 2.793500 ms (FindLiveObjects: 0.271100 ms CreateObjectMapping: 0.176000 ms MarkObjects: 2.288200 ms  DeleteObjects: 0.057300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 70.749398 seconds.
+  path: Assets/Prefab/CYCle.prefab
+  artifactKey: Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/CYCle.prefab using Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab0387da4dad92aba4d1eaf0065c5cf5') in 0.071581 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 29.022265 seconds.
+  path: Assets/Prefab/GameObject 2.prefab
+  artifactKey: Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 2.prefab using Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad9e6f4c99a452a03c1b1292a3a6e397') in 0.032305 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.165472 seconds.
+  path: Assets/Prefab/GameObject 2.prefab
+  artifactKey: Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 2.prefab using Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cda69fddb5eef922347f79d642b0b12') in 0.033916 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.628856 seconds.
+  path: Assets/Prefab/GameObject 2.prefab
+  artifactKey: Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GameObject 2.prefab using Guid(ce6a5a1b1b2e6fb48a31d64f95115b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cd74060cbb9bb76e3891c97af024a45') in 0.038641 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006165 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.153 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.0 MB.
+System memory in use after: 149.2 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3921.
+Total: 2.575800 ms (FindLiveObjects: 0.340200 ms CreateObjectMapping: 0.247000 ms MarkObjects: 1.871100 ms  DeleteObjects: 0.116800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005495 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.156 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.0 MB.
+System memory in use after: 149.2 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3923.
+Total: 2.232600 ms (FindLiveObjects: 0.240500 ms CreateObjectMapping: 0.171100 ms MarkObjects: 1.734600 ms  DeleteObjects: 0.085500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005569 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.138 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.0 MB.
+System memory in use after: 149.2 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3925.
+Total: 2.265800 ms (FindLiveObjects: 0.231500 ms CreateObjectMapping: 0.158900 ms MarkObjects: 1.812500 ms  DeleteObjects: 0.062200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 542.159262 seconds.
+  path: Assets/Prefab/CYCle.prefab
+  artifactKey: Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/CYCle.prefab using Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5f670de8310302a7348441d725e6d85') in 0.100774 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.475738 seconds.
+  path: Assets/Prefab/CYCle.prefab
+  artifactKey: Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/CYCle.prefab using Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '093bbca238c0e45d89da5b93499c6ef9') in 0.054636 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.186182 seconds.
+  path: Assets/Prefab/CYCle.prefab
+  artifactKey: Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/CYCle.prefab using Guid(b9b7f2527ff8ad64e90dd47550899042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49179a794cc38fc4c270ee139b4e8c54') in 0.049489 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005647 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.201 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.0 MB.
+System memory in use after: 149.2 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3928.
+Total: 2.339600 ms (FindLiveObjects: 0.222000 ms CreateObjectMapping: 0.157500 ms MarkObjects: 1.855700 ms  DeleteObjects: 0.103800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005696 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.165 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.0 MB.
+System memory in use after: 149.2 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3930.
+Total: 2.677500 ms (FindLiveObjects: 0.289500 ms CreateObjectMapping: 0.144900 ms MarkObjects: 2.182500 ms  DeleteObjects: 0.059900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005762 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.171 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.0 MB.
+System memory in use after: 149.2 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3932.
+Total: 2.392400 ms (FindLiveObjects: 0.251500 ms CreateObjectMapping: 0.156300 ms MarkObjects: 1.885300 ms  DeleteObjects: 0.075500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005953 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.129 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.0 MB.
+System memory in use after: 149.2 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3934.
+Total: 2.315700 ms (FindLiveObjects: 0.233100 ms CreateObjectMapping: 0.162600 ms MarkObjects: 1.827000 ms  DeleteObjects: 0.091900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 12.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.1 MB.
+System memory in use after: 84.3 MB.
+
+Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 3934.
+Total: 3.306900 ms (FindLiveObjects: 0.271800 ms CreateObjectMapping: 0.166700 ms MarkObjects: 2.810000 ms  DeleteObjects: 0.057100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006001 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.354 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.0 MB.
+System memory in use after: 149.2 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3936.
+Total: 2.649300 ms (FindLiveObjects: 0.278800 ms CreateObjectMapping: 0.148900 ms MarkObjects: 2.168800 ms  DeleteObjects: 0.051800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 3431.159616 seconds.
+  path: Assets/Content/Level/Lvl-1 1.asset
+  artifactKey: Guid(2812199424867f04ba143c78e6a58ab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Content/Level/Lvl-1 1.asset using Guid(2812199424867f04ba143c78e6a58ab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae848d8afb716922f31e4cf82a7a3632') in 0.037814 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006244 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koush\OneDrive\Desktop\onlinestoge\runing_game\RunningGame\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.667 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.0 MB.
+System memory in use after: 149.2 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3938.
+Total: 2.547100 ms (FindLiveObjects: 0.232000 ms CreateObjectMapping: 0.137700 ms MarkObjects: 2.131200 ms  DeleteObjects: 0.045200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

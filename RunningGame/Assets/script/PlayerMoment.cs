@@ -17,10 +17,9 @@ public class PlayerMoment : MonoBehaviour
     public float speedmuliplyer;
     public Vector3 velocity;
     private float timer=0;
-    [SerializeField] GameObject congratspanel;
     public Animator anime;
     public int inteligent =5;
-    public float test;
+    public GameObject Cyclingobj;
     public Transform Target;
     [Header("Running")]
     #region RuningState
@@ -56,7 +55,7 @@ public class PlayerMoment : MonoBehaviour
     {   
         curotrineconnect = true;
         anime = GetComponentInChildren<Animator>();
-        congratspanel = GameObject.Find("Completed").GetComponent<GameObject>();
+        //congratspanel = GameObject.Find("Completed").GetComponent<GameObject>();
         controler = GetComponent<CharacterController>();
         if (Type == PlayerType.Player)
         {
@@ -64,8 +63,10 @@ public class PlayerMoment : MonoBehaviour
             Fill = GameObject.Find("Canvas/oxybar/Fill");
             oxygenbar.gameObject.SetActive(false);
         }
-      //  GameManager.instance.UI.leftbutton.onClick.AddListener(() => click());
-       // GameManager.instance.UI.rightbutton.onClick.AddListener(() => click());
+        GameManager.instance.UI.leftbutton.onClick.AddListener(() => click());
+        GameManager.instance.UI.rightbutton.onClick.AddListener(() => click());
+        //GameManager.instance.UI.leftbutton.gameObject.SetActive(false);
+        //GameManager.instance.UI.rightbutton.gameObject.SetActive(false);
     }
     private void Update()
     {
@@ -87,40 +88,47 @@ public class PlayerMoment : MonoBehaviour
         }
         else if (state == PlayerState.Swiming)
         {
-
-            //oxygenbar.transform.localScale = new Vector3(6, 6, 6);
-            // oxygenbar.gameObject.SetActive(true);
-          
+            velocity.y = -7;
 
             anime.SetBool("Swiming",true);
             anime.SetBool("Running", false);
-
-
-
 #if UNITY_EDITOR
 
             if (Input.GetKeyDown(KeyCode.P)&&Type == PlayerType.Player)
                speed += acc;
             
 #endif
+            if (clicked == false)
+            {
+                speed -= acc * Time.deltaTime;
+                if (speed < 0)
+                    speed = 0;
+            }
+            if (transform.localPosition.y < -9)
+            {
+                velocity.y = 2;
+            }
+            else
+            {
+                velocity.y = -2;
+            }
+            //else if(transform.position.y < -9)
+            //{
+            //    velocity.y -= swiminggravity * Time.deltaTime;
+            //}
+            //if (velocity.y < -3)
+            //    velocity.y = -3f;
 
-            insarface = Physics.CheckSphere(serfacecheck.position, waterdistace, Watermask);
-
-
-
-            if (velocity.y < -4)
-                velocity.y = -4f;
-
-            if (transform.position.y < -5)
-                velocity.y += swiminggravity * Time.deltaTime;
-            else if (transform.position.y > -5.5)
-                velocity.y -= swiminggravity * Time.deltaTime;
-
-
-            swimmingtimer();
+            //if (transform.position.y < -5)
+            //    velocity.y += swiminggravity * Time.deltaTime;
+            //else if (transform.position.y > -5.5)
+            //    velocity.y -= swiminggravity * Time.deltaTime;
             Diving();
-            SpeedControler();
             controler.Move(velocity * Time.deltaTime);
+
+
+          //  swimmingtimer();
+           
         }
         else if (state == PlayerState.cycling)
         {
@@ -176,13 +184,19 @@ public class PlayerMoment : MonoBehaviour
     {
         if (isgrounded)
         {
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             if (Input.GetButtonDown("Jump") && Type == PlayerType.Player)
+            {
+                anime.SetBool("Jump", true);
                 velocity.y = Mathf.Sqrt(jumpHight * -2f * gravity);
+                StartCoroutine(jumpstop());
+            }
 #endif
             if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && Type == PlayerType.Player)
             {
+                anime.SetBool("Jump", true);
                 velocity.y = Mathf.Sqrt(jumpHight * -2f * gravity);
+                StartCoroutine(jumpstop());
             }
             else if (Type == PlayerType.AirtificialInteligence)
             {
@@ -194,12 +208,20 @@ public class PlayerMoment : MonoBehaviour
                         int rang = Random.Range(0, 1000);
                         if (rang < inteligent)
                         {
+                            anime.SetBool("Jump", true);
                             velocity.y = Mathf.Sqrt(jumpHight * -2f * gravity);
+                            StartCoroutine(jumpstop());
                         }
                     }
                 }
             }
         }
+    }
+    IEnumerator jumpstop()
+    {
+        yield return new WaitForSeconds(1.3f);
+
+        anime.SetBool("Jump", false);
     }
     bool curotrineconnect = true;
     void Diving()
@@ -209,60 +231,83 @@ public class PlayerMoment : MonoBehaviour
         {
             float FILL = (float)speed / maxspeed;
             //  float FILL = (float)speed / maxspeed;
-            print(FILL);
-           
-            if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-                speed+=acc;
+      
+            if (speed < maxspeed)
+            {
+                if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+                    speed += acc;
+            }
             Fill.GetComponent<Image>().fillAmount = FILL;
           //  velocity.y -= Mathf.Sqrt(diveforce * -2f * swiminggravity);
         }
         else if (Type == PlayerType.AirtificialInteligence)
         {
             int rang = Random.Range(0, 1000);
-            if (rang < inteligent) 
-            {
-                if (curotrineconnect)
-                    StartCoroutine(NPCDivingSpeed());   
-            } 
+           
+           if (rang < inteligent)
+           {
+                clicked = true;
+                if (speed < maxspeed)
+                {
+                    speed += acc;
+
+                }
+           }
+                //if (curotrineconnect)
+                //    StartCoroutine(NPCDivingSpeed());   
+            
         }
     }
-    IEnumerator NPCDivingSpeed()
-    {
-        curotrineconnect = false;
-        yield return new WaitForSeconds(.1f);
-        
-        speed+=acc;
-        curotrineconnect = true;
-    
-    
-    }
-    void swimmingtimer()//swimming timer
-    {
-        //oxygenbar depletion 
-        timer += Time.deltaTime;
-        if (timer > 0.5)//for how much time
-        {
-            speed-= acc; //amount of oxygen
-            timer = 0;
-        }
-    }
+
 
     void Sensour()
     {
         RaycastHit hit;
         Vector3 startingpos = this.transform.position;
 
+        //if ((Physics.Raycast(startingpos, Quaternion.AngleAxis(0, transform.up) * transform.forward, out hit, sensorLenth)))
+        //{
+        //    if (!hit.collider.CompareTag("Coin"))
+        //    {
+                
+        //        if (Physics.Raycast(startingpos, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
+        //        {
+
+        //            controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
+        //            return;
+        //        }
+        //        else if (Physics.Raycast(startingpos, Quaternion.AngleAxis(-sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
+        //        {
+        //            controler.transform.Rotate(0, angleofrotation * Time.deltaTime, 0);
+        //            return;
+
+        //        }
+        //        controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
+
+        //    }
+        //}
 
 
-    
         if (Physics.Raycast(startingpos, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
         {
+            if (!hit.collider.CompareTag("Coin"))
+            {
 
-            controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
+                controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
+            }
+
+
         }
-        if (Physics.Raycast(startingpos, Quaternion.AngleAxis(-sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
+        else if (Physics.Raycast(startingpos, Quaternion.AngleAxis(-sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
         {
-            controler.transform.Rotate(0, angleofrotation * Time.deltaTime, 0);
+
+            if (!hit.collider.CompareTag("Coin"))
+            {
+
+                controler.transform.Rotate(0, angleofrotation * Time.deltaTime, 0);
+            }
+
+
 
         }
 
@@ -314,6 +359,7 @@ public class PlayerMoment : MonoBehaviour
 
             else if (Type == PlayerType.AirtificialInteligence)
             {
+
                 if (clicked == true)
                 {
                     StartCoroutine(Speed());
@@ -321,8 +367,8 @@ public class PlayerMoment : MonoBehaviour
                 }
                 else
                 {
-                    int range = Random.Range(0, 200);
-                    if (range < 1)
+                    int range = Random.Range(0, 1000);
+                    if (range < inteligent)
                     {
                         clicked = true;
                         if (speed < maxspeed)
@@ -357,7 +403,7 @@ public class PlayerMoment : MonoBehaviour
             }
             if (speed <= 0)
             {
-                speed = 0;
+                speed = 1;
             }
         }
         
@@ -391,11 +437,18 @@ public class PlayerMoment : MonoBehaviour
         {
             if(state != PlayerState.cycling)
             {
+
                 state = PlayerState.cycling;
                 speed = 0;
+                GameObject obj= Instantiate(Cyclingobj, transform.position, Quaternion.identity, this.transform);
+           //     transform.rotation = Quaternion.Euler(Vector3.zero);
+                transform.GetChild(0).gameObject.SetActive(false);
                 if (Type == PlayerType.Player)
                 {
+                    //make player color green
                     oxygenbar.gameObject.SetActive(false);
+                    GameManager.instance.UI.leftbutton.gameObject.SetActive(true);
+                    GameManager.instance.UI.rightbutton.gameObject.SetActive(true);
                 }
             }
           
@@ -414,9 +467,9 @@ public class PlayerMoment : MonoBehaviour
             GameManager.instance.Posstion++;
             if(Type== PlayerType.Player)
             {
-
+                
                 GameManager.instance.congratspanel.SetActive(true);
-                test = 123;
+                PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
             }
         }
     }
@@ -435,6 +488,17 @@ public class PlayerMoment : MonoBehaviour
                 if (power.collider == null)
                     booster = powerUp.none;
             }
+        }
+        else if (power.collider.CompareTag("Coin"))
+        {
+            if (Type == PlayerType.Player)
+                GameManager.instance.coin++;
+            foreach (var item in power.collider.GetComponent<Coin>().player)
+            { 
+                item.Target = null;
+            }
+            Destroy(power.collider.gameObject);
+
         }
       
     }

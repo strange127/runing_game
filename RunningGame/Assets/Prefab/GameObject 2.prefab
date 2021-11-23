@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1905694133669559987}
   - component: {fileID: 2493368687586484086}
   - component: {fileID: 7800848829564636019}
-  - component: {fileID: 397094203182212024}
   m_Layer: 0
   m_Name: GameObject 2
   m_TagString: Player
@@ -28,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5119269989532996602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 61.175762, y: 2.9681923, z: 116.96638}
-  m_LocalScale: {x: 2.51, y: 2.54, z: 2.5}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 1741902464012651650}
   m_Father: {fileID: 0}
@@ -72,7 +71,9 @@ MonoBehaviour:
   speedmuliplyer: 2
   velocity: {x: 0, y: 0, z: 0}
   anime: {fileID: 0}
-  inteligent: 5
+  inteligent: 50
+  Cyclingobj: {fileID: 3643132923497633188, guid: b9b7f2527ff8ad64e90dd47550899042, type: 3}
+  Target: {fileID: 0}
   gravity: -9
   groundMask:
     serializedVersion: 2
@@ -81,32 +82,18 @@ MonoBehaviour:
   groundcheck: {fileID: 1905694133669559987}
   jumpHight: 5
   insarface: 0
-  swiminggravity: 9
+  swiminggravity: -1
   Watermask:
     serializedVersion: 2
     m_Bits: 16
   waterdistace: 0.2
   serfacecheck: {fileID: 1905694133669559987}
   diveforce: 3
-  oxygenbar: {fileID: 0}
   angleofrotation: 10
   acc: 0.5
   clicked: 0
-  sensourAngle: 30
-  sensorLenth: 20
---- !u!65 &397094203182212024
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5119269989532996602}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.7042193, z: 1}
-  m_Center: {x: 0, y: 0.85729104, z: 0}
+  sensourAngle: 20
+  sensorLenth: 30
 --- !u!1001 &2280724058849373033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -161,6 +148,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d5d049241c90ae946b2a225d09905824, type: 3}
       propertyPath: m_Name
       value: Player3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5d049241c90ae946b2a225d09905824, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: d5d049241c90ae946b2a225d09905824, type: 3}
       propertyPath: m_Controller
