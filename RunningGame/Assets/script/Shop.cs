@@ -29,14 +29,17 @@ public class Shop : MonoBehaviour
             //play bostuseitemsound
             if (power == powerUp.shield && PlayerPrefs.GetInt("shildbooster") > 0)
             {
+                GameManager.instance.plalyermoment.booster = powerUp.shield;
                 StartCoroutine(poweruptimer(Duration.shildduration));
             }
             else if (power == powerUp.Speedbooster  && PlayerPrefs.GetInt("Speedbooster") > 0)
             {
+                GameManager.instance.plalyermoment.booster = powerUp.Speedbooster;
                 StartCoroutine(poweruptimer(Duration.bostduratio));
             }
             else if (power == powerUp.noobsticle && PlayerPrefs.GetInt("noobsticle") > 0)
             {
+                GameManager.instance.plalyermoment.booster = powerUp.noobsticle;
                 StartCoroutine(poweruptimer(Duration.noobsticaleduration));
             }
         }

@@ -72,7 +72,9 @@ MonoBehaviour:
   speedmuliplyer: 2
   velocity: {x: 0, y: 0, z: 0}
   anime: {fileID: 0}
-  inteligent: 5
+  inteligent: 50
+  Cyclingobj: {fileID: 3643132923497633188, guid: b9b7f2527ff8ad64e90dd47550899042, type: 3}
+  Target: {fileID: 0}
   gravity: -9
   groundMask:
     serializedVersion: 2
@@ -88,7 +90,6 @@ MonoBehaviour:
   waterdistace: 0.2
   serfacecheck: {fileID: 1905694133669559987}
   diveforce: 3
-  oxygenbar: {fileID: 0}
   angleofrotation: 10
   acc: 0.5
   clicked: 0
@@ -161,6 +162,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d5d049241c90ae946b2a225d09905824, type: 3}
       propertyPath: m_Name
       value: Player3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5d049241c90ae946b2a225d09905824, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: d5d049241c90ae946b2a225d09905824, type: 3}
       propertyPath: m_Controller

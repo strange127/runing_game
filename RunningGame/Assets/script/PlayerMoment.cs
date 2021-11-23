@@ -19,7 +19,7 @@ public class PlayerMoment : MonoBehaviour
     private float timer=0;
     public Animator anime;
     public int inteligent =5;
-    public float test;
+    public GameObject Cyclingobj;
     public Transform Target;
     [Header("Running")]
     #region RuningState
@@ -323,8 +323,8 @@ public class PlayerMoment : MonoBehaviour
                 }
                 else
                 {
-                    int range = Random.Range(0, 200);
-                    if (range < 1)
+                    int range = Random.Range(0, 1000);
+                    if (range < inteligent)
                     {
                         clicked = true;
                         if (speed < maxspeed)
@@ -359,7 +359,7 @@ public class PlayerMoment : MonoBehaviour
             }
             if (speed <= 0)
             {
-                speed = 0;
+                speed = 1;
             }
         }
         
@@ -393,8 +393,11 @@ public class PlayerMoment : MonoBehaviour
         {
             if(state != PlayerState.cycling)
             {
+
                 state = PlayerState.cycling;
                 speed = 0;
+                Instantiate(Cyclingobj, transform.position, Quaternion.identity, this.transform);
+                transform.GetChild(0).gameObject.SetActive(false);
                 if (Type == PlayerType.Player)
                 {
                     oxygenbar.gameObject.SetActive(false);
@@ -418,9 +421,9 @@ public class PlayerMoment : MonoBehaviour
             GameManager.instance.Posstion++;
             if(Type== PlayerType.Player)
             {
-
+                
                 GameManager.instance.congratspanel.SetActive(true);
-                test = 123;
+                PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
             }
         }
     }
@@ -439,6 +442,17 @@ public class PlayerMoment : MonoBehaviour
                 if (power.collider == null)
                     booster = powerUp.none;
             }
+        }
+        else if (power.collider.CompareTag("Coin"))
+        {
+            if (Type == PlayerType.Player)
+                GameManager.instance.coin++;
+            foreach (var item in power.collider.GetComponent<Coin>().player)
+            { 
+                item.Target = null;
+            }
+            Destroy(power.collider.gameObject);
+
         }
       
     }

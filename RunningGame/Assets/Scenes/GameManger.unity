@@ -840,6 +840,7 @@ GameObject:
   - component: {fileID: 1133820823}
   - component: {fileID: 1133820822}
   - component: {fileID: 1133820824}
+  - component: {fileID: 1133820825}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1039,6 +1040,19 @@ MonoBehaviour:
   noobsticalsaved: 0
   leftbutton: {fileID: 676576424}
   rightbutton: {fileID: 860674533}
+--- !u!114 &1133820825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133820818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 409218f5fcec2f24db85d116b3873699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orientation: 3
 --- !u!1 &1175293154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,7 +1325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  CameraMomentSpeed: 0.6
+  CameraMomentSpeed: 1
   Ycontroler: 10
   ZControler: -10
 --- !u!81 &1776121542

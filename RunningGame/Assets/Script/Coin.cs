@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    private List<PlayerMoment> player = new List<PlayerMoment>();
+    public List<PlayerMoment> player = new List<PlayerMoment>();
     private void OnTriggerEnter(Collider other)
     {
         if(other.GetComponent<PlayerMoment>().Type == PlayerType.AirtificialInteligence && other.GetComponent<PlayerMoment>().Target == null)
@@ -13,14 +13,5 @@ public class Coin : MonoBehaviour
             player.Add(other.GetComponent<PlayerMoment>());
         }
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        GameManager.instance.coin++;
-        foreach (var item in player)
-        {
-            item.Target = null;
-        }
-        //play sound
-        Destroy(this.gameObject);
-    }
+
 }

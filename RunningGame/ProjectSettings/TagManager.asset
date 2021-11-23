@@ -11,6 +11,7 @@ TagManager:
   - ChangeToCycling
   - ChangeToRunner
   - Finished
+  - Coin
   layers:
   - Default
   - TransparentFX
