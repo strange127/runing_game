@@ -65,6 +65,8 @@ public class PlayerMoment : MonoBehaviour
         }
         GameManager.instance.UI.leftbutton.onClick.AddListener(() => click());
         GameManager.instance.UI.rightbutton.onClick.AddListener(() => click());
+        sensorLenth = Random.Range(35, 50);
+        sensourAngle = Random.Range(35, 45);
         //GameManager.instance.UI.leftbutton.gameObject.SetActive(false);
         //GameManager.instance.UI.rightbutton.gameObject.SetActive(false);
     }
@@ -259,11 +261,11 @@ public class PlayerMoment : MonoBehaviour
         }
     }
 
-
+    public Transform pos;
     void Sensour()
     {
         RaycastHit hit;
-        Vector3 startingpos = this.transform.position;
+  
 
         //if ((Physics.Raycast(startingpos, Quaternion.AngleAxis(0, transform.up) * transform.forward, out hit, sensorLenth)))
         //{
@@ -288,7 +290,7 @@ public class PlayerMoment : MonoBehaviour
         //}
 
 
-        if (Physics.Raycast(startingpos, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
+        if (Physics.Raycast(pos.position, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
         {
             if (!hit.collider.CompareTag("Coin"))
             {
@@ -298,7 +300,7 @@ public class PlayerMoment : MonoBehaviour
 
 
         }
-        else if (Physics.Raycast(startingpos, Quaternion.AngleAxis(-sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
+        else if (Physics.Raycast(pos.position, Quaternion.AngleAxis(-sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
         {
 
             if (!hit.collider.CompareTag("Coin"))

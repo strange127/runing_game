@@ -711,7 +711,6 @@ MonoBehaviour:
   selectedLevel:
   - {fileID: 11400000, guid: 2812199424867f04ba143c78e6a58ab8, type: 2}
   - {fileID: 0}
-  loadingScreen: {fileID: 0}
   curentsecne: 0
   previousscen: 0
 --- !u!4 &1133820820
@@ -1671,7 +1670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000013255603, y: -15.905}
+  m_AnchoredPosition: {x: -0.000013255603, y: -15.905029}
   m_SizeDelta: {x: 49.978, y: 5.3166}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &8063706507319242749
@@ -1700,7 +1699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &8063706507642123442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1750,7 +1749,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10.912842, y: 0.30671692}
+  m_AnchoredPosition: {x: -10.912842, y: 0.30670166}
   m_SizeDelta: {x: -514.9153, y: -170.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8063706507642123444
