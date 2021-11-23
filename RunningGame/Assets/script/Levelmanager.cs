@@ -10,7 +10,8 @@ public class Levelmanager : MonoBehaviour
     [SerializeField] Transform india;
     [SerializeField] GameObject paneloff;
     [SerializeField] GameObject panelon;
-
+    public pinsproperties selectedpin;
+    AsyncOperation async;
  
     // Start is called before the first frame update
     private void Awake()
@@ -41,18 +42,24 @@ public class Levelmanager : MonoBehaviour
         {
             panelon.SetActive(true);
             paneloff.SetActive(false);
+
         }
         if (india.localScale.x > 1.5)
-          india.localScale = new Vector3(1.3f, 1.3f, 1.3f);
+        {
+            selectedpin.big = false;
+            selectedpin.pressed = 0;
+            india.localScale = new Vector3(1.3f, 1.3f, 1.3f);
+            Debug.Log(selectedpin.big);
+        }
+        
 
     }
     public void worldback()
     {
-        LoadingScreen.Loading.async = SceneManager.LoadSceneAsync((int)ScenceConect.StartMenu,LoadSceneMode.Additive);
-       /// StartCoroutine(StartMenu());
-      
+        async = SceneManager.UnloadSceneAsync((int)2);
+        async = SceneManager.LoadSceneAsync((int)1);
     }
-   
+
     // Update is called once per frame
     void Update()
     {
