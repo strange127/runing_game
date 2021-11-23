@@ -52,15 +52,15 @@ public class SoundSetting : MonoBehaviour
     }
     void UpdateButtonIcon()
     {
-        if (ismuted)
-        {
-            soundOn.enabled = false;
-            soundOff.enabled = true; 
-        }else
-        {
-            soundOn.enabled = true;
-            soundOff.enabled = false;
-        }
+        //if (ismuted)
+        //{
+        //    soundOn.enabled = false;
+        //    soundOff.enabled = true; 
+        //}else
+        //{
+        //    soundOn.enabled = true;
+        //    soundOff.enabled = false;
+        //}
     }
 
     public void Save()
