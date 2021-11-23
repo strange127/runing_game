@@ -7,7 +7,7 @@ public class LoadingScreen : MonoBehaviour
 {
     public static LoadingScreen Loading;
     public LevelCreationScriptable[] selectedLevel;
-    public GameObject loadingScreen;
+   
     private Button PlayGame;
 
     public AsyncOperation async;
@@ -18,7 +18,6 @@ public class LoadingScreen : MonoBehaviour
     {
    
         Loading = this;
-        loadingScreen.SetActive(true);
         async = SceneManager.LoadSceneAsync((int)ScenceConect.StartMenu, LoadSceneMode.Additive);
         previousscen = (int)ScenceConect.StartMenu - 1;
         curentsecne = (int)ScenceConect.StartMenu;
@@ -31,7 +30,7 @@ public class LoadingScreen : MonoBehaviour
             yield return null;
         }
        // async = SceneManager.UnloadSceneAsync((int)ScenceConect.LevelSelction);
-        loadingScreen.SetActive(false);
+   //     loadingScreen.SetActive(false);
         PlayGame = GameObject.Find("Canvas/MainMenu/Play").GetComponent<Button>();
         PlayGame.onClick.AddListener(() => Loaded());
     }
@@ -59,7 +58,7 @@ public class LoadingScreen : MonoBehaviour
         {
             PlayerPrefs.SetInt("SaveGame", level);
         }
-        loadingScreen.SetActive(true);
+  //      loadingScreen.SetActive(true);
         async = SceneManager.LoadSceneAsync((int)3, LoadSceneMode.Additive);
         curentsecne = (int)3;
         previousscen = 2;
@@ -92,7 +91,7 @@ public class LoadingScreen : MonoBehaviour
         }
      
 
-        loadingScreen.SetActive(false);
+      //  loadingScreen.SetActive(false);
 
     }
 }
