@@ -29,13 +29,8 @@ public class Levelmanager : MonoBehaviour
         }
         
     }
-
-  
-
-    void Start()
-    {
-        
-    }
+ 
+    
    public void back()
     {
         if (india.localScale.x < 1.5)
@@ -54,15 +49,5 @@ public class Levelmanager : MonoBehaviour
         
 
     }
-    public void worldback()
-    {
-        async = SceneManager.UnloadSceneAsync((int)2);
-        async = SceneManager.LoadSceneAsync((int)1);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

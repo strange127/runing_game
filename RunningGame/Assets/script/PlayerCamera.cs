@@ -11,6 +11,10 @@ public class PlayerCamera : MonoBehaviour
     public void Update()
     {
         if (Target)
+        {
+            this.transform.parent = Target.transform;
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(Target.transform.position.x, Target.transform.position.y + Ycontroler, Target.transform.position.z + ZControler), CameraMomentSpeed);
+        }
+
     }
 }

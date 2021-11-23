@@ -1,0 +1,1878 @@
+fileFormatVersion: 2
+guid: efa0e2c428f85ce489f9225b88bef89f
+ModelImporter:
+  serializedVersion: 21100
+  internalIDToNameTable:
+  - first:
+      74: -2175923366814495724
+    second: cycleEnterAnim
+  - first:
+      74: 4540256494226759009
+    second: cycleEnterAnim.001
+  - first:
+      74: -2441074539318360181
+    second: CharacterCycleExitAnim
+  - first:
+      74: 8144473124666935716
+    second: CharacterCyclingAnim
+  - first:
+      74: -469606946993363830
+    second: CharacterCyclingAnim.001
+  - first:
+      74: 2834841700774906597
+    second: CharacterCyclingAnim.002
+  - first:
+      74: 6053807319629292150
+    second: cycle_Cycling
+  - first:
+      74: -3980271451269666871
+    second: cycle_Exit
+  - first:
+      74: 277244579925579810
+    second: cycle_Cycling.001
+  - first:
+      74: -6021340937048630836
+    second: handle_Cycling
+  - first:
+      74: 2073693694548410006
+    second: Armature.001|Armature.001|mixamo.com|Layer0
+  - first:
+      74: 8256121159120966149
+    second: Armature.001|chain plateAction
+  - first:
+      74: -5606628871434999549
+    second: Armature.001|CharacterCycleEnterAnim
+  - first:
+      74: 8148808620283369020
+    second: Armature.001|CharacterCycleExitAnim
+  - first:
+      74: -460375187132780315
+    second: Armature.001|CharacterCyclingAnim
+  - first:
+      74: -3605937053545535818
+    second: Armature.001|cycle_Cycling
+  - first:
+      74: 3262691799827936236
+    second: Armature.001|cycle_Enter
+  - first:
+      74: -7798095192399319708
+    second: Armature.001|cycle_Exit
+  - first:
+      74: -1833310346590945428
+    second: Armature.001|CyclingCharacter
+  - first:
+      74: 669746971585176909
+    second: Armature.001|Cylinder.001Action
+  - first:
+      74: 7735656557686025979
+    second: Armature.001|Cylinder.002Action
+  - first:
+      74: -3116884291912103444
+    second: Armature.001|Cylinder.005Action
+  - first:
+      74: 2471512799301242250
+    second: Armature.001|Cylinder.006Action
+  - first:
+      74: 983261835692450840
+    second: Armature.001|CylinderAction
+  - first:
+      74: -4311447845684342631
+    second: Armature.001|handle_Cycling
+  - first:
+      74: -6842062029761219554
+    second: Armature.001|handle_Enter
+  - first:
+      74: 4485028436726486974
+    second: Armature.001|handle_Exit
+  - first:
+      74: 4219644257269782292
+    second: Armature.001|Jump_Landing
+  - first:
+      74: 7104377941463129445
+    second: Armature.001|Jump_MidAir
+  - first:
+      74: 6251552739409645969
+    second: Armature.001|Jump_Starting
+  - first:
+      74: 1434788795880328241
+    second: Armature.001|OriginalJump
+  - first:
+      74: 8405706834453975687
+    second: Armature.001|pedal leftAction
+  - first:
+      74: -2169273624869036699
+    second: Armature.001|pedal leftAction.001
+  - first:
+      74: 4163429543430819156
+    second: Armature.001|pedal rAction
+  - first:
+      74: 6577964627111890923
+    second: Armature.001|rim backAction
+  - first:
+      74: -8051594929915577370
+    second: Armature.001|rim frontAction
+  - first:
+      74: 5734163638311270788
+    second: Armature.001|seat rodAction
+  - first:
+      74: -5824394925726405028
+    second: Armature.001|seatAction.001
+  - first:
+      74: -8827115742462452512
+    second: Armature.001|spokes backAction
+  - first:
+      74: 455392252662608893
+    second: Armature.001|spokes frontAction
+  - first:
+      74: 2773706323535485621
+    second: Armature.001|stearingAction.001
+  - first:
+      74: 3384293773053709764
+    second: Armature.001|T_Pose
+  - first:
+      74: 892278317881885920
+    second: Armature.001|tyre backAction.001
+  - first:
+      74: 2999178255047901856
+    second: Armature.001|tyre frontAction.001
+  - first:
+      74: -7453061059523341
+    second: Armature.001|Vert.001Action
+  - first:
+      74: 8561097817021846723
+    second: Armature.001|VertAction.001
+  - first:
+      74: -2869271387307531838
+    second: chain plate|chain plateAction
+  - first:
+      74: -5044663376187761446
+    second: chain plate|cycle_Cycling
+  - first:
+      74: -8641037949294454410
+    second: chain plate|cycle_Enter
+  - first:
+      74: -2863512752994908190
+    second: chain plate|cycle_Exit
+  - first:
+      74: 4206193680987826570
+    second: chain plate|Cylinder.001Action
+  - first:
+      74: 8757232320417796734
+    second: chain plate|Cylinder.002Action
+  - first:
+      74: 590394803661242529
+    second: chain plate|Cylinder.005Action
+  - first:
+      74: -5079509548967657213
+    second: chain plate|Cylinder.006Action
+  - first:
+      74: -2336784854569118527
+    second: chain plate|CylinderAction
+  - first:
+      74: 8971022898749544753
+    second: chain plate|handle_Cycling
+  - first:
+      74: -6072502024497008486
+    second: chain plate|handle_Enter
+  - first:
+      74: -2048073231859098563
+    second: chain plate|handle_Exit
+  - first:
+      74: 2497638607325212569
+    second: chain plate|pedal leftAction
+  - first:
+      74: 8769313160983471530
+    second: chain plate|pedal leftAction.001
+  - first:
+      74: 6222752622148208556
+    second: chain plate|pedal rAction
+  - first:
+      74: 1239568186745262767
+    second: chain plate|rim backAction
+  - first:
+      74: -6525719120205661848
+    second: chain plate|rim frontAction
+  - first:
+      74: 932554830337056025
+    second: chain plate|seat rodAction
+  - first:
+      74: -4515095410577970052
+    second: chain plate|seatAction.001
+  - first:
+      74: 6867797006421547810
+    second: chain plate|spokes backAction
+  - first:
+      74: 8447636025301971717
+    second: chain plate|spokes frontAction
+  - first:
+      74: 8809060032921693745
+    second: chain plate|stearingAction.001
+  - first:
+      74: 3688400753733920195
+    second: chain plate|tyre backAction.001
+  - first:
+      74: -3516569551806341240
+    second: chain plate|tyre frontAction.001
+  - first:
+      74: 5310431152200804926
+    second: chain plate|Vert.001Action
+  - first:
+      74: 4074084959860503907
+    second: chain plate|VertAction.001
+  - first:
+      74: -8353787039802282969
+    second: cycle body|chain plateAction
+  - first:
+      74: 6559449552318868293
+    second: cycle body|cycle_Cycling
+  - first:
+      74: 8061807182568540960
+    second: cycle body|cycle_Enter
+  - first:
+      74: -5582707486140975544
+    second: cycle body|cycle_Exit
+  - first:
+      74: -4585748636797757396
+    second: cycle body|Cylinder.001Action
+  - first:
+      74: -3468832889147427641
+    second: cycle body|Cylinder.002Action
+  - first:
+      74: 7823186865994260261
+    second: cycle body|Cylinder.005Action
+  - first:
+      74: -5740086808521268542
+    second: cycle body|Cylinder.006Action
+  - first:
+      74: -3874056715359612315
+    second: cycle body|CylinderAction
+  - first:
+      74: -5600691352623444860
+    second: cycle body|handle_Cycling
+  - first:
+      74: 1251550020920453528
+    second: cycle body|handle_Enter
+  - first:
+      74: -3956676046079862244
+    second: cycle body|handle_Exit
+  - first:
+      74: 3716374817309558757
+    second: cycle body|pedal leftAction
+  - first:
+      74: 3679230934591083490
+    second: cycle body|pedal leftAction.001
+  - first:
+      74: 7100704464334029783
+    second: cycle body|pedal rAction
+  - first:
+      74: -3051287647818819931
+    second: cycle body|rim backAction
+  - first:
+      74: 879182406368870400
+    second: cycle body|rim frontAction
+  - first:
+      74: 841626589990715418
+    second: cycle body|seat rodAction
+  - first:
+      74: -3024436168031873770
+    second: cycle body|seatAction.001
+  - first:
+      74: 2055494195491634375
+    second: cycle body|spokes backAction
+  - first:
+      74: -4573672818397799324
+    second: cycle body|spokes frontAction
+  - first:
+      74: -1709171825738422999
+    second: cycle body|stearingAction.001
+  - first:
+      74: 773348966403631574
+    second: cycle body|tyre backAction.001
+  - first:
+      74: -2271974545956306619
+    second: cycle body|tyre frontAction.001
+  - first:
+      74: 8736543871005480011
+    second: cycle body|Vert.001Action
+  - first:
+      74: -6221004182808237402
+    second: cycle body|VertAction.001
+  - first:
+      74: -6275991818822616467
+    second: Cylinder|chain plateAction
+  - first:
+      74: 1049371000039554910
+    second: Cylinder|cycle_Cycling
+  - first:
+      74: 8740319876492381598
+    second: Cylinder|cycle_Enter
+  - first:
+      74: -3260746919629071021
+    second: Cylinder|cycle_Exit
+  - first:
+      74: -1565937593473639013
+    second: Cylinder|Cylinder.001Action
+  - first:
+      74: 5100070300365281523
+    second: Cylinder|Cylinder.002Action
+  - first:
+      74: 9078188308105296935
+    second: Cylinder|Cylinder.005Action
+  - first:
+      74: 431284223910517015
+    second: Cylinder|Cylinder.006Action
+  - first:
+      74: -88723805440604879
+    second: Cylinder|CylinderAction
+  - first:
+      74: -7267331216475729273
+    second: Cylinder|handle_Cycling
+  - first:
+      74: 4742179265784878372
+    second: Cylinder|handle_Enter
+  - first:
+      74: 6049833636259392591
+    second: Cylinder|handle_Exit
+  - first:
+      74: 4868411041791725306
+    second: Cylinder|pedal leftAction
+  - first:
+      74: -6681239892436193027
+    second: Cylinder|pedal leftAction.001
+  - first:
+      74: 9194110072385485173
+    second: Cylinder|pedal rAction
+  - first:
+      74: 1583639907827750550
+    second: Cylinder|rim backAction
+  - first:
+      74: -3355840823075575436
+    second: Cylinder|rim frontAction
+  - first:
+      74: 3444714352688560435
+    second: Cylinder|seat rodAction
+  - first:
+      74: -1399469410835008419
+    second: Cylinder|seatAction.001
+  - first:
+      74: -6133168916029646888
+    second: Cylinder|spokes backAction
+  - first:
+      74: 4067642082746755227
+    second: Cylinder|spokes frontAction
+  - first:
+      74: 4323831208019211975
+    second: Cylinder|stearingAction.001
+  - first:
+      74: -1898997785020563911
+    second: Cylinder|tyre backAction.001
+  - first:
+      74: -5075407747189547010
+    second: Cylinder|tyre frontAction.001
+  - first:
+      74: -2451466256736062775
+    second: Cylinder|Vert.001Action
+  - first:
+      74: -502511353755280838
+    second: Cylinder|VertAction.001
+  - first:
+      74: 2031481563270962210
+    second: Cylinder.001|chain plateAction
+  - first:
+      74: 9101581289897079635
+    second: Cylinder.001|cycle_Cycling
+  - first:
+      74: 5933225329612222730
+    second: Cylinder.001|cycle_Enter
+  - first:
+      74: 1315691356812520872
+    second: Cylinder.001|cycle_Exit
+  - first:
+      74: 3936550650637524798
+    second: Cylinder.001|Cylinder.001Action
+  - first:
+      74: -5525172884732378176
+    second: Cylinder.001|Cylinder.002Action
+  - first:
+      74: 7723382410155899653
+    second: Cylinder.001|Cylinder.005Action
+  - first:
+      74: 6358004397706741214
+    second: Cylinder.001|Cylinder.006Action
+  - first:
+      74: 3602085371921796995
+    second: Cylinder.001|CylinderAction
+  - first:
+      74: 7856185441947241436
+    second: Cylinder.001|handle_Cycling
+  - first:
+      74: -7735169952661947471
+    second: Cylinder.001|handle_Enter
+  - first:
+      74: -882595177873431023
+    second: Cylinder.001|handle_Exit
+  - first:
+      74: 1473890057461550077
+    second: Cylinder.001|pedal leftAction
+  - first:
+      74: 1369203577349002681
+    second: Cylinder.001|pedal leftAction.001
+  - first:
+      74: 8485934685903774676
+    second: Cylinder.001|pedal rAction
+  - first:
+      74: 5266346783837701637
+    second: Cylinder.001|rim backAction
+  - first:
+      74: -3873113615771218328
+    second: Cylinder.001|rim frontAction
+  - first:
+      74: -3308285203709989607
+    second: Cylinder.001|seat rodAction
+  - first:
+      74: -8549565840592137164
+    second: Cylinder.001|seatAction.001
+  - first:
+      74: 5190568260247291414
+    second: Cylinder.001|spokes backAction
+  - first:
+      74: 2031364630115748846
+    second: Cylinder.001|spokes frontAction
+  - first:
+      74: 251082514362513161
+    second: Cylinder.001|stearingAction.001
+  - first:
+      74: 6927134668155073926
+    second: Cylinder.001|tyre backAction.001
+  - first:
+      74: -136209529596140255
+    second: Cylinder.001|tyre frontAction.001
+  - first:
+      74: -409126973050346909
+    second: Cylinder.001|Vert.001Action
+  - first:
+      74: 2286364492247280946
+    second: Cylinder.001|VertAction.001
+  - first:
+      74: -2509414920656597647
+    second: Cylinder.002|chain plateAction
+  - first:
+      74: -5271580998217082360
+    second: Cylinder.002|cycle_Cycling
+  - first:
+      74: -9195167299307808149
+    second: Cylinder.002|cycle_Enter
+  - first:
+      74: 4368664898025992757
+    second: Cylinder.002|cycle_Exit
+  - first:
+      74: 7317901949878717092
+    second: Cylinder.002|Cylinder.001Action
+  - first:
+      74: -2388811887902066691
+    second: Cylinder.002|Cylinder.002Action
+  - first:
+      74: -1274200084847902161
+    second: Cylinder.002|Cylinder.005Action
+  - first:
+      74: 8679656059726125112
+    second: Cylinder.002|Cylinder.006Action
+  - first:
+      74: 3149465394390671080
+    second: Cylinder.002|CylinderAction
+  - first:
+      74: -6666128974388684652
+    second: Cylinder.002|handle_Cycling
+  - first:
+      74: -2403453975797224391
+    second: Cylinder.002|handle_Enter
+  - first:
+      74: -5692401541570263165
+    second: Cylinder.002|handle_Exit
+  - first:
+      74: 6279119314507374180
+    second: Cylinder.002|pedal leftAction
+  - first:
+      74: 2518201789672924852
+    second: Cylinder.002|pedal leftAction.001
+  - first:
+      74: -4986215040978680531
+    second: Cylinder.002|pedal rAction
+  - first:
+      74: 3490360735859087618
+    second: Cylinder.002|rim backAction
+  - first:
+      74: -6740161517315163917
+    second: Cylinder.002|rim frontAction
+  - first:
+      74: 1180811899783858449
+    second: Cylinder.002|seat rodAction
+  - first:
+      74: 6922451103601771674
+    second: Cylinder.002|seatAction.001
+  - first:
+      74: 2039436207013951807
+    second: Cylinder.002|spokes backAction
+  - first:
+      74: 5093392906436863232
+    second: Cylinder.002|spokes frontAction
+  - first:
+      74: -7971023866051082571
+    second: Cylinder.002|stearingAction.001
+  - first:
+      74: 1944326811064270407
+    second: Cylinder.002|tyre backAction.001
+  - first:
+      74: -6727386890545040603
+    second: Cylinder.002|tyre frontAction.001
+  - first:
+      74: -2714455687543773589
+    second: Cylinder.002|Vert.001Action
+  - first:
+      74: 550118645895078623
+    second: Cylinder.002|VertAction.001
+  - first:
+      74: -9073633002218921194
+    second: Cylinder.005|chain plateAction
+  - first:
+      74: 7566215558697171022
+    second: Cylinder.005|cycle_Cycling
+  - first:
+      74: -2499479894052290190
+    second: Cylinder.005|cycle_Enter
+  - first:
+      74: -6989689200689449830
+    second: Cylinder.005|cycle_Exit
+  - first:
+      74: -1462771642627587431
+    second: Cylinder.005|Cylinder.001Action
+  - first:
+      74: 3890446107519760013
+    second: Cylinder.005|Cylinder.002Action
+  - first:
+      74: 8263777003831402119
+    second: Cylinder.005|Cylinder.005Action
+  - first:
+      74: -7545710929396808760
+    second: Cylinder.005|Cylinder.006Action
+  - first:
+      74: -5213651074218866315
+    second: Cylinder.005|CylinderAction
+  - first:
+      74: -236547951495824181
+    second: Cylinder.005|handle_Cycling
+  - first:
+      74: 5918617078357202615
+    second: Cylinder.005|handle_Enter
+  - first:
+      74: 5534306624301804842
+    second: Cylinder.005|handle_Exit
+  - first:
+      74: -3052614203354838776
+    second: Cylinder.005|pedal leftAction
+  - first:
+      74: 819322294063358921
+    second: Cylinder.005|pedal leftAction.001
+  - first:
+      74: -4288880373145040317
+    second: Cylinder.005|pedal rAction
+  - first:
+      74: 3837211302207292495
+    second: Cylinder.005|rim backAction
+  - first:
+      74: 2753215991041828432
+    second: Cylinder.005|rim frontAction
+  - first:
+      74: 7228302110555771718
+    second: Cylinder.005|seat rodAction
+  - first:
+      74: 386355544840716378
+    second: Cylinder.005|seatAction.001
+  - first:
+      74: 7060402628487416456
+    second: Cylinder.005|spokes backAction
+  - first:
+      74: 1421707483446910610
+    second: Cylinder.005|spokes frontAction
+  - first:
+      74: 7265281108224913438
+    second: Cylinder.005|stearingAction.001
+  - first:
+      74: -6640592231482331091
+    second: Cylinder.005|tyre backAction.001
+  - first:
+      74: 3415425914301322407
+    second: Cylinder.005|tyre frontAction.001
+  - first:
+      74: -1789212715945774923
+    second: Cylinder.005|Vert.001Action
+  - first:
+      74: 7896886307465221134
+    second: Cylinder.005|VertAction.001
+  - first:
+      74: 2311111377593346790
+    second: Cylinder.006|chain plateAction
+  - first:
+      74: 2572915043002037502
+    second: Cylinder.006|cycle_Cycling
+  - first:
+      74: -6726069173900215698
+    second: Cylinder.006|cycle_Enter
+  - first:
+      74: -5707882769046678024
+    second: Cylinder.006|cycle_Exit
+  - first:
+      74: 6009409518754032770
+    second: Cylinder.006|Cylinder.001Action
+  - first:
+      74: -3483683978538292018
+    second: Cylinder.006|Cylinder.002Action
+  - first:
+      74: -9030733858237037353
+    second: Cylinder.006|Cylinder.005Action
+  - first:
+      74: 58856497514032921
+    second: Cylinder.006|Cylinder.006Action
+  - first:
+      74: 8952547294952175140
+    second: Cylinder.006|CylinderAction
+  - first:
+      74: 1601563507286376238
+    second: Cylinder.006|handle_Cycling
+  - first:
+      74: 4564733264128707048
+    second: Cylinder.006|handle_Enter
+  - first:
+      74: -4603549708433966869
+    second: Cylinder.006|handle_Exit
+  - first:
+      74: 1010164897852840334
+    second: Cylinder.006|pedal leftAction
+  - first:
+      74: -3664273741872386615
+    second: Cylinder.006|pedal leftAction.001
+  - first:
+      74: 662912991019147550
+    second: Cylinder.006|pedal rAction
+  - first:
+      74: 5423770983819517854
+    second: Cylinder.006|rim backAction
+  - first:
+      74: -9206727309473493470
+    second: Cylinder.006|rim frontAction
+  - first:
+      74: 4825913270470401951
+    second: Cylinder.006|seat rodAction
+  - first:
+      74: -8653195595246058811
+    second: Cylinder.006|seatAction.001
+  - first:
+      74: -985229980748696758
+    second: Cylinder.006|spokes backAction
+  - first:
+      74: 7456835683928773381
+    second: Cylinder.006|spokes frontAction
+  - first:
+      74: -4333447225446833048
+    second: Cylinder.006|stearingAction.001
+  - first:
+      74: -1802450331652045528
+    second: Cylinder.006|tyre backAction.001
+  - first:
+      74: -8778776852818840994
+    second: Cylinder.006|tyre frontAction.001
+  - first:
+      74: 5756394892379481930
+    second: Cylinder.006|Vert.001Action
+  - first:
+      74: -283258175875908243
+    second: Cylinder.006|VertAction.001
+  - first:
+      74: 844374588839352033
+    second: handle.001|chain plateAction
+  - first:
+      74: -8255241102756520493
+    second: handle.001|cycle_Cycling
+  - first:
+      74: 6791704385625221318
+    second: handle.001|cycle_Enter
+  - first:
+      74: -5243529710614561560
+    second: handle.001|cycle_Exit
+  - first:
+      74: -4589892311688098694
+    second: handle.001|Cylinder.001Action
+  - first:
+      74: -2138122826286386531
+    second: handle.001|Cylinder.002Action
+  - first:
+      74: 6787450191357759273
+    second: handle.001|Cylinder.005Action
+  - first:
+      74: 8100046239543817520
+    second: handle.001|Cylinder.006Action
+  - first:
+      74: 3107730868428373024
+    second: handle.001|CylinderAction
+  - first:
+      74: 2817606808087280379
+    second: handle.001|handle_Cycling
+  - first:
+      74: -6862802986350996595
+    second: handle.001|handle_Enter
+  - first:
+      74: 3395882404112783763
+    second: handle.001|handle_Exit
+  - first:
+      74: 7816317210148227671
+    second: handle.001|pedal leftAction
+  - first:
+      74: -5484234603893260682
+    second: handle.001|pedal leftAction.001
+  - first:
+      74: -8179490718817867112
+    second: handle.001|pedal rAction
+  - first:
+      74: -2313102567329487511
+    second: handle.001|rim backAction
+  - first:
+      74: -6006596863261597074
+    second: handle.001|rim frontAction
+  - first:
+      74: -4643487011698870949
+    second: handle.001|seat rodAction
+  - first:
+      74: 4220095947623510271
+    second: handle.001|seatAction.001
+  - first:
+      74: -9031594499387469470
+    second: handle.001|spokes backAction
+  - first:
+      74: -8722538220415639991
+    second: handle.001|spokes frontAction
+  - first:
+      74: 3956034709901142246
+    second: handle.001|stearingAction.001
+  - first:
+      74: 2727838469353422252
+    second: handle.001|tyre backAction.001
+  - first:
+      74: -8055913846658495000
+    second: handle.001|tyre frontAction.001
+  - first:
+      74: 2244976997041183266
+    second: handle.001|Vert.001Action
+  - first:
+      74: 244234774780781501
+    second: handle.001|VertAction.001
+  - first:
+      74: 5365837619653857395
+    second: pedal left|chain plateAction
+  - first:
+      74: 4314564367157051981
+    second: pedal left|cycle_Cycling
+  - first:
+      74: 4511265164407278168
+    second: pedal left|cycle_Enter
+  - first:
+      74: 7544097312565408395
+    second: pedal left|cycle_Exit
+  - first:
+      74: 6235575101041888953
+    second: pedal left|Cylinder.001Action
+  - first:
+      74: -5412880497770215607
+    second: pedal left|Cylinder.002Action
+  - first:
+      74: -2356003737367840884
+    second: pedal left|Cylinder.005Action
+  - first:
+      74: -3849119306631214663
+    second: pedal left|Cylinder.006Action
+  - first:
+      74: -1821827002669853846
+    second: pedal left|CylinderAction
+  - first:
+      74: -2305466317228968904
+    second: pedal left|handle_Cycling
+  - first:
+      74: 7833103950271148107
+    second: pedal left|handle_Enter
+  - first:
+      74: -7004254083130900244
+    second: pedal left|handle_Exit
+  - first:
+      74: 3577480551636444146
+    second: pedal left|pedal leftAction
+  - first:
+      74: -5609541768815548198
+    second: pedal left|pedal leftAction.001
+  - first:
+      74: -1430370439028307308
+    second: pedal left|pedal rAction
+  - first:
+      74: 1842673993819374513
+    second: pedal left|rim backAction
+  - first:
+      74: -5195389312685761784
+    second: pedal left|rim frontAction
+  - first:
+      74: 6798974632745322454
+    second: pedal left|seat rodAction
+  - first:
+      74: 43871335654962814
+    second: pedal left|seatAction.001
+  - first:
+      74: 4059969502229160063
+    second: pedal left|spokes backAction
+  - first:
+      74: -2306132600282322935
+    second: pedal left|spokes frontAction
+  - first:
+      74: -5793606872638574285
+    second: pedal left|stearingAction.001
+  - first:
+      74: 2894700312683723443
+    second: pedal left|tyre backAction.001
+  - first:
+      74: -1639793879133662617
+    second: pedal left|tyre frontAction.001
+  - first:
+      74: 8792435150570246539
+    second: pedal left|Vert.001Action
+  - first:
+      74: 3749970477206553052
+    second: pedal left|VertAction.001
+  - first:
+      74: 4633338671655206109
+    second: pedal r|chain plateAction
+  - first:
+      74: -5752278437144788434
+    second: pedal r|cycle_Cycling
+  - first:
+      74: -6127697714104446275
+    second: pedal r|cycle_Enter
+  - first:
+      74: 6940892338809459502
+    second: pedal r|cycle_Exit
+  - first:
+      74: -4823295045692972456
+    second: pedal r|Cylinder.001Action
+  - first:
+      74: 3599494340922202218
+    second: pedal r|Cylinder.002Action
+  - first:
+      74: -1396216942958781899
+    second: pedal r|Cylinder.005Action
+  - first:
+      74: -1789777112013097543
+    second: pedal r|Cylinder.006Action
+  - first:
+      74: 4402672147606922635
+    second: pedal r|CylinderAction
+  - first:
+      74: -7162082908449144418
+    second: pedal r|handle_Cycling
+  - first:
+      74: 5001128069669432078
+    second: pedal r|handle_Enter
+  - first:
+      74: -7472304355548414653
+    second: pedal r|handle_Exit
+  - first:
+      74: -4867356042248380251
+    second: pedal r|pedal leftAction
+  - first:
+      74: -2660898806254752507
+    second: pedal r|pedal leftAction.001
+  - first:
+      74: 682656063392353808
+    second: pedal r|pedal rAction
+  - first:
+      74: -3870525995645955295
+    second: pedal r|rim backAction
+  - first:
+      74: -4068572981064989155
+    second: pedal r|rim frontAction
+  - first:
+      74: 1899063134246343416
+    second: pedal r|seat rodAction
+  - first:
+      74: 6861295121964189976
+    second: pedal r|seatAction.001
+  - first:
+      74: -6341639712727673607
+    second: pedal r|spokes backAction
+  - first:
+      74: 833469839030063368
+    second: pedal r|spokes frontAction
+  - first:
+      74: 4147760311801563998
+    second: pedal r|stearingAction.001
+  - first:
+      74: 2958579388465725495
+    second: pedal r|tyre backAction.001
+  - first:
+      74: -1419671210215241805
+    second: pedal r|tyre frontAction.001
+  - first:
+      74: -3448370497542637771
+    second: pedal r|Vert.001Action
+  - first:
+      74: 7665574802027159348
+    second: pedal r|VertAction.001
+  - first:
+      74: -6578469883355734732
+    second: rim back|chain plateAction
+  - first:
+      74: -87406817133130483
+    second: rim back|cycle_Cycling
+  - first:
+      74: 7909890170563762062
+    second: rim back|cycle_Enter
+  - first:
+      74: 3552413973630321534
+    second: rim back|cycle_Exit
+  - first:
+      74: -6786572376716663985
+    second: rim back|Cylinder.001Action
+  - first:
+      74: 8382307751943136409
+    second: rim back|Cylinder.002Action
+  - first:
+      74: -4997758774362824244
+    second: rim back|Cylinder.005Action
+  - first:
+      74: 834943124556122103
+    second: rim back|Cylinder.006Action
+  - first:
+      74: 5722374558511420132
+    second: rim back|CylinderAction
+  - first:
+      74: 4716753401593525026
+    second: rim back|handle_Cycling
+  - first:
+      74: 694178044701834223
+    second: rim back|handle_Enter
+  - first:
+      74: -4095408767374048024
+    second: rim back|handle_Exit
+  - first:
+      74: -8584552680018142685
+    second: rim back|pedal leftAction
+  - first:
+      74: -5602111115411685410
+    second: rim back|pedal leftAction.001
+  - first:
+      74: 8509300152542478833
+    second: rim back|pedal rAction
+  - first:
+      74: -7436574517846603556
+    second: rim back|rim backAction
+  - first:
+      74: 1249299185413534300
+    second: rim back|rim frontAction
+  - first:
+      74: -6515425185228932055
+    second: rim back|seat rodAction
+  - first:
+      74: 2989592467850911459
+    second: rim back|seatAction.001
+  - first:
+      74: -2808510749145971895
+    second: rim back|spokes backAction
+  - first:
+      74: 811103727567061337
+    second: rim back|spokes frontAction
+  - first:
+      74: -5338576145796690139
+    second: rim back|stearingAction.001
+  - first:
+      74: -2820618810333980103
+    second: rim back|tyre backAction.001
+  - first:
+      74: 5852508454746626018
+    second: rim back|tyre frontAction.001
+  - first:
+      74: 2798897484292370372
+    second: rim back|Vert.001Action
+  - first:
+      74: -1052274079704057185
+    second: rim back|VertAction.001
+  - first:
+      74: 7132003095716084101
+    second: rim front|chain plateAction
+  - first:
+      74: 6698744042309056190
+    second: rim front|cycle_Cycling
+  - first:
+      74: 2674394972434629964
+    second: rim front|cycle_Enter
+  - first:
+      74: -4077035062298728080
+    second: rim front|cycle_Exit
+  - first:
+      74: 2854283179111843098
+    second: rim front|Cylinder.001Action
+  - first:
+      74: -1961155761089418230
+    second: rim front|Cylinder.002Action
+  - first:
+      74: -2997140538496955294
+    second: rim front|Cylinder.005Action
+  - first:
+      74: -1032207478463088824
+    second: rim front|Cylinder.006Action
+  - first:
+      74: 173371477727561997
+    second: rim front|CylinderAction
+  - first:
+      74: 786541307036134113
+    second: rim front|handle_Cycling
+  - first:
+      74: 8862080381747819302
+    second: rim front|handle_Enter
+  - first:
+      74: -3226604979272516474
+    second: rim front|handle_Exit
+  - first:
+      74: 5024415056246163923
+    second: rim front|pedal leftAction
+  - first:
+      74: 2839877501813140693
+    second: rim front|pedal leftAction.001
+  - first:
+      74: -7147775859765889921
+    second: rim front|pedal rAction
+  - first:
+      74: -5848196226858299768
+    second: rim front|rim backAction
+  - first:
+      74: 3368501963041390556
+    second: rim front|rim frontAction
+  - first:
+      74: 8923755810053568743
+    second: rim front|seat rodAction
+  - first:
+      74: -4800769166148296198
+    second: rim front|seatAction.001
+  - first:
+      74: -236067685037063696
+    second: rim front|spokes backAction
+  - first:
+      74: -760740908537576624
+    second: rim front|spokes frontAction
+  - first:
+      74: 5591570167766436330
+    second: rim front|stearingAction.001
+  - first:
+      74: 23987949119232193
+    second: rim front|tyre backAction.001
+  - first:
+      74: -1651358300936496932
+    second: rim front|tyre frontAction.001
+  - first:
+      74: -6195302872459149190
+    second: rim front|Vert.001Action
+  - first:
+      74: -5825446567127434693
+    second: rim front|VertAction.001
+  - first:
+      74: 6779605187708134078
+    second: seat|chain plateAction
+  - first:
+      74: 1288142351191442147
+    second: seat|cycle_Cycling
+  - first:
+      74: 8459674762171251477
+    second: seat|cycle_Enter
+  - first:
+      74: -5275158856903911874
+    second: seat|cycle_Exit
+  - first:
+      74: 8859894373915475145
+    second: seat|Cylinder.001Action
+  - first:
+      74: 4475284178625052132
+    second: seat|Cylinder.002Action
+  - first:
+      74: -7040792515662022766
+    second: seat|Cylinder.005Action
+  - first:
+      74: 2910000275714542208
+    second: seat|Cylinder.006Action
+  - first:
+      74: -8096055428211738980
+    second: seat|CylinderAction
+  - first:
+      74: -7448708763865707294
+    second: seat|handle_Cycling
+  - first:
+      74: -7948786186618379130
+    second: seat|handle_Enter
+  - first:
+      74: 1880098804022203048
+    second: seat|handle_Exit
+  - first:
+      74: -4987349017019808909
+    second: seat|pedal leftAction
+  - first:
+      74: -1311667109139031810
+    second: seat|pedal leftAction.001
+  - first:
+      74: 3378842647694617196
+    second: seat|pedal rAction
+  - first:
+      74: -3052789902597336443
+    second: seat|rim backAction
+  - first:
+      74: 7226239203746174832
+    second: seat|rim frontAction
+  - first:
+      74: -8148246154844414730
+    second: seat|seat rodAction
+  - first:
+      74: 8122940765255184077
+    second: seat|seatAction.001
+  - first:
+      74: -672934283059280805
+    second: seat|spokes backAction
+  - first:
+      74: 1952040213622468117
+    second: seat|spokes frontAction
+  - first:
+      74: 1905296231274988617
+    second: seat|stearingAction.001
+  - first:
+      74: -9192810175252615197
+    second: seat|tyre backAction.001
+  - first:
+      74: -2560688377384961761
+    second: seat|tyre frontAction.001
+  - first:
+      74: -2610900293581973634
+    second: seat|Vert.001Action
+  - first:
+      74: 1082316687453884889
+    second: seat|VertAction.001
+  - first:
+      74: -2707301487835327574
+    second: seat rod|chain plateAction
+  - first:
+      74: 3829359702894739355
+    second: seat rod|cycle_Cycling
+  - first:
+      74: -5064575538494279279
+    second: seat rod|cycle_Enter
+  - first:
+      74: 6066173197847835441
+    second: seat rod|cycle_Exit
+  - first:
+      74: 6691757827308392657
+    second: seat rod|Cylinder.001Action
+  - first:
+      74: 3817322271403945745
+    second: seat rod|Cylinder.002Action
+  - first:
+      74: -3388846479537378410
+    second: seat rod|Cylinder.005Action
+  - first:
+      74: -4125505500145026321
+    second: seat rod|Cylinder.006Action
+  - first:
+      74: -627761827100478252
+    second: seat rod|CylinderAction
+  - first:
+      74: -7828293287960244783
+    second: seat rod|handle_Cycling
+  - first:
+      74: 1170179945254225971
+    second: seat rod|handle_Enter
+  - first:
+      74: 755017511286880510
+    second: seat rod|handle_Exit
+  - first:
+      74: 6235740205857905639
+    second: seat rod|pedal leftAction
+  - first:
+      74: -1305389671073171542
+    second: seat rod|pedal leftAction.001
+  - first:
+      74: -5307592878817827854
+    second: seat rod|pedal rAction
+  - first:
+      74: -5284904629443920652
+    second: seat rod|rim backAction
+  - first:
+      74: -6135978443009496272
+    second: seat rod|rim frontAction
+  - first:
+      74: 423801450169786255
+    second: seat rod|seat rodAction
+  - first:
+      74: 7034798952921882475
+    second: seat rod|seatAction.001
+  - first:
+      74: 6628611954633248691
+    second: seat rod|spokes backAction
+  - first:
+      74: 5953081448831225273
+    second: seat rod|spokes frontAction
+  - first:
+      74: -4322110536410659742
+    second: seat rod|stearingAction.001
+  - first:
+      74: 8857057747752235587
+    second: seat rod|tyre backAction.001
+  - first:
+      74: -332808967508382263
+    second: seat rod|tyre frontAction.001
+  - first:
+      74: -8513424884298470682
+    second: seat rod|Vert.001Action
+  - first:
+      74: 3143885257987492828
+    second: seat rod|VertAction.001
+  - first:
+      74: 83085177388151065
+    second: spokes back|chain plateAction
+  - first:
+      74: -2766616031097411170
+    second: spokes back|cycle_Cycling
+  - first:
+      74: -2032386315350058454
+    second: spokes back|cycle_Enter
+  - first:
+      74: -4600756406394789771
+    second: spokes back|cycle_Exit
+  - first:
+      74: -8012060660682324136
+    second: spokes back|Cylinder.001Action
+  - first:
+      74: -1606518588093715257
+    second: spokes back|Cylinder.002Action
+  - first:
+      74: -1789752851508560516
+    second: spokes back|Cylinder.005Action
+  - first:
+      74: -4240101226930263894
+    second: spokes back|Cylinder.006Action
+  - first:
+      74: 5657150084116557054
+    second: spokes back|CylinderAction
+  - first:
+      74: -2827597571761951516
+    second: spokes back|handle_Cycling
+  - first:
+      74: -1167388953434239513
+    second: spokes back|handle_Enter
+  - first:
+      74: 725002047827615123
+    second: spokes back|handle_Exit
+  - first:
+      74: -4705017798201145589
+    second: spokes back|pedal leftAction
+  - first:
+      74: -7214753556571092775
+    second: spokes back|pedal leftAction.001
+  - first:
+      74: -8273423895126579288
+    second: spokes back|pedal rAction
+  - first:
+      74: 5848076820622760797
+    second: spokes back|rim backAction
+  - first:
+      74: -8047007090273494931
+    second: spokes back|rim frontAction
+  - first:
+      74: -1818836190932981900
+    second: spokes back|seat rodAction
+  - first:
+      74: -8342605656826128203
+    second: spokes back|seatAction.001
+  - first:
+      74: 2053212689409302489
+    second: spokes back|spokes backAction
+  - first:
+      74: 7827296942320406526
+    second: spokes back|spokes frontAction
+  - first:
+      74: -6799601405088519438
+    second: spokes back|stearingAction.001
+  - first:
+      74: -6039352339760134163
+    second: spokes back|tyre backAction.001
+  - first:
+      74: -7535314498766854157
+    second: spokes back|tyre frontAction.001
+  - first:
+      74: -5157927907815482517
+    second: spokes back|Vert.001Action
+  - first:
+      74: 7340320262794230664
+    second: spokes back|VertAction.001
+  - first:
+      74: -7641166307391405288
+    second: spokes front|chain plateAction
+  - first:
+      74: -1496642066881559763
+    second: spokes front|cycle_Cycling
+  - first:
+      74: -6230680910411667618
+    second: spokes front|cycle_Enter
+  - first:
+      74: -4574872278036272052
+    second: spokes front|cycle_Exit
+  - first:
+      74: -6249840352382297546
+    second: spokes front|Cylinder.001Action
+  - first:
+      74: -469336213333395431
+    second: spokes front|Cylinder.002Action
+  - first:
+      74: 9100990327060645700
+    second: spokes front|Cylinder.005Action
+  - first:
+      74: -1817263637590676785
+    second: spokes front|Cylinder.006Action
+  - first:
+      74: 3815782440732520767
+    second: spokes front|CylinderAction
+  - first:
+      74: 4616599586628861007
+    second: spokes front|handle_Cycling
+  - first:
+      74: 150702781260240635
+    second: spokes front|handle_Enter
+  - first:
+      74: -4894008346863857896
+    second: spokes front|handle_Exit
+  - first:
+      74: -5988947589873261100
+    second: spokes front|pedal leftAction
+  - first:
+      74: -4430032330133245659
+    second: spokes front|pedal leftAction.001
+  - first:
+      74: -441972034608980146
+    second: spokes front|pedal rAction
+  - first:
+      74: -2911309030440930859
+    second: spokes front|rim backAction
+  - first:
+      74: -2841157815081792022
+    second: spokes front|rim frontAction
+  - first:
+      74: 381127211747914927
+    second: spokes front|seat rodAction
+  - first:
+      74: -844643977766694091
+    second: spokes front|seatAction.001
+  - first:
+      74: -3170758662108621238
+    second: spokes front|spokes backAction
+  - first:
+      74: -5266803256737735915
+    second: spokes front|spokes frontAction
+  - first:
+      74: -8142609038259474015
+    second: spokes front|stearingAction.001
+  - first:
+      74: -5134827319305915204
+    second: spokes front|tyre backAction.001
+  - first:
+      74: -8667698759186770203
+    second: spokes front|tyre frontAction.001
+  - first:
+      74: -8773292656938946346
+    second: spokes front|Vert.001Action
+  - first:
+      74: 8479757129616296140
+    second: spokes front|VertAction.001
+  - first:
+      74: -6960291799834822405
+    second: stearing|chain plateAction
+  - first:
+      74: -7602561256104989244
+    second: stearing|cycle_Cycling
+  - first:
+      74: -4428588819057242668
+    second: stearing|cycle_Enter
+  - first:
+      74: 7612612274235968202
+    second: stearing|cycle_Exit
+  - first:
+      74: 8137951633787726797
+    second: stearing|Cylinder.001Action
+  - first:
+      74: 6211590831111145940
+    second: stearing|Cylinder.002Action
+  - first:
+      74: 5365101021586979431
+    second: stearing|Cylinder.005Action
+  - first:
+      74: 2975943166061416069
+    second: stearing|Cylinder.006Action
+  - first:
+      74: -1098280800841002949
+    second: stearing|CylinderAction
+  - first:
+      74: -304741466311529702
+    second: stearing|handle_Cycling
+  - first:
+      74: 7512300806875982191
+    second: stearing|handle_Enter
+  - first:
+      74: -4266680340782973892
+    second: stearing|handle_Exit
+  - first:
+      74: 781984331104417848
+    second: stearing|pedal leftAction
+  - first:
+      74: -7271150944705957216
+    second: stearing|pedal leftAction.001
+  - first:
+      74: -3068662100781556559
+    second: stearing|pedal rAction
+  - first:
+      74: -1910825773607865696
+    second: stearing|rim backAction
+  - first:
+      74: 3853678665346166720
+    second: stearing|rim frontAction
+  - first:
+      74: -6198418480809225844
+    second: stearing|seat rodAction
+  - first:
+      74: 888222673877919949
+    second: stearing|seatAction.001
+  - first:
+      74: 7237166913293887525
+    second: stearing|spokes backAction
+  - first:
+      74: -7765337611661544084
+    second: stearing|spokes frontAction
+  - first:
+      74: -2339030034254681905
+    second: stearing|stearingAction.001
+  - first:
+      74: -100925870664998596
+    second: stearing|tyre backAction.001
+  - first:
+      74: -6154897963105453075
+    second: stearing|tyre frontAction.001
+  - first:
+      74: 4501799901245657224
+    second: stearing|Vert.001Action
+  - first:
+      74: -156048250237783960
+    second: stearing|VertAction.001
+  - first:
+      74: -4347271647547925536
+    second: tyre back|chain plateAction
+  - first:
+      74: -3186319499341560001
+    second: tyre back|cycle_Cycling
+  - first:
+      74: -8432297607236765512
+    second: tyre back|cycle_Enter
+  - first:
+      74: -7869796575441929784
+    second: tyre back|cycle_Exit
+  - first:
+      74: 5542615565163175773
+    second: tyre back|Cylinder.001Action
+  - first:
+      74: -300485648768743847
+    second: tyre back|Cylinder.002Action
+  - first:
+      74: -6396024495889093252
+    second: tyre back|Cylinder.005Action
+  - first:
+      74: 6138475527395297947
+    second: tyre back|Cylinder.006Action
+  - first:
+      74: 5235586613452799206
+    second: tyre back|CylinderAction
+  - first:
+      74: 7950437488164653603
+    second: tyre back|handle_Cycling
+  - first:
+      74: -6269919754733864125
+    second: tyre back|handle_Enter
+  - first:
+      74: 3998543472226645682
+    second: tyre back|handle_Exit
+  - first:
+      74: -3077279873575813107
+    second: tyre back|pedal leftAction
+  - first:
+      74: 6065791079171159252
+    second: tyre back|pedal leftAction.001
+  - first:
+      74: 7408802336088878975
+    second: tyre back|pedal rAction
+  - first:
+      74: 7487098294111813128
+    second: tyre back|rim backAction
+  - first:
+      74: 6414895407457764705
+    second: tyre back|rim frontAction
+  - first:
+      74: 1349488945557677155
+    second: tyre back|seat rodAction
+  - first:
+      74: -8453466085399765019
+    second: tyre back|seatAction.001
+  - first:
+      74: 5078095403957758347
+    second: tyre back|spokes backAction
+  - first:
+      74: -2749219270312462422
+    second: tyre back|spokes frontAction
+  - first:
+      74: -1201445963685272077
+    second: tyre back|stearingAction.001
+  - first:
+      74: -576943930216661078
+    second: tyre back|tyre backAction.001
+  - first:
+      74: 6251547355147473340
+    second: tyre back|tyre frontAction.001
+  - first:
+      74: 8229723534665257569
+    second: tyre back|Vert.001Action
+  - first:
+      74: -324378268153592001
+    second: tyre back|VertAction.001
+  - first:
+      74: 5291608768455751239
+    second: tyre front|chain plateAction
+  - first:
+      74: 8461391347114093015
+    second: tyre front|cycle_Cycling
+  - first:
+      74: -1279278096751495718
+    second: tyre front|cycle_Enter
+  - first:
+      74: 6432832519655174919
+    second: tyre front|cycle_Exit
+  - first:
+      74: 6523614248207588204
+    second: tyre front|Cylinder.001Action
+  - first:
+      74: 9031144421574649230
+    second: tyre front|Cylinder.002Action
+  - first:
+      74: -7124508171110880009
+    second: tyre front|Cylinder.005Action
+  - first:
+      74: -7610717438073615809
+    second: tyre front|Cylinder.006Action
+  - first:
+      74: -1850492896297875303
+    second: tyre front|CylinderAction
+  - first:
+      74: 6194204389460935616
+    second: tyre front|handle_Cycling
+  - first:
+      74: -1255608050654672992
+    second: tyre front|handle_Enter
+  - first:
+      74: 2356709439824874059
+    second: tyre front|handle_Exit
+  - first:
+      74: -3700312950581022693
+    second: tyre front|pedal leftAction
+  - first:
+      74: 7528982092076516163
+    second: tyre front|pedal leftAction.001
+  - first:
+      74: 1852014285749468101
+    second: tyre front|pedal rAction
+  - first:
+      74: 1692886317303048751
+    second: tyre front|rim backAction
+  - first:
+      74: 5473734863429823222
+    second: tyre front|rim frontAction
+  - first:
+      74: -7140341759119921462
+    second: tyre front|seat rodAction
+  - first:
+      74: -8861472710937061238
+    second: tyre front|seatAction.001
+  - first:
+      74: -3551732816828566146
+    second: tyre front|spokes backAction
+  - first:
+      74: -5524528246183595072
+    second: tyre front|spokes frontAction
+  - first:
+      74: -5165132062681420087
+    second: tyre front|stearingAction.001
+  - first:
+      74: 511792297010843950
+    second: tyre front|tyre backAction.001
+  - first:
+      74: 1325722852122978493
+    second: tyre front|tyre frontAction.001
+  - first:
+      74: -1761740347592143266
+    second: tyre front|Vert.001Action
+  - first:
+      74: -6989342819581979978
+    second: tyre front|VertAction.001
+  - first:
+      74: 9061088315167019751
+    second: Vert|chain plateAction
+  - first:
+      74: 9119122888703075056
+    second: Vert|cycle_Cycling
+  - first:
+      74: -5538837727278773045
+    second: Vert|cycle_Enter
+  - first:
+      74: -2250191444934578959
+    second: Vert|cycle_Exit
+  - first:
+      74: -366340467728867943
+    second: Vert|Cylinder.001Action
+  - first:
+      74: -8459836855678147546
+    second: Vert|Cylinder.002Action
+  - first:
+      74: 5356848422740385358
+    second: Vert|Cylinder.005Action
+  - first:
+      74: 6472627249505709537
+    second: Vert|Cylinder.006Action
+  - first:
+      74: -6628026086829200575
+    second: Vert|CylinderAction
+  - first:
+      74: 353337418469457953
+    second: Vert|handle_Cycling
+  - first:
+      74: -7377723509087002755
+    second: Vert|handle_Enter
+  - first:
+      74: 9178556642366686903
+    second: Vert|handle_Exit
+  - first:
+      74: -8041089743958054826
+    second: Vert|pedal leftAction
+  - first:
+      74: -1268699122646010
+    second: Vert|pedal leftAction.001
+  - first:
+      74: 8007628510597915984
+    second: Vert|pedal rAction
+  - first:
+      74: 5763877711618272940
+    second: Vert|rim backAction
+  - first:
+      74: -3757595489976753019
+    second: Vert|rim frontAction
+  - first:
+      74: -4445507567899935055
+    second: Vert|seat rodAction
+  - first:
+      74: 5705179757703314869
+    second: Vert|seatAction.001
+  - first:
+      74: 7250094336546553657
+    second: Vert|spokes backAction
+  - first:
+      74: -3382269837015755773
+    second: Vert|spokes frontAction
+  - first:
+      74: -7929760255858505165
+    second: Vert|stearingAction.001
+  - first:
+      74: 9104872075861496833
+    second: Vert|tyre backAction.001
+  - first:
+      74: 687808289329997567
+    second: Vert|tyre frontAction.001
+  - first:
+      74: 4147908263305295388
+    second: Vert|Vert.001Action
+  - first:
+      74: 7011350755761921623
+    second: Vert|VertAction.001
+  - first:
+      74: 5015801632733127666
+    second: Vert.001|chain plateAction
+  - first:
+      74: -1883783522269419821
+    second: Vert.001|cycle_Cycling
+  - first:
+      74: 787132771139771232
+    second: Vert.001|cycle_Enter
+  - first:
+      74: -1027165762113939747
+    second: Vert.001|cycle_Exit
+  - first:
+      74: 7465382443395481731
+    second: Vert.001|Cylinder.001Action
+  - first:
+      74: 3767876603928560364
+    second: Vert.001|Cylinder.002Action
+  - first:
+      74: 5048557822480357012
+    second: Vert.001|Cylinder.005Action
+  - first:
+      74: -2814843237603050172
+    second: Vert.001|Cylinder.006Action
+  - first:
+      74: -1513346282895152589
+    second: Vert.001|CylinderAction
+  - first:
+      74: 8747483763243903564
+    second: Vert.001|handle_Cycling
+  - first:
+      74: -441789325441247239
+    second: Vert.001|handle_Enter
+  - first:
+      74: 2985922097006332597
+    second: Vert.001|handle_Exit
+  - first:
+      74: 5770348734627992958
+    second: Vert.001|pedal leftAction
+  - first:
+      74: 5462642377129173818
+    second: Vert.001|pedal leftAction.001
+  - first:
+      74: 7205921915581745183
+    second: Vert.001|pedal rAction
+  - first:
+      74: 3426351767990840066
+    second: Vert.001|rim backAction
+  - first:
+      74: 6073576885134417232
+    second: Vert.001|rim frontAction
+  - first:
+      74: 8469919062942079426
+    second: Vert.001|seat rodAction
+  - first:
+      74: -3421406450140747201
+    second: Vert.001|seatAction.001
+  - first:
+      74: -7989724370215964356
+    second: Vert.001|spokes backAction
+  - first:
+      74: 4285990499347217463
+    second: Vert.001|spokes frontAction
+  - first:
+      74: 622252623844412259
+    second: Vert.001|stearingAction.001
+  - first:
+      74: 8996984051419707775
+    second: Vert.001|tyre backAction.001
+  - first:
+      74: 2303486810277994111
+    second: Vert.001|tyre frontAction.001
+  - first:
+      74: 5244449420962968739
+    second: Vert.001|Vert.001Action
+  - first:
+      74: 8016473415680600678
+    second: Vert.001|VertAction.001
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

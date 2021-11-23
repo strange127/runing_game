@@ -108,20 +108,25 @@ public class PlayerMoment : MonoBehaviour
             insarface = Physics.CheckSphere(serfacecheck.position, waterdistace, Watermask);
 
 
-
-            if (velocity.y < -4)
-                velocity.y = -4f;
+            if (clicked == false)
+            {
+                speed -= acc * Time.deltaTime;
+                if (speed < 0)
+                    speed = 0;
+            }
+            if (velocity.y < -3)
+                velocity.y = -3f;
 
             if (transform.position.y < -5)
                 velocity.y += swiminggravity * Time.deltaTime;
             else if (transform.position.y > -5.5)
                 velocity.y -= swiminggravity * Time.deltaTime;
-
-
-            swimmingtimer();
             Diving();
-            SpeedControler();
             controler.Move(velocity * Time.deltaTime);
+
+
+          //  swimmingtimer();
+           
         }
         else if (state == PlayerState.cycling)
         {
@@ -177,13 +182,19 @@ public class PlayerMoment : MonoBehaviour
     {
         if (isgrounded)
         {
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             if (Input.GetButtonDown("Jump") && Type == PlayerType.Player)
+            {
+                anime.SetBool("Jump", true);
                 velocity.y = Mathf.Sqrt(jumpHight * -2f * gravity);
+                StartCoroutine(jumpstop());
+            }
 #endif
             if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && Type == PlayerType.Player)
             {
+                anime.SetBool("Jump", true);
                 velocity.y = Mathf.Sqrt(jumpHight * -2f * gravity);
+                StartCoroutine(jumpstop());
             }
             else if (Type == PlayerType.AirtificialInteligence)
             {
@@ -195,12 +206,20 @@ public class PlayerMoment : MonoBehaviour
                         int rang = Random.Range(0, 1000);
                         if (rang < inteligent)
                         {
+                            anime.SetBool("Jump", true);
                             velocity.y = Mathf.Sqrt(jumpHight * -2f * gravity);
+                            StartCoroutine(jumpstop());
                         }
                     }
                 }
             }
         }
+    }
+    IEnumerator jumpstop()
+    {
+        yield return new WaitForSeconds(1.3f);
+
+        anime.SetBool("Jump", false);
     }
     bool curotrineconnect = true;
     void Diving()
@@ -220,11 +239,19 @@ public class PlayerMoment : MonoBehaviour
         else if (Type == PlayerType.AirtificialInteligence)
         {
             int rang = Random.Range(0, 1000);
-            if (rang < inteligent) 
-            {
-                if (curotrineconnect)
-                    StartCoroutine(NPCDivingSpeed());   
-            } 
+           
+           if (rang < inteligent)
+           {
+                clicked = true;
+                if (speed < maxspeed)
+                {
+                    speed += acc;
+
+                }
+           }
+                //if (curotrineconnect)
+                //    StartCoroutine(NPCDivingSpeed());   
+            
         }
     }
     IEnumerator NPCDivingSpeed()

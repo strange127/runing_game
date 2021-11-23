@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
                 float dis = Random.Range(AutoLevelMaking.MinDistance, AutoLevelMaking.MaxDistance);
                 pos = new Vector3(pos.x, pos.y, pos.z + dis);
 
-                Instantiate(Coin, new Vector3(pos.x, pos.y + 2, pos.z), Quaternion.identity,SpawnHOlder.GetChild(1));
+                Instantiate(Coin, new Vector3(pos.x, pos.y + 7, pos.z), Quaternion.identity,SpawnHOlder.GetChild(1));
                 Instantiate(AutoLevelMaking.RunningObstackleToSpawn[obstacklespawnid], pos, Quaternion.identity, SpawnHOlder.GetChild(1));
             }
             pos = new Vector3(pos.x, pos.y, postion.z);
