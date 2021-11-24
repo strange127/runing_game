@@ -10,19 +10,21 @@ public class Level : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] Animator shopanimatior;
     [SerializeField] SoundSetting sound;
-   // [SerializeField] Image[] buttons;
+    // [SerializeField] Image[] buttons;
 
-
+    private void Start()
+    {
+        //GameObject.Find("GameManager").GetComponent<SoundSetting>().ismuted =
+    }
     public void shop()
     {
         anim.SetBool("Stop",false);
     }
+
     public void shopback()
     {
         anim.SetBool("Stop",true);
-        //shopanimatior.SetBool("Close",true);
-        //StartCoroutine(BACKaNIMTION(OBJ));
-        
+
     }
     public void volume(int i)
         
@@ -30,36 +32,32 @@ public class Level : MonoBehaviour
         switch (i)
         {
             case 0:
-                GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue = 8f;
+                GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue = .5f;
                 break;
             case 1:
-                GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue = 11f;
+                GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue = 2.5f;
                 break;
             case 2:
-                GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue = 14f;
+                GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue = 5f;
                 break;
             case 3:
-                GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue = 17f;
+                GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue = 7.5f;
                 break;
             case 4:
-                GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue = 20f;
+                GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue = 10f;
                 break;
         }
 
-        
+        GameObject.Find("GameManager").GetComponent<SoundSetting>().ChangeSoundVoulume();
     }
     
    
-    public void volumemute(bool value)
+    public void volumemute()
     {
-        GameObject.Find("GameManager").GetComponent<SoundSetting>().ismuted = value;
+        GameObject.Find("GameManager").GetComponent<SoundSetting>().SoundButton();
 
     }
-    IEnumerator BACKaNIMTION(GameObject OBJ)
-    {
-        yield return new WaitForSeconds(.75f);
-        OBJ.SetActive(false);
-    }
+
     public void ModesMenu() {
         SceneManager.LoadScene(0);
     }
