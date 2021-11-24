@@ -28,7 +28,9 @@ public class SoundSetting : MonoBehaviour
         {
             Load();
         }
-        volumeVlaue = PlayerPrefs.GetInt("SoundVolume");
+        if(!PlayerPrefs.HasKey("SoundVolume"))
+        volumeVlaue = PlayerPrefs.GetFloat("SoundVolume");
+        
         UpdateButtonIcon();
         AudioListener.pause = ismuted;
         
@@ -42,7 +44,8 @@ public class SoundSetting : MonoBehaviour
     public void ChangeSoundVoulume()
     {
         AudioListener.volume = volumeVlaue;
-        PlayerPrefs.SetFloat("SoundVolume", volumeVlaue);
+        PlayerPrefs.SetFloat("SoundVolume",volumeVlaue);
+        PlayerPrefs.Save();
         
     }
    public void SoundButton()
