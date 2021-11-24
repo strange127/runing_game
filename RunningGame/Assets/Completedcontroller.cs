@@ -23,14 +23,17 @@ public class Completedcontroller : MonoBehaviour
         {
             case 1:
                 medal3.SetActive(true);
+                PlayerPrefs.SetInt("SaveGame", PlayerPrefs.GetInt("SaveGame") + 1);
                 wintext.text = "AWESOME";
                 break;
             case 2:
                 medal2.SetActive(true);
+                PlayerPrefs.SetInt("SaveGame", PlayerPrefs.GetInt("SaveGame") + 1);
                 wintext.text = "GREAT";
                 break;
             case 3:
                 medal1.SetActive(true);
+                PlayerPrefs.SetInt("SaveGame", PlayerPrefs.GetInt("SaveGame") + 1);
                 wintext.text = "GOOD";
                 break;
             case 4:

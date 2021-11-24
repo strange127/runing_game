@@ -28,22 +28,19 @@ public class SoundSetting : MonoBehaviour
         {
             Load();
         }
-        volumeVlaue = PlayerPrefs.GetInt("SoundVolume");
         UpdateButtonIcon();
         AudioListener.pause = ismuted;
         
     }
     private void Update()
     {
-       
+        ChangeSoundVoulume();
         if (Input.GetKeyDown(KeyCode.G))
             SoundButton();
     }
     public void ChangeSoundVoulume()
     {
         AudioListener.volume = volumeVlaue;
-        PlayerPrefs.SetFloat("SoundVolume", volumeVlaue);
-        
     }
    public void SoundButton()
     {

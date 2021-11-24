@@ -17,10 +17,11 @@ public class PauseManager : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
      }
-    public void Gameplay(int SceneID)
+    public void Gameplay()
     {
+        LoadingScreen.Loading.BackButton((int)ScenceConect.StartMenu);
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneID);
+        
     }
     public void QuitGame()
     {

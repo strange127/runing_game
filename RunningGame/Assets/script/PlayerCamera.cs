@@ -18,7 +18,7 @@ public class PlayerCamera : MonoBehaviour
         if (Target)
         {
             this.transform.parent = Target.transform;
-            transform.localPosition = new Vector3(0, Ycontroler, ZControler);
+            
         }
     }
 }

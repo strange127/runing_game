@@ -469,7 +469,7 @@ public class PlayerMoment : MonoBehaviour
             GameManager.instance.Posstion++;
             if(Type== PlayerType.Player)
             {
-                
+                PlayerPrefs.SetInt("SaveGame", PlayerPrefs.GetInt("SaveGame")+1);
                 GameManager.instance.congratspanel.SetActive(true);
                 PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
             }

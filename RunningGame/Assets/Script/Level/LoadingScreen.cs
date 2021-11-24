@@ -7,7 +7,7 @@ public class LoadingScreen : MonoBehaviour
 {
     public static LoadingScreen Loading;
     public LevelCreationScriptable[] selectedLevel;
-   
+    public GameObject camera;
     private Button PlayGame;
 
     public AsyncOperation async;
@@ -43,34 +43,39 @@ public class LoadingScreen : MonoBehaviour
         previousscen = (int)ScenceConect.LevelSelction - 1;
         StartCoroutine(LoadLevelSelction());
     }
+
     IEnumerator LoadLevelSelction()
     {
         while (!async.isDone)
         {
             yield return null;
         }
+        
         Button buton = GameObject.Find("LevelSelctionCanvas/Panel-worldmap/worldmap/Backbutton").GetComponent<Button>();
-        buton.onClick.AddListener(() => BackButton());
+        buton.onClick.AddListener(() => BackButton((int)ScenceConect.StartMenu));
     }
     public void LoadingScence(int level)
     {
-        if (GameManager.instance.levelLoad < level)
-        {
-            PlayerPrefs.SetInt("SaveGame", level);
-        }
+
   //      loadingScreen.SetActive(true);
         async = SceneManager.LoadSceneAsync((int)3, LoadSceneMode.Additive);
-        curentsecne = (int)3;
+        curentsecne = 3;
         previousscen = 2;
         async = SceneManager.UnloadSceneAsync((int)2);
         StartCoroutine(GetScenceLoadProgress(level));
        
     }
-    public void BackButton()
+    public void BackButton(int level)
     {
+        camera.transform.parent =GameObject.Find("CameraParent").transform;
+        GameManager.instance.Road.Clear();
         async = SceneManager.UnloadSceneAsync(curentsecne);
-        async = SceneManager.LoadSceneAsync(previousscen, LoadSceneMode.Additive);
-        StartCoroutine(StartMenu());
+        async = SceneManager.LoadSceneAsync(level, LoadSceneMode.Additive);
+        curentsecne = level;
+        if(level == (int)ScenceConect.StartMenu)
+             StartCoroutine(StartMenu());
+        else if(level== (int)ScenceConect.LevelSelction)
+            StartCoroutine(LoadLevelSelction());
     }
     
     public IEnumerator GetScenceLoadProgress(int lvel)
@@ -79,7 +84,7 @@ public class LoadingScreen : MonoBehaviour
         {
             yield return null;
         }
-
+        GameManager.instance.SpawnHolder = GameObject.Find("SpawnHolder").transform;
         for (int i = 0; i < selectedLevel.Length; i++)
         {
             if(selectedLevel[i].level == lvel)

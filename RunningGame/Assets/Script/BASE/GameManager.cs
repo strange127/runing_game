@@ -11,15 +11,15 @@ public class GameManager : MonoBehaviour
     [SerializeField]private GameObject PlayerSpawnObject;
     [SerializeField]private GameObject PlayerStandingPoint;
     public GameObject congratspanel;
-    private PlayerCamera PlayerFlowCamera;
+    public PlayerCamera PlayerFlowCamera;
     private float Size;
     private int FieldID;
     public UiContains UI;
-    public Transform SpawnHOlder;
+    public Transform SpawnHolder;
     public Collider filalline;
     public int coin;
     public int levelLoad;
-    private List<GameObject> Road = new List<GameObject>();
+    public List<GameObject> Road = new List<GameObject>();
     public int Posstion;
 
 
@@ -40,9 +40,10 @@ public class GameManager : MonoBehaviour
 
     public void LevelCreate()
     {
-        PlayerFlowCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerCamera>(); 
-        PlayerSpawn();
+        //PlayerFlowCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerCamera>(); 
+
         SpawnField();
+        PlayerSpawn();
       
         Road[AutoLevelMaking.LevelState.Length-1].GetComponent<Filed>().pos.gameObject.tag = "Finished";
       
@@ -63,8 +64,8 @@ public class GameManager : MonoBehaviour
                 float dis = Random.Range(AutoLevelMaking.MinDistance, AutoLevelMaking.MaxDistance);
                 pos = new Vector3(pos.x, pos.y, pos.z + dis);
 
-                Instantiate(Coin, new Vector3(pos.x, pos.y + 7, pos.z), Quaternion.identity,SpawnHOlder.GetChild(1));
-                Instantiate(AutoLevelMaking.RunningObstackleToSpawn[obstacklespawnid], pos, Quaternion.identity, SpawnHOlder.GetChild(1));
+                Instantiate(Coin, new Vector3(pos.x, pos.y + 7, pos.z), Quaternion.identity,SpawnHolder.GetChild(1));
+                Instantiate(AutoLevelMaking.RunningObstackleToSpawn[obstacklespawnid], pos, Quaternion.identity, SpawnHolder.GetChild(1));
             }
             pos = new Vector3(pos.x, pos.y, postion.z);
         }
@@ -95,21 +96,21 @@ public class GameManager : MonoBehaviour
          
         if(AutoLevelMaking.curves[i] == CyclingCurve.Right)
         {
-            Road.Add(Instantiate(AutoLevelMaking.RightCurve[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
+            Road.Add(Instantiate(AutoLevelMaking.RightCurve[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHolder));
             Road[j - 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
             float y = Road[j - 1].GetComponent<Filed>().Roration.y + Road[j - 1].GetComponent<Filed>().curentRotation.y;
             Road[j].transform.Rotate(0, y, 0);
         }
         else if(AutoLevelMaking.curves[i] == CyclingCurve.Left)
         {
-            Road.Add(Instantiate(AutoLevelMaking.LeftCurve[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
+            Road.Add(Instantiate(AutoLevelMaking.LeftCurve[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHolder.GetChild(0)));
             Road[j - 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
             float y = Road[j - 1].GetComponent<Filed>().Roration.y + Road[j - 1].GetComponent<Filed>().curentRotation.y;
             Road[j].transform.Rotate(0, y, 0);
         }
         else if(AutoLevelMaking.curves[i] == CyclingCurve.Straight)
         {
-            Road.Add(Instantiate(AutoLevelMaking.straightField[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHOlder));
+            Road.Add(Instantiate(AutoLevelMaking.straightField[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHolder.GetChild(0)));
             Road[j - 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
             float y = Road[j - 1].GetComponent<Filed>().Roration.y + Road[j - 1].GetComponent<Filed>().curentRotation.y;
             Road[j].transform.Rotate(0, y, 0);
@@ -153,7 +154,7 @@ public class GameManager : MonoBehaviour
                     pos = AutoLevelMaking.PlayerSpawnPos;
                     FieldID = Random.Range(0, AutoLevelMaking.RununingField.Length);
                     pos = new Vector3(pos.x + 30, pos.y, pos.z);
-                    GameObject obj = Instantiate(AutoLevelMaking.RununingField[FieldID], new Vector3(pos.x, pos.y - 2, pos.z), Quaternion.identity, SpawnHOlder.GetChild(0));
+                    GameObject obj = Instantiate(AutoLevelMaking.RununingField[FieldID], new Vector3(pos.x, pos.y - 2, pos.z), Quaternion.identity, SpawnHolder.GetChild(0));
                     Road.Add(obj);
                     obj.transform.localScale = new Vector3(1, 1, Size);
                     pos = obj.GetComponent<Filed>().pos.position;
@@ -164,7 +165,7 @@ public class GameManager : MonoBehaviour
 
                     FieldID = Random.Range(0, AutoLevelMaking.SwimingFileldField.Length);
                     pos = new Vector3(40, pos.y, pos.z);
-                    GameObject obj = Instantiate(AutoLevelMaking.SwimingFileldField[FieldID], new Vector3(pos.x, pos.y - 2, pos.z), Quaternion.identity, SpawnHOlder.GetChild(0));
+                    GameObject obj = Instantiate(AutoLevelMaking.SwimingFileldField[FieldID], new Vector3(pos.x, pos.y - 2, pos.z), Quaternion.identity, SpawnHolder.GetChild(0));
                     Road.Add(obj);
                     pos = obj.GetComponent<Filed>().pos.position;
                 }
@@ -179,7 +180,7 @@ public class GameManager : MonoBehaviour
                     
                     Size = AutoLevelMaking.MaxDistance * AutoLevelMaking.ObstacleCount[0];
                     pos = new Vector3(40, pos.y, pos.z);
-                    GameObject obj = Instantiate(AutoLevelMaking.RununingField[FieldID], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity, SpawnHOlder.GetChild(0));
+                    GameObject obj = Instantiate(AutoLevelMaking.RununingField[FieldID], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity, SpawnHolder.GetChild(0));
                     Road.Add(obj);
                     obj.transform.localScale = new Vector3(1, 1, Size);
                     pos = obj.GetComponent<Filed>().pos.position;
@@ -192,7 +193,7 @@ public class GameManager : MonoBehaviour
                     
                    
                       //  pos = new Vector3(pos.x + 30, pos.y, Size + 100 / 2);
-                        GameObject obj = Instantiate(AutoLevelMaking.SwimingFileldField[FieldID], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity, SpawnHOlder.GetChild(0));
+                        GameObject obj = Instantiate(AutoLevelMaking.SwimingFileldField[FieldID], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity, SpawnHolder.GetChild(0));
                     Road.Add(obj);
                     pos = obj.GetComponent<Filed>().pos.position;
                     // obj.transform.localScale = new Vector3(10, 0.5f, newplatformsize);
@@ -215,7 +216,7 @@ public class GameManager : MonoBehaviour
         {
             pos = new Vector3(pos.x + 10, pos.y, pos.z);
             Vector3 standingpoint = new Vector3(pos.x, pos.y - 2, pos.z);
-            GameObject obj = Instantiate(PlayerSpawnObject, pos, Quaternion.identity,SpawnHOlder.GetChild(2));
+            GameObject obj = Instantiate(PlayerSpawnObject, pos, Quaternion.identity,SpawnHolder.GetChild(2));
             Instantiate(PlayerStandingPoint, standingpoint, Quaternion.identity);
             if (i != playno)
             {
@@ -226,9 +227,12 @@ public class GameManager : MonoBehaviour
             {
                 obj.GetComponent<PlayerMoment>().Type = PlayerType.Player;
                 plalyermoment = obj.GetComponent<PlayerMoment>();
+
                 //   Button1.onClick.AddListener(() => obj.GetComponent<PlayerMoment>().click());
                 //  Button1.onClick.AddListener(() => obj.GetComponent<PlayerMoment>().click());
-                PlayerFlowCamera.Target = obj;
+                PlayerFlowCamera.transform.parent = obj.transform;
+                PlayerFlowCamera.transform.localPosition = new Vector3(0, PlayerFlowCamera.Ycontroler, PlayerFlowCamera.ZControler);
+
             }
 
         }
