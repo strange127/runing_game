@@ -12,29 +12,44 @@ public class Level : MonoBehaviour
     private SoundSetting sound;
     // [SerializeField] Image[] buttons;
 
-    private void Awake()
+    void Start()
     {
-        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().ismuted == true)
-        { Audiosetup[0].enabled = true; Audiosetup[1].enabled = false; }
-        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().ismuted == false)
-        { Audiosetup[1].enabled = true; Audiosetup[0].enabled = false; }
-            switch (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue)
+        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue == 0.5)
+            Audiosetup[2].enabled = true;
+        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue == 2.5)
         {
-            case 0.5f: Audiosetup[2].enabled = true;
-                break;
-            case 2.5f:
-                Audiosetup[3].enabled = true;
-                break;
-            case 5f:
-                Audiosetup[4].enabled = true;
-                break;
-            case 7.5f:
-                Audiosetup[5].enabled = true;
-                break;
-            case 10f:
-                Audiosetup[6].enabled = true;
-                break;
+            Audiosetup[3].enabled = true;
+            Audiosetup[2].enabled = true;
         }
+        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue == 5)
+        {
+            Audiosetup[3].enabled = true;
+            Audiosetup[2].enabled = true;
+            Audiosetup[4].enabled = true;
+        }
+        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue == 7.5)
+        {
+            Audiosetup[3].enabled = true;
+            Audiosetup[2].enabled = true;
+            Audiosetup[4].enabled = true;
+            Audiosetup[5].enabled = true;
+        }
+        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue == 10)
+        {
+            Audiosetup[3].enabled = true;
+            Audiosetup[2].enabled = true;
+            Audiosetup[4].enabled = true;
+            Audiosetup[5].enabled = true;
+            Audiosetup[6].enabled = true;
+        }
+
+
+        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().ismuted == true)
+        { Audiosetup[0].enabled = false; Audiosetup[1].enabled = true; }
+        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().ismuted == false)
+        { Audiosetup[1].enabled = false; Audiosetup[0].enabled = true; }
+
+        
 
     }
     public void shop()
