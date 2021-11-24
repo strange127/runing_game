@@ -862,7 +862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundOn: {fileID: 1541567472}
   soundOff: {fileID: 0}
-  volumeVlaue: 1
+  volumeVlaue: 5
   ismuted: 0
   BackGroundSound:
   - {fileID: 8300000, guid: 3ad6ca7ca93309f4dbf9a5a3471d015d, type: 3}
