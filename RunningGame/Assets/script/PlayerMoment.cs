@@ -21,6 +21,7 @@ public class PlayerMoment : MonoBehaviour
     public int inteligent =5;
     public GameObject Cyclingobj;
     public Transform Target;
+    public Transform RayCastPostion;
     [Header("Running")]
     #region RuningState
     private bool isgrounded;
@@ -53,7 +54,6 @@ public class PlayerMoment : MonoBehaviour
     #endregion
     private void Start()
     {   
-        curotrineconnect = true;
         anime = GetComponentInChildren<Animator>();
         //congratspanel = GameObject.Find("Completed").GetComponent<GameObject>();
         controler = GetComponent<CharacterController>();
@@ -225,7 +225,6 @@ public class PlayerMoment : MonoBehaviour
 
         anime.SetBool("Jump", false);
     }
-    bool curotrineconnect = true;
     void Diving()
     {
 
@@ -260,8 +259,6 @@ public class PlayerMoment : MonoBehaviour
             
         }
     }
-
-    public Transform pos;
     void Sensour()
     {
         RaycastHit hit;
@@ -290,9 +287,9 @@ public class PlayerMoment : MonoBehaviour
         //}
 
 
-        if (Physics.Raycast(pos.position, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
+        if (Physics.Raycast(RayCastPostion.position, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
         {
-            if (!hit.collider.CompareTag("Coin"))
+            if (!hit.collider.CompareTag("Coin") && !hit.collider.CompareTag("Finished"))
             {
 
                 controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
@@ -300,10 +297,10 @@ public class PlayerMoment : MonoBehaviour
 
 
         }
-        else if (Physics.Raycast(pos.position, Quaternion.AngleAxis(-sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
+        else if (Physics.Raycast(RayCastPostion.position, Quaternion.AngleAxis(-sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
         {
 
-            if (!hit.collider.CompareTag("Coin"))
+            if (!hit.collider.CompareTag("Coin")&&!hit.collider.CompareTag("Finished"))
             {
 
                 controler.transform.Rotate(0, angleofrotation * Time.deltaTime, 0);
@@ -384,7 +381,6 @@ public class PlayerMoment : MonoBehaviour
             }
         }
     }
-
     public void SpeedControler()
     {
         if (speed < maxspeed)

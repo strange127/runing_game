@@ -15,25 +15,40 @@ public class UiContains : MonoBehaviour
     {
         instace = this;
     }
-    public void ShopItemParchase(powerUp power)
+    public void ShopItemParchase(int i)
     {
-        if (GameManager.instance.coin >= 100)
+
+
+        //money will be minus
+        if ((int)powerUp.Speedbooster == i)
         {
-            GameManager.instance.coin -= 100;
-            PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
-            //money will be minus
-            if (power == powerUp.Speedbooster)
+            if (GameManager.instance.coin >= speedbostersaved)
             {
                 PlayerPrefs.SetInt("Speedbooster", PlayerPrefs.GetInt("Speedbooster") + 1);
-
+                GameManager.instance.coin -= speedbostersaved;
+                PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
             }
-            else if (power == powerUp.shield)
+        }
+        else if ((int)powerUp.shield == i)
+        {
+            if (GameManager.instance.coin >= shildbostersaved)
             {
                 PlayerPrefs.SetInt("shildbooster", PlayerPrefs.GetInt("shildbooster") + 1);
+                GameManager.instance.coin -= shildbostersaved;
+                PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
             }
-            else if (power == powerUp.noobsticle)
+
+
+        }
+        else if ((int)powerUp.noobsticle == i)
+        {
+
+            if (GameManager.instance.coin >= noobsticalsaved)
             {
+
                 PlayerPrefs.SetInt("noobsticle", PlayerPrefs.GetInt("noobsticle") + 1);
+                GameManager.instance.coin -= noobsticalsaved;
+                PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
             }
         }
 

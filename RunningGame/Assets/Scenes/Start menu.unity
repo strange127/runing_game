@@ -1931,7 +1931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &565130030
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2293,11 +2293,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -2306,7 +2306,7 @@ PrefabInstance:
     - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1419449190}
+      objectReference: {fileID: 565130029}
     - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2317,7 +2317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: shopback
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -2325,7 +2325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Level, Assembly-CSharp
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -2334,14 +2334,14 @@ PrefabInstance:
     - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 565130029}
+      objectReference: {fileID: 0}
     - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3777701117176823989, guid: 11f2f558af68a234cb23d6f36c8bae4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3769,7 +3769,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4850,7 +4850,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

@@ -10,14 +10,8 @@ public class StartMenu : MonoBehaviour
 
     }
 
-   public void ShopParchaseItem(int item)
-    {
-        if (item == 0)
-        {
-            UiContains.instace.ShopItemParchase(powerUp.shield);
-        } else if (item == 1)
-            UiContains.instace.ShopItemParchase(powerUp.Speedbooster);
-        else if (item == 2)      
-            UiContains.instace.ShopItemParchase(powerUp.noobsticle);
+    public void ShopParchaseItem(int item)
+    { 
+        UiContains.instace.ShopItemParchase(item);
     }
 }

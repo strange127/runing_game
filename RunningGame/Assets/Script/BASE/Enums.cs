@@ -23,10 +23,10 @@ using UnityEngine;
     }
 public enum powerUp
 {
-    none,
-    Speedbooster,
-    shield,
-    noobsticle
+    none=0,
+    Speedbooster=1,
+    shield=2,
+    noobsticle=3
 }
 public enum ScenceConect
 {
