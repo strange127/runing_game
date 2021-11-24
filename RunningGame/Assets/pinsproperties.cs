@@ -38,13 +38,7 @@ public class pinsproperties : MonoBehaviour {
     }
     private void Start()
     {
-        if (PlayerPrefs.HasKey("SaveGame")) 
-        {
-            if (level == PlayerPrefs.GetInt("SaveGame"))
-            {
-                mystate = state.current;
-            }
-        }
+        
     }
     private void Update()
     {
