@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> Road = new List<GameObject>();
     public int Posstion;
 
-
+    public GameObject FinishedLIne;
     private void Awake()
     {
         AutoLevelMaking = null;
@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
         {
             levelLoad = PlayerPrefs.GetInt("SaveGame");
         }
+        coin = PlayerPrefs.GetInt("Coin");
     }
 
     public void LevelCreate()
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
 
         SpawnField();
         PlayerSpawn();
-      
+        Instantiate(FinishedLIne, Road[AutoLevelMaking.LevelState.Length - 1].GetComponent<Filed>().pos.position,Quaternion.identity,SpawnHolder.GetChild(0));
         Road[AutoLevelMaking.LevelState.Length-1].GetComponent<Filed>().pos.gameObject.tag = "Finished";
       
         

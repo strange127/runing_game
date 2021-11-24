@@ -1633,7 +1633,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedLevel:
   - {fileID: 11400000, guid: 2812199424867f04ba143c78e6a58ab8, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 80f8a75928e637243b4c59a4023653d6, type: 2}
+  - {fileID: 11400000, guid: 4ec3efd97a98e9b409cd612d85366740, type: 2}
+  - {fileID: 11400000, guid: 5237bbebb81772844a930dd78341e220, type: 2}
   camera: {fileID: 1776121540}
   curentsecne: 0
   previousscen: 0
@@ -1677,6 +1679,7 @@ MonoBehaviour:
   levelLoad: 0
   Road: []
   Posstion: 0
+  FinishedLIne: {fileID: 3205968381360134707, guid: d5862125f8c94e941bcad9754743a085, type: 3}
   Coin: {fileID: 7081180305563950418, guid: 6fb1b3e7d2e85234d90e70a583445b42, type: 3}
 --- !u!82 &1133820822
 AudioSource:
