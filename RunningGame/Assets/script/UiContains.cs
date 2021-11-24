@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class UiContains : MonoBehaviour
 {
     public static UiContains instace;
@@ -10,10 +11,15 @@ public class UiContains : MonoBehaviour
     public int noobsticalsaved;
     public Button leftbutton;
     public Button rightbutton;
+    public TextMeshProUGUI CoinText;
 
     private void Awake()
     {
         instace = this;
+    }
+    private void Start()
+    {
+        CoinText.text = GameManager.instance.coin.ToString();
     }
     public void ShopItemParchase(int i)
     {

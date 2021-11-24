@@ -75,6 +75,7 @@ MonoBehaviour:
   inteligent: 50
   Cyclingobj: {fileID: 3643132923497633188, guid: b9b7f2527ff8ad64e90dd47550899042, type: 3}
   Target: {fileID: 0}
+  RayCastPostion: {fileID: 7659743558039996581}
   gravity: -9
   groundMask:
     serializedVersion: 2
@@ -95,7 +96,6 @@ MonoBehaviour:
   clicked: 0
   sensourAngle: 25
   sensorLenth: 45
-  pos: {fileID: 7659743558039996581}
 --- !u!1 &6024143527964008876
 GameObject:
   m_ObjectHideFlags: 0

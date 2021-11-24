@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject CoinObject;
     public static GameManager instance;
     private int MaxPlayer = 5;
     public LevelCreationScriptable AutoLevelMaking;
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
     public int levelLoad;
     public List<GameObject> Road = new List<GameObject>();
     public int Posstion;
-
+    Vector3 pos;
     public GameObject FinishedLIne;
     private void Awake()
     {
@@ -38,7 +39,6 @@ public class GameManager : MonoBehaviour
         }
         coin = PlayerPrefs.GetInt("Coin");
     }
-
     public void LevelCreate()
     {
         //PlayerFlowCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerCamera>(); 
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
       
         
     }
-    public GameObject Coin;
+    
     void RunningField()
     {
         int obstacklespawnid = Random.Range(0, AutoLevelMaking.RunningObstackleToSpawn.Length);
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
                 float dis = Random.Range(AutoLevelMaking.MinDistance, AutoLevelMaking.MaxDistance);
                 pos = new Vector3(pos.x, pos.y, pos.z + dis);
 
-                Instantiate(Coin, new Vector3(pos.x, pos.y + 7, pos.z), Quaternion.identity,SpawnHolder.GetChild(1));
+                Instantiate(CoinObject, new Vector3(pos.x, pos.y + 7, pos.z), Quaternion.identity,SpawnHolder.GetChild(1));
                 Instantiate(AutoLevelMaking.RunningObstackleToSpawn[obstacklespawnid], pos, Quaternion.identity, SpawnHolder.GetChild(1));
             }
             pos = new Vector3(pos.x, pos.y, postion.z);
@@ -137,11 +137,12 @@ public class GameManager : MonoBehaviour
            // }
        
     }
-    Vector3 pos ;
-    int i;
+    
+   
     void SpawnField()
     {
-        i = 0;
+
+        int i = 0;
         for (int j = 0; j < AutoLevelMaking.LevelState.Length; j++)
         {
             
