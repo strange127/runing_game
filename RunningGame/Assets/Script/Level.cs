@@ -76,7 +76,7 @@ public class Level : MonoBehaviour
     public void volumemute()
     {
         GameObject.Find("GameManager").GetComponent<SoundSetting>().SoundButton();
-
+        
     }
 
     public void ModesMenu() {
