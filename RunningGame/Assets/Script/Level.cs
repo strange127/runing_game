@@ -8,13 +8,34 @@ using UnityEngine.Animations;
 public class Level : MonoBehaviour
 {
     [SerializeField] Animator anim;
-    [SerializeField] Animator shopanimatior;
-    [SerializeField] SoundSetting sound;
+    [SerializeField] Image[] Audiosetup;
+    private SoundSetting sound;
     // [SerializeField] Image[] buttons;
 
-    private void Start()
+    private void Awake()
     {
-        //GameObject.Find("GameManager").GetComponent<SoundSetting>().ismuted =
+        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().ismuted == true)
+        { Audiosetup[0].enabled = true; Audiosetup[1].enabled = false; }
+        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().ismuted == false)
+        { Audiosetup[1].enabled = true; Audiosetup[0].enabled = false; }
+            switch (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue)
+        {
+            case 0.5f: Audiosetup[2].enabled = true;
+                break;
+            case 2.5f:
+                Audiosetup[3].enabled = true;
+                break;
+            case 5f:
+                Audiosetup[4].enabled = true;
+                break;
+            case 7.5f:
+                Audiosetup[5].enabled = true;
+                break;
+            case 10f:
+                Audiosetup[6].enabled = true;
+                break;
+        }
+
     }
     public void shop()
     {
