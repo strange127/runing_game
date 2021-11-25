@@ -30,13 +30,7 @@ public class SoundSetting : MonoBehaviour
         }
         volumeVlaue = PlayerPrefs.GetFloat("SoundVolume");
         UpdateButtonIcon();
-        AudioListener.pause = ismuted;
-    }
-    private void Update()
-    {
-       
-        if (Input.GetKeyDown(KeyCode.G))
-            SoundButton();
+   
     }
     public void ChangeSoundVoulume()
     {
@@ -47,22 +41,13 @@ public class SoundSetting : MonoBehaviour
    public void SoundButton()
     {
         ismuted = !ismuted;
-        AudioListener.pause = !AudioListener.pause;
         Save();
         UpdateButtonIcon();
         
     }
     void UpdateButtonIcon()
     {
-        //if (ismuted)
-        //{
-        //    soundOn.enabled = false;
-        //    soundOff.enabled = true; 
-        //}else
-        //{
-        //    soundOn.enabled = true;
-        //    soundOff.enabled = false;
-        //}
+        AudioListener.pause = ismuted;
     }
 
     public void Save()

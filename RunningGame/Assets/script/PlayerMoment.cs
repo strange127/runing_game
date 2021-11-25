@@ -395,10 +395,7 @@ public class PlayerMoment : MonoBehaviour
                 if (speed > maxspeed)
                 {
                     speed = maxspeed;
-
-                }
-
-            }
+                }            }
             if (speed <= 0)
             {
                 speed = 1;
@@ -498,11 +495,8 @@ public class PlayerMoment : MonoBehaviour
         {
             if (Type == PlayerType.Player)
             {
-
                 GameManager.instance.coin++;
                 UiContains.instace.CoinText.text = GameManager.instance.coin.ToString();
-            
-
             }
             foreach (var item in power.collider.GetComponent<Coin>().player)
             { 

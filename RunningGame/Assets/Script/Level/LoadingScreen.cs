@@ -31,7 +31,7 @@ public class LoadingScreen : MonoBehaviour
         }
        // async = SceneManager.UnloadSceneAsync((int)ScenceConect.LevelSelction);
    //     loadingScreen.SetActive(false);
-        PlayGame = GameObject.Find("Canvas/MainMenu/Play").GetComponent<Button>();
+        PlayGame = GameObject.Find("Canvas/SelectMode/LevelMode").GetComponent<Button>();
         PlayGame.onClick.AddListener(() => Loaded());
     }
     public void Loaded()

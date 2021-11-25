@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class StartMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void LevelPracticeMode(int vlaue)
     {
-
+        LoadingScreen.Loading.LoadingScence(vlaue);
     }
 
     public void ShopParchaseItem(int item)
