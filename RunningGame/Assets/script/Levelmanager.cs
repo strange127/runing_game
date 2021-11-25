@@ -14,7 +14,7 @@ public class Levelmanager : MonoBehaviour
 
 
     // Start is called before the first frame update
-    private void OnEnable()
+    private void Awake()
     {
         pins[0].mystate = state.current;
         for (int i = 0; i < pins.Length; i++)
