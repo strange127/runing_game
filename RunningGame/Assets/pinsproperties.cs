@@ -32,13 +32,13 @@ public class pinsproperties : MonoBehaviour {
       //  pinimage = gameObject.GetComponent<Image>();
         pinpointloc = gameObject.GetComponent<Transform>();
         gamemanager = GameObject.Find("GameManager").GetComponent<LoadingScreen>();
-        print("sd");
+        
        // colour = pinimage.color;
         
     }
     private void Start()
     {
-        print("Eybs");
+      
         
     }
     private void Update()
@@ -48,7 +48,7 @@ public class pinsproperties : MonoBehaviour {
             gameObject.GetComponent<Button>().interactable = true;
             anim.SetBool("currentstate", false);
             anim.SetBool("activestate",true);
-           // pinimage.color = new Color32(1, 1, 1, 1);
+         
         }
         if(mystate == state.current)
         {
