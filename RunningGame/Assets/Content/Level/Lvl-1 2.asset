@@ -16,7 +16,7 @@ MonoBehaviour:
   PlayerSpawnPos: {x: 10, y: 0, z: 0}
   MinDistance: 15
   MaxDistance: 20
-  LevelState: 0000000002000000
+  LevelState: 000000000000000002000000
   ObstacleCount: 0a00000010000000
   RunningObstackleToSpawn:
   - {fileID: 3989314764399396367, guid: 5fdde811a8b539a43be21c969ace6036, type: 3}

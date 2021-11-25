@@ -289,7 +289,7 @@ public class PlayerMoment : MonoBehaviour
 
         if (Physics.Raycast(RayCastPostion.position, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
         {
-            if (!hit.collider.CompareTag("Coin") && !hit.collider.CompareTag("Finished"))
+            if (!hit.collider.CompareTag("Coin") || !hit.collider.CompareTag("Finished"))
             {
 
                 controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
@@ -300,7 +300,7 @@ public class PlayerMoment : MonoBehaviour
         else if (Physics.Raycast(RayCastPostion.position, Quaternion.AngleAxis(-sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
         {
 
-            if (!hit.collider.CompareTag("Coin")&&!hit.collider.CompareTag("Finished"))
+            if (!hit.collider.CompareTag("Coin")||!hit.collider.CompareTag("Finished"))
             {
 
                 controler.transform.Rotate(0, angleofrotation * Time.deltaTime, 0);
@@ -490,11 +490,22 @@ public class PlayerMoment : MonoBehaviour
         else if (power.collider.CompareTag("Coin"))
         {
             if (Type == PlayerType.Player)
+            {
+<<<<<<< Updated upstream
                 GameManager.instance.coin++;
+                UiContains.instace.CoinText.text = GameManager.instance.coin.ToString();
+=======
+
+                GameManager.instance.coin++;
+                UiContains.instace.CoinText.text = GameManager.instance.coin.ToString();
+            
+>>>>>>> Stashed changes
+            }
             foreach (var item in power.collider.GetComponent<Coin>().player)
             { 
                 item.Target = null;
             }
+          
             Destroy(power.collider.gameObject);
 
         }
