@@ -11,28 +11,26 @@ public class Levelmanager : MonoBehaviour
     [SerializeField] GameObject paneloff;
     [SerializeField] GameObject panelon;
     public pinsproperties selectedpin;
-
-
+ 
+ 
     // Start is called before the first frame update
-    private void OnEnable()
+    private void Awake()
     {
         pins[0].mystate = state.current;
         for (int i = 0; i < pins.Length; i++)
         {    
             if (pins[i].level == PlayerPrefs.GetInt("SaveGame"))
-             pins[i].mystate = state.current;
-            if (pins[i].level < PlayerPrefs.GetInt("SaveGame"))
-                pins[i].mystate = state.active;
-            if (pins[i].level > PlayerPrefs.GetInt("SaveGame"))
-                pins[i].mystate = state.deactive;
-            
-            pins[i].level = i+1;
+            {
+                pins[i].mystate = state.current;
+                pins[i - 1].mystate = state.active;
+            }
+           
             //if (i>0 && pins[i - 1].Hascompleted == true)
             //{
             //    pins[i - 1].mystate = state.active;
             //     pins[i].mystate = state.current;
             //}
-           
+            pins[i].level = i+1;
         }
         
     }
