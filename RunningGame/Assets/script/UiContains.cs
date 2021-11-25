@@ -12,7 +12,7 @@ public class UiContains : MonoBehaviour
     public TextMeshProUGUI CoinText;
     public Button leftbutton;
     public Button rightbutton;
-    public TextMeshProUGUI CoinText;
+  //  public TextMeshProUGUI CoinText;
 
     private void Awake()
     {
