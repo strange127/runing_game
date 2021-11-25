@@ -1666,6 +1666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c799425951f163e48a76488770cc4e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CoinObject: {fileID: 0}
   AutoLevelMaking: {fileID: 0}
   plalyermoment: {fileID: 0}
   PlayerSpawnObject: {fileID: 5119269989532996602, guid: ce6a5a1b1b2e6fb48a31d64f95115b46, type: 3}
@@ -1680,7 +1681,6 @@ MonoBehaviour:
   Road: []
   Posstion: 0
   FinishedLIne: {fileID: 3205968381360134707, guid: d5862125f8c94e941bcad9754743a085, type: 3}
-  Coin: {fileID: 7081180305563950418, guid: 6fb1b3e7d2e85234d90e70a583445b42, type: 3}
 --- !u!82 &1133820822
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1814,6 +1814,7 @@ MonoBehaviour:
   speedbostersaved: 0
   shildbostersaved: 0
   noobsticalsaved: 0
+  CoinText: {fileID: 0}
   leftbutton: {fileID: 676576424}
   rightbutton: {fileID: 860674533}
 --- !u!114 &1133820825
@@ -2178,7 +2179,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1776121544}
-  - {fileID: 1764372736}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2285,36 +2285,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1893464120}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1764372735
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1764372736}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1764372736
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764372735}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1499744541}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1776121540
