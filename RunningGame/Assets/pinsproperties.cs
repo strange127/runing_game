@@ -32,19 +32,14 @@ public class pinsproperties : MonoBehaviour {
       //  pinimage = gameObject.GetComponent<Image>();
         pinpointloc = gameObject.GetComponent<Transform>();
         gamemanager = GameObject.Find("GameManager").GetComponent<LoadingScreen>();
-       
+        print("sd");
        // colour = pinimage.color;
         
     }
     private void Start()
     {
-        if (PlayerPrefs.HasKey("SaveGame")) 
-        {
-            if (level == PlayerPrefs.GetInt("SaveGame"))
-            {
-                mystate = state.current;
-            }
-        }
+        print("Eybs");
+        
     }
     private void Update()
     {
