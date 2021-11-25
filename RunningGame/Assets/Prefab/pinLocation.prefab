@@ -312,10 +312,15 @@ MonoBehaviour:
   pinimage: {fileID: 0}
   colour: {r: 0, g: 0, b: 0, a: 0}
   mystate: 1
+  curmap: 0
   anim: {fileID: 0}
+  panel: {fileID: 0}
   india: {fileID: 0}
   pinpointloc: {fileID: 0}
   regn: 0
+  gamemanager: {fileID: 0}
+  big: 0
+  pressed: 0
 --- !u!95 &8641724836517885151
 Animator:
   serializedVersion: 3
