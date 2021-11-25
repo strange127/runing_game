@@ -32,6 +32,7 @@ public class UiContains : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Speedbooster", PlayerPrefs.GetInt("Speedbooster") + 1);
                 GameManager.instance.coin -= speedbostersaved;
+                CoinText.text = GameManager.instance.coin.ToString();
                 PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
             }
         }
@@ -41,6 +42,7 @@ public class UiContains : MonoBehaviour
             {
                 PlayerPrefs.SetInt("shildbooster", PlayerPrefs.GetInt("shildbooster") + 1);
                 GameManager.instance.coin -= shildbostersaved;
+                CoinText.text = GameManager.instance.coin.ToString();
                 PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
             }
 
@@ -54,6 +56,7 @@ public class UiContains : MonoBehaviour
 
                 PlayerPrefs.SetInt("noobsticle", PlayerPrefs.GetInt("noobsticle") + 1);
                 GameManager.instance.coin -= noobsticalsaved;
+                CoinText.text = GameManager.instance.coin.ToString();
                 PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
             }
         }
