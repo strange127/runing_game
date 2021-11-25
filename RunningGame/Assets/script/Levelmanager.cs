@@ -18,7 +18,8 @@ public class Levelmanager : MonoBehaviour
     {
         pins[0].mystate = state.current;
         for (int i = 0; i < pins.Length; i++)
-        {    
+        {
+            print("asdc");
             if (pins[i].level == PlayerPrefs.GetInt("SaveGame"))
              pins[i].mystate = state.current;
             if (pins[i].level < PlayerPrefs.GetInt("SaveGame"))
