@@ -428,6 +428,8 @@ public class PlayerMoment : MonoBehaviour
             if (Type == PlayerType.Player)
             {
                 oxygenbar.gameObject.SetActive(true);
+                GameManager.instance.UI.leftbutton.gameObject.SetActive(false);
+                GameManager.instance.UI.rightbutton.gameObject.SetActive(false);
             }
 
         }
@@ -458,7 +460,10 @@ public class PlayerMoment : MonoBehaviour
             state = PlayerState.Running;
             if (Type == PlayerType.Player)
             {
+
                 oxygenbar.gameObject.SetActive(false);
+                GameManager.instance.UI.leftbutton.gameObject.SetActive(false);
+                GameManager.instance.UI.rightbutton.gameObject.SetActive(false);
             }
         }else if (other.CompareTag("Finished"))
         {
@@ -468,6 +473,8 @@ public class PlayerMoment : MonoBehaviour
                 PlayerPrefs.SetInt("SaveGame", PlayerPrefs.GetInt("SaveGame")+1);
                 GameManager.instance.congratspanel.SetActive(true);
                 PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
+                GameManager.instance.UI.leftbutton.gameObject.SetActive(false);
+                GameManager.instance.UI.rightbutton.gameObject.SetActive(false);
             }
         }
     }
