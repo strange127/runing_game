@@ -498,6 +498,7 @@ public class PlayerMoment : MonoBehaviour
         {
             if (Type == PlayerType.Player)
             {
+
                 GameManager.instance.coin++;
                 UiContains.instace.CoinText.text = GameManager.instance.coin.ToString();
             

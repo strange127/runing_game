@@ -775,7 +775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &676576423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1129,7 +1129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &860674532
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1520,7 +1520,7 @@ MonoBehaviour:
   levelLoad: 0
   Road: []
   Posstion: 0
-  FinishedLIne: {fileID: 3205968381360134707, guid: d5862125f8c94e941bcad9754743a085, type: 3}
+  FinishedLIne: {fileID: 7091328927130440950, guid: 26394868c319c254c9a3c2f91366cabc, type: 3}
 --- !u!82 &1133820822
 AudioSource:
   m_ObjectHideFlags: 0

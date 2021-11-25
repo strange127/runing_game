@@ -28,12 +28,9 @@ public class SoundSetting : MonoBehaviour
         {
             Load();
         }
-        
         volumeVlaue = PlayerPrefs.GetFloat("SoundVolume");
-        
         UpdateButtonIcon();
         AudioListener.pause = ismuted;
-        
     }
     private void Update()
     {
