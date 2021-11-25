@@ -491,8 +491,15 @@ public class PlayerMoment : MonoBehaviour
         {
             if (Type == PlayerType.Player)
             {
+<<<<<<< Updated upstream
                 GameManager.instance.coin++;
                 UiContains.instace.CoinText.text = GameManager.instance.coin.ToString();
+=======
+
+                GameManager.instance.coin++;
+                UiContains.instace.CoinText.text = GameManager.instance.coin.ToString();
+            
+>>>>>>> Stashed changes
             }
             foreach (var item in power.collider.GetComponent<Coin>().player)
             { 

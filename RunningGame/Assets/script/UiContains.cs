@@ -9,6 +9,7 @@ public class UiContains : MonoBehaviour
     public int speedbostersaved;
     public int shildbostersaved;
     public int noobsticalsaved;
+    public TextMeshProUGUI CoinText;
     public Button leftbutton;
     public Button rightbutton;
     public TextMeshProUGUI CoinText;
@@ -33,6 +34,7 @@ public class UiContains : MonoBehaviour
                 PlayerPrefs.SetInt("Speedbooster", PlayerPrefs.GetInt("Speedbooster") + 1);
                 GameManager.instance.coin -= speedbostersaved;
                 PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
+                CoinText.text = GameManager.instance.coin.ToString();
             }
         }
         else if ((int)powerUp.shield == i)
@@ -42,6 +44,7 @@ public class UiContains : MonoBehaviour
                 PlayerPrefs.SetInt("shildbooster", PlayerPrefs.GetInt("shildbooster") + 1);
                 GameManager.instance.coin -= shildbostersaved;
                 PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
+                CoinText.text = GameManager.instance.coin.ToString();
             }
 
 
@@ -55,6 +58,7 @@ public class UiContains : MonoBehaviour
                 PlayerPrefs.SetInt("noobsticle", PlayerPrefs.GetInt("noobsticle") + 1);
                 GameManager.instance.coin -= noobsticalsaved;
                 PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
+                CoinText.text = GameManager.instance.coin.ToString();
             }
         }
 

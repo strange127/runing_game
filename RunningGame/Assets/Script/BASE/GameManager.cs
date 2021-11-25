@@ -37,7 +37,13 @@ public class GameManager : MonoBehaviour
         {
             levelLoad = PlayerPrefs.GetInt("SaveGame");
         }
+        else
+        {
+            levelLoad = 1;
+            PlayerPrefs.SetInt("SaveGame",1);
+        }
         coin = PlayerPrefs.GetInt("Coin");
+        UiContains.instace.CoinText.text =coin.ToString();
     }
     public void LevelCreate()
     {
@@ -234,6 +240,7 @@ public class GameManager : MonoBehaviour
                 //  Button1.onClick.AddListener(() => obj.GetComponent<PlayerMoment>().click());
                 PlayerFlowCamera.transform.parent = obj.transform;
                 PlayerFlowCamera.transform.localPosition = new Vector3(0, PlayerFlowCamera.Ycontroler, PlayerFlowCamera.ZControler);
+                PlayerFlowCamera.transform.rotation = Quaternion.Euler(30, 0, 0);
 
             }
 
