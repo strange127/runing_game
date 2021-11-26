@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 public class UiContains : MonoBehaviour
 {
-    public static UiContains instace;
+   
     public int speedbostersaved;
     public int shildbostersaved;
     public int noobsticalsaved;
@@ -14,10 +14,7 @@ public class UiContains : MonoBehaviour
     public Button rightbutton;
   //  public TextMeshProUGUI CoinText;
 
-    private void Awake()
-    {
-        instace = this;
-    }
+
     private void Start()
     {
         CoinText.text = GameManager.instance.coin.ToString();

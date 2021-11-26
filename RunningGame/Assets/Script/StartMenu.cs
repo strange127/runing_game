@@ -11,6 +11,6 @@ public class StartMenu : MonoBehaviour
 
     public void ShopParchaseItem(int item)
     { 
-        UiContains.instace.ShopItemParchase(item);
+        GameManager.instance.UI.ShopItemParchase(item);
     }
 }

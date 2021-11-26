@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("SaveGame",1);
         }
         coin = PlayerPrefs.GetInt("Coin");
-        UiContains.instace.CoinText.text =coin.ToString();
+        UI.CoinText.text =coin.ToString();
     }
     public void LevelCreate()
     {
@@ -51,10 +51,11 @@ public class GameManager : MonoBehaviour
 
         SpawnField();
         PlayerSpawn();
-        Instantiate(FinishedLIne, Road[AutoLevelMaking.LevelState.Length - 1].GetComponent<Filed>().pos.position,Quaternion.identity,SpawnHolder.GetChild(0));
-        Road[AutoLevelMaking.LevelState.Length-1].GetComponent<Filed>().pos.gameObject.tag = "Finished";
-      
-        
+        GameObject obj=Instantiate(FinishedLIne, Road[AutoLevelMaking.LevelState.Length - 1].GetComponent<Filed>().pos.position,Quaternion.identity,SpawnHolder.GetChild(1));
+        float y = Road[AutoLevelMaking.LevelState.Length - 1].GetComponent<Filed>().Roration.y + Road[AutoLevelMaking.LevelState.Length - 1].GetComponent<Filed>().curentRotation.y;
+        //   Road[AutoLevelMaking.LevelState.Length-1].GetComponent<Filed>().pos.gameObject.tag = "Finished";
+        obj.transform.Rotate(0, y, 0);
+
     }
     
     void RunningField()

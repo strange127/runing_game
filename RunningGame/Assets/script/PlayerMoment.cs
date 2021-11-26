@@ -158,7 +158,8 @@ public class PlayerMoment : MonoBehaviour
             GameManager.instance.congratspanel.SetActive(true);
         }
 
-
+        if (Target)
+            transform.LookAt(Target.position);
 
     }
 
@@ -289,25 +290,32 @@ public class PlayerMoment : MonoBehaviour
 
         if (Physics.Raycast(RayCastPostion.position, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
         {
-            if (!hit.collider.CompareTag("Coin") || !hit.collider.CompareTag("Finished"))
+            if (hit.collider.CompareTag("Finished"))
+            {
+                Target = hit.collider.gameObject.transform;
+            }
+            else if (!hit.collider.CompareTag("Coin"))
             {
 
                 controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
+            }else if (hit.collider.CompareTag("Coin"))
+            {
+                Target = hit.collider.gameObject.transform;
             }
 
 
         }
         else if (Physics.Raycast(RayCastPostion.position, Quaternion.AngleAxis(-sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
         {
-
-            if (!hit.collider.CompareTag("Coin")||!hit.collider.CompareTag("Finished"))
+            if (hit.collider.CompareTag("Finished"))
+            {
+                Target = hit.collider.gameObject.transform;
+            }
+            else if (!hit.collider.CompareTag("Coin"))
             {
 
                 controler.transform.Rotate(0, angleofrotation * Time.deltaTime, 0);
             }
-
-
-
         }
 
     }
@@ -470,6 +478,7 @@ public class PlayerMoment : MonoBehaviour
                 PlayerPrefs.SetInt("SaveGame", PlayerPrefs.GetInt("SaveGame")+1);
                 GameManager.instance.congratspanel.SetActive(true);
                 PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
+                //play Animation
                 GameManager.instance.UI.leftbutton.gameObject.SetActive(false);
                 GameManager.instance.UI.rightbutton.gameObject.SetActive(false);
             }
@@ -496,7 +505,7 @@ public class PlayerMoment : MonoBehaviour
             if (Type == PlayerType.Player)
             {
                 GameManager.instance.coin++;
-                UiContains.instace.CoinText.text = GameManager.instance.coin.ToString();
+                GameManager.instance.UI.CoinText.text = GameManager.instance.coin.ToString();
             }
             foreach (var item in power.collider.GetComponent<Coin>().player)
             { 

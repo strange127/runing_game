@@ -1154,7 +1154,7 @@ GameObject:
   - component: {fileID: 211201813}
   - component: {fileID: 211201812}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Jumping
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1223,7 +1223,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 211201813}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1760668164}
+        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
+        m_MethodName: LevelPracticeMode
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &211201813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2260,7 +2272,7 @@ GameObject:
   - component: {fileID: 378967328}
   - component: {fileID: 378967327}
   m_Layer: 5
-  m_Name: Level Mode
+  m_Name: LevelMode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3192,7 +3204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &623714416
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4116,7 +4128,7 @@ GameObject:
   - component: {fileID: 812178409}
   - component: {fileID: 812178408}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Swiming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4185,7 +4197,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 812178409}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1760668164}
+        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
+        m_MethodName: LevelPracticeMode
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &812178409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5979,7 +6003,7 @@ GameObject:
   - component: {fileID: 1142878188}
   - component: {fileID: 1142878187}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6048,7 +6072,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1142878188}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 259490084}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1142878188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8020,7 +8056,7 @@ GameObject:
   - component: {fileID: 1686553871}
   - component: {fileID: 1686553870}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Cycling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8089,7 +8125,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1686553871}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1760668164}
+        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
+        m_MethodName: LevelPracticeMode
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1686553871
 MonoBehaviour:
   m_ObjectHideFlags: 0
