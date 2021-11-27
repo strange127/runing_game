@@ -14,35 +14,26 @@ public class Level : MonoBehaviour
 
     void Start()
     {
-        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue == 0.5)
-            Audiosetup[2].enabled = true;
-        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue == 2.5)
+        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue >= 0.5)
         {
-            Audiosetup[3].enabled = true;
             Audiosetup[2].enabled = true;
+            if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue >= 2.5)
+            {
+                Audiosetup[2].enabled = true;
+                if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue >= 5)
+                {
+                    Audiosetup[4].enabled = true;
+                    if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue >= 7.5)
+                    {
+                        Audiosetup[5].enabled = true;
+                        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue == 10)
+                        {
+                            Audiosetup[6].enabled = true;
+                        }
+                    }
+                }
+            }
         }
-        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue == 5)
-        {
-            Audiosetup[3].enabled = true;
-            Audiosetup[2].enabled = true;
-            Audiosetup[4].enabled = true;
-        }
-        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue == 7.5)
-        {
-            Audiosetup[3].enabled = true;
-            Audiosetup[2].enabled = true;
-            Audiosetup[4].enabled = true;
-            Audiosetup[5].enabled = true;
-        }
-        if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue == 10)
-        {
-            Audiosetup[3].enabled = true;
-            Audiosetup[2].enabled = true;
-            Audiosetup[4].enabled = true;
-            Audiosetup[5].enabled = true;
-            Audiosetup[6].enabled = true;
-        }
-
 
         if (GameObject.Find("GameManager").GetComponent<SoundSetting>().ismuted == true)
         { Audiosetup[0].enabled = false; Audiosetup[1].enabled = true; }

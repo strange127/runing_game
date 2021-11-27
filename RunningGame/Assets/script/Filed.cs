@@ -9,4 +9,10 @@ public class Filed : MonoBehaviour
     public Transform pos;
     public Vector3 curentRotation;
 
+    private void Awake()
+    {
+       // print(transform.rotation.y);
+       // print(Quaternion.Euler(transform.localEulerAngles));
+    }
+
 }

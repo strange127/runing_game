@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a6cf26ae81907e4d81125ee5f5f1d53, type: 3}
-  m_Name: Lvl-1 1
+  m_Name: Lvl-1 7
   m_EditorClassIdentifier: 
-  level: 1
+  level: 4
   PlayerSpawnPos: {x: 10, y: 0, z: 0}
-  MinDistance: 15
-  MaxDistance: 20
-  LevelState: 0000000002000000
-  ObstacleCount: 0a00000010000000
+  MinDistance: 30
+  MaxDistance: 50
+  LevelState: 01000000000000000100000000000000020000000200000002000000020000000200000002000000
+  ObstacleCount: 1000000016000000
   RunningObstackleToSpawn:
   - {fileID: 3989314764399396367, guid: 5fdde811a8b539a43be21c969ace6036, type: 3}
   RununingField:
   - {fileID: 7940015119814366133, guid: 6d6868e5dc95eeb49b0dbfba00d99ef9, type: 3}
   SwimingFileldField:
   - {fileID: 8228847553654101836, guid: 6e1e204a9ae8b0a409e7d1bbeb033f3d, type: 3}
-  curves: 02000000
+  curves: 010000000100000002000000000000000000000002000000
   straightField:
   - {fileID: 7940015119814366133, guid: 1fb23aefafea8124f83e7613b33c343d, type: 3}
   LeftCurve:

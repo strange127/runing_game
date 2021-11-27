@@ -68,7 +68,7 @@ MonoBehaviour:
   booster: 0
   state: 1
   speed: 0
-  maxspeed: 5
+  maxspeed: 10
   speedmuliplyer: 2
   velocity: {x: 0, y: 0, z: 0}
   anime: {fileID: 0}
@@ -82,7 +82,7 @@ MonoBehaviour:
     m_Bits: 64
   distnce: 0.2
   groundcheck: {fileID: 1905694133669559987}
-  jumpHight: 5
+  jumpHight: 4
   insarface: 0
   swiminggravity: -12.75
   Watermask:

@@ -59,10 +59,19 @@ public class LoadingScreen : MonoBehaviour
     {
 
   //      loadingScreen.SetActive(true);
-        async = SceneManager.LoadSceneAsync((int)3, LoadSceneMode.Additive);
-        curentsecne = 3;
-        previousscen = 2;
-        async = SceneManager.UnloadSceneAsync((int)2);
+        async = SceneManager.LoadSceneAsync((int)ScenceConect.Game, LoadSceneMode.Additive);
+        if (level > 0)
+        {
+            curentsecne = (int)ScenceConect.Game;
+            previousscen = (int)ScenceConect.LevelSelction;
+            async = SceneManager.UnloadSceneAsync((int)ScenceConect.LevelSelction);
+        }
+        else
+        {
+            curentsecne = (int)ScenceConect.Game;
+            previousscen = (int)ScenceConect.StartMenu;
+            async = SceneManager.UnloadSceneAsync((int)ScenceConect.StartMenu);
+        }
         StartCoroutine(GetScenceLoadProgress(level));
        
     }

@@ -78,49 +78,64 @@ public class GameManager : MonoBehaviour
             pos = new Vector3(pos.x, pos.y, postion.z);
         }
     }
-    //void SwimingField(int obstacke)
-    //{
-    ////    int obstacklespawnid = Random.Range(0, AutoLevelMaking.SwimingObstackleToSpawn.Length);
+    void SwimingField(int obstacke)
+    {
+        //    int obstacklespawnid = Random.Range(0, AutoLevelMaking.SwimingObstackleToSpawn.Length);
 
-    //    Vector3 pos = AutoLevelMaking.PlayerSpawnPos;
-    //    //for (int i = 0; i < 5; i++)
-    //    //{
-    //    //    //pos = new Vector3(pos.x + 10, pos.y, Size);
+        Vector3 pos = AutoLevelMaking.PlayerSpawnPos;
+        //for (int i = 0; i < 5; i++)
+        //{
+        //    //pos = new Vector3(pos.x + 10, pos.y, Size);
 
-    //    //    //for (int j = 0; j < AutoLevelMaking.ObstacleCount[obstacke]; j++)
-    //    //    //{
-    //    //    //    float dis = Random.Range(AutoLevelMaking.MinDistance, AutoLevelMaking.MaxDistance);
-    //    //    //    pos = new Vector3(pos.x, pos.y, pos.z + dis);
+        //    //for (int j = 0; j < AutoLevelMaking.ObstacleCount[obstacke]; j++)
+        //    //{
+        //    //    float dis = Random.Range(AutoLevelMaking.MinDistance, AutoLevelMaking.MaxDistance);
+        //    //    pos = new Vector3(pos.x, pos.y, pos.z + dis);
 
 
-    //    //    ////    Instantiate(AutoLevelMaking.SwimingObstackleToSpawn[obstacklespawnid], pos, Quaternion.identity, SpawnHOlder);
-    //    //    //}
-    //    //}
-    //}
+        //    ////    Instantiate(AutoLevelMaking.SwimingObstackleToSpawn[obstacklespawnid], pos, Quaternion.identity, SpawnHOlder);
+        //    //}
+        //}
+    }
 
-   
+
     void CyclingField(int i,int j)
     {
          
         if(AutoLevelMaking.curves[i] == CyclingCurve.Right)
         {
             Road.Add(Instantiate(AutoLevelMaking.RightCurve[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHolder));
-            Road[j - 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
-            float y = Road[j - 1].GetComponent<Filed>().Roration.y + Road[j - 1].GetComponent<Filed>().curentRotation.y;
+            for (int k = 0; k < Road.Count-1; k++)
+            {
+                Road[j].GetComponent<Filed>().curentRotation += Road[k].GetComponent<Filed>().Roration;
+            }
+
+            // Road[j - 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
+            float y = Road[j-1].GetComponent<Filed>().Roration.y + Road[j - 1].GetComponent<Filed>().curentRotation.y;
             Road[j].transform.Rotate(0, y, 0);
         }
         else if(AutoLevelMaking.curves[i] == CyclingCurve.Left)
         {
             Road.Add(Instantiate(AutoLevelMaking.LeftCurve[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHolder.GetChild(0)));
-            Road[j - 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
-            float y = Road[j - 1].GetComponent<Filed>().Roration.y + Road[j - 1].GetComponent<Filed>().curentRotation.y;
+            for (int k = 0; k < Road.Count - 1; k++)
+            {
+                Road[j].GetComponent<Filed>().curentRotation += Road[k].GetComponent<Filed>().Roration;
+            }
+
+            //Road[j - 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
+            float y = Road[j-1].GetComponent<Filed>().Roration.y + Road[j - 1].GetComponent<Filed>().curentRotation.y;
             Road[j].transform.Rotate(0, y, 0);
         }
         else if(AutoLevelMaking.curves[i] == CyclingCurve.Straight)
         {
             Road.Add(Instantiate(AutoLevelMaking.straightField[0], Road[j - 1].GetComponent<Filed>().pos.position, Quaternion.identity, SpawnHolder.GetChild(0)));
-            Road[j - 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
-            float y = Road[j - 1].GetComponent<Filed>().Roration.y + Road[j - 1].GetComponent<Filed>().curentRotation.y;
+            for (int k = 0; k < Road.Count - 1; k++)
+            {
+                Road[j].GetComponent<Filed>().curentRotation += Road[k].GetComponent<Filed>().Roration;
+            }
+
+            //Road[j - 1].GetComponent<Filed>().curentRotation.y = Road[j - 1].transform.eulerAngles.y;
+            float y = Road[j-1].GetComponent<Filed>().Roration.y + Road[j - 1].GetComponent<Filed>().curentRotation.y;
             Road[j].transform.Rotate(0, y, 0);
         }
            // if (i == 0)
@@ -167,6 +182,10 @@ public class GameManager : MonoBehaviour
                     Road.Add(obj);
                     obj.transform.localScale = new Vector3(1, 1, Size);
                     pos = obj.GetComponent<Filed>().pos.position;
+                    for (int k = 0; k < Road.Count; k++)
+                    {
+                        obj.GetComponent<Filed>().curentRotation += Road[k].GetComponent<Filed>().Roration;
+                    }
 
                 }
                 else if (AutoLevelMaking.LevelState[j] == PlayerState.Swiming)
@@ -177,6 +196,16 @@ public class GameManager : MonoBehaviour
                     GameObject obj = Instantiate(AutoLevelMaking.SwimingFileldField[FieldID], new Vector3(pos.x, pos.y - 2, pos.z), Quaternion.identity, SpawnHolder.GetChild(0));
                     Road.Add(obj);
                     pos = obj.GetComponent<Filed>().pos.position;
+                    for (int k = 0; k < Road.Count; k++)
+                    {
+                        obj.GetComponent<Filed>().curentRotation += Road[k].GetComponent<Filed>().Roration;
+                    }
+                    
+                }
+                else if(AutoLevelMaking.LevelState[j] == PlayerState.cycling)
+                {
+                    CyclingField(i, j);
+                    i++;
                 }
 
             }
@@ -193,8 +222,12 @@ public class GameManager : MonoBehaviour
                     Road.Add(obj);
                     obj.transform.localScale = new Vector3(1, 1, Size);
                     pos = obj.GetComponent<Filed>().pos.position;
-               
-                
+
+                    for (int k = 0; k < Road.Count; k++)
+                    {
+                        obj.GetComponent<Filed>().curentRotation += Road[k].GetComponent<Filed>().Roration;
+                    }
+
                 }
                 else if (AutoLevelMaking.LevelState[j] == PlayerState.Swiming)
                 {
@@ -213,6 +246,7 @@ public class GameManager : MonoBehaviour
                 {
                     CyclingField(i,j);
                     i++;
+
                 }
             }
         }
