@@ -42,9 +42,10 @@ GameObject:
   - component: {fileID: 7756026814547184370}
   - component: {fileID: 6357831063204559772}
   - component: {fileID: 188427881866574356}
+  - component: {fileID: 7417647945719851889}
   m_Layer: 0
   m_Name: Winning stage
-  m_TagString: Untagged
+  m_TagString: ChangeToRunner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +116,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7417647945719851889
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130242657617689063}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 29.788082, y: 19.02715, z: 5.577471}
+  m_Center: {x: -2.349144, y: 4.3986382, z: -25.122202}
 --- !u!1 &7091328926390187819
 GameObject:
   m_ObjectHideFlags: 0
