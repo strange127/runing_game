@@ -325,6 +325,16 @@ public class PlayerMoment : MonoBehaviour
         {
             if (Type == PlayerType.Player)
             {
+               if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Stationary)
+                {
+                    speed += acc;
+                }
+                if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended  )
+                {
+                    speed -= acc;
+                }
+
+
                 if (Input.acceleration.x > .1f)
                 {
                     controler.transform.Rotate(0, angleofrotation * Time.deltaTime, 0);
