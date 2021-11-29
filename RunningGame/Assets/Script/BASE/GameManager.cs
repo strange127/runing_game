@@ -78,24 +78,26 @@ public class GameManager : MonoBehaviour
             pos = new Vector3(pos.x, pos.y, postion.z);
         }
     }
-    void SwimingField(int obstacke)
+    void SwimingField()
     {
-        //    int obstacklespawnid = Random.Range(0, AutoLevelMaking.SwimingObstackleToSpawn.Length);
+        int obstacklespawnid = Random.Range(0, AutoLevelMaking.SwimingObstackleToSpawn.Length);
 
-        Vector3 pos = AutoLevelMaking.PlayerSpawnPos;
-        //for (int i = 0; i < 5; i++)
-        //{
-        //    //pos = new Vector3(pos.x + 10, pos.y, Size);
+        pos.x = 10;
+        for (int i = 0; i < 5; i++)
+        {
+            pos = new Vector3(pos.x + 10, pos.y, pos.z);
+            Vector3 postion = new Vector3(pos.x + 10, pos.y, pos.z);
+            for (int j = 0; j < AutoLevelMaking.ObstacleCount[1]; j++)
+            {
+                float dis = Random.Range(AutoLevelMaking.MinDistance, AutoLevelMaking.MaxDistance);
+                pos = new Vector3(pos.x, pos.y, pos.z + dis);
+                Instantiate(CoinObject, new Vector3(pos.x, pos.y - 7, pos.z), Quaternion.identity, SpawnHolder.GetChild(1));
+                Instantiate(AutoLevelMaking.SwimingObstackleToSpawn[obstacklespawnid], new Vector3(pos.x, pos.y - 3, pos.z), Quaternion.identity, SpawnHolder.GetChild(1));
 
-        //    //for (int j = 0; j < AutoLevelMaking.ObstacleCount[obstacke]; j++)
-        //    //{
-        //    //    float dis = Random.Range(AutoLevelMaking.MinDistance, AutoLevelMaking.MaxDistance);
-        //    //    pos = new Vector3(pos.x, pos.y, pos.z + dis);
-
-
-        //    ////    Instantiate(AutoLevelMaking.SwimingObstackleToSpawn[obstacklespawnid], pos, Quaternion.identity, SpawnHOlder);
-        //    //}
-        //}
+                //    Instantiate(AutoLevelMaking.SwimingObstackleToSpawn[obstacklespawnid], pos, Quaternion.identity, SpawnHOlder);
+            }
+            pos = new Vector3(pos.x, pos.y, postion.z);
+        }
     }
 
 
@@ -190,9 +192,11 @@ public class GameManager : MonoBehaviour
                 }
                 else if (AutoLevelMaking.LevelState[j] == PlayerState.Swiming)
                 {
-
+                    Size = AutoLevelMaking.MaxDistance * AutoLevelMaking.ObstacleCount[1];
+                    SwimingField();
+                    pos = AutoLevelMaking.PlayerSpawnPos;
                     FieldID = Random.Range(0, AutoLevelMaking.SwimingFileldField.Length);
-                    pos = new Vector3(40, pos.y, pos.z);
+                    pos = new Vector3(pos.x+30, pos.y, pos.z);
                     GameObject obj = Instantiate(AutoLevelMaking.SwimingFileldField[FieldID], new Vector3(pos.x, pos.y - 2, pos.z), Quaternion.identity, SpawnHolder.GetChild(0));
                     Road.Add(obj);
                     pos = obj.GetComponent<Filed>().pos.position;

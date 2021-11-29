@@ -24,6 +24,8 @@ MonoBehaviour:
   - {fileID: 7940015119814366133, guid: 6d6868e5dc95eeb49b0dbfba00d99ef9, type: 3}
   SwimingFileldField:
   - {fileID: 8228847553654101836, guid: 6e1e204a9ae8b0a409e7d1bbeb033f3d, type: 3}
+  SwimingObstackleToSpawn:
+  - {fileID: 5690594098390577576, guid: c74bef013e862fb479c4baeba3837963, type: 3}
   curves: 0200000001000000
   straightField:
   - {fileID: 7940015119814366133, guid: 1fb23aefafea8124f83e7613b33c343d, type: 3}

@@ -23,20 +23,20 @@ public class Completedcontroller : MonoBehaviour
         {
             case 1:
                 medal3.SetActive(true);
-                if(PlayerPrefs.GetInt("SaveGame") <=GameManager.instance.AutoLevelMaking.level)
-                     PlayerPrefs.SetInt("SaveGame", PlayerPrefs.GetInt("SaveGame") + 1);
+                if(PlayerPrefs.GetInt("SaveGame") ==GameManager.instance.AutoLevelMaking.level)
+                     PlayerPrefs.SetInt("SaveGame", GameManager.instance.AutoLevelMaking.level + 1);
                 wintext.text = "AWESOME";
                 break;
             case 2:
                 medal2.SetActive(true);
-                if (PlayerPrefs.GetInt("SaveGame") <= GameManager.instance.AutoLevelMaking.level)
-                    PlayerPrefs.SetInt("SaveGame", PlayerPrefs.GetInt("SaveGame") + 1);
+                if (PlayerPrefs.GetInt("SaveGame") == GameManager.instance.AutoLevelMaking.level)
+                    PlayerPrefs.SetInt("SaveGame", GameManager.instance.AutoLevelMaking.level + 1);
                 wintext.text = "GREAT";
                 break;
             case 3:
                 medal1.SetActive(true);
-                if (PlayerPrefs.GetInt("SaveGame") <= GameManager.instance.AutoLevelMaking.level)
-                    PlayerPrefs.SetInt("SaveGame", PlayerPrefs.GetInt("SaveGame") + 1);
+                if (PlayerPrefs.GetInt("SaveGame") == GameManager.instance.AutoLevelMaking.level)
+                    PlayerPrefs.SetInt("SaveGame", GameManager.instance.AutoLevelMaking.level + 1);
                 wintext.text = "GOOD";
                 break;
             case 4:

@@ -19,7 +19,7 @@ public class Level : MonoBehaviour
             Audiosetup[2].enabled = true;
             if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue >= 2.5)
             {
-                Audiosetup[2].enabled = true;
+                Audiosetup[3].enabled = true;
                 if (GameObject.Find("GameManager").GetComponent<SoundSetting>().volumeVlaue >= 5)
                 {
                     Audiosetup[4].enabled = true;

@@ -23,7 +23,7 @@ public class LevelCreationScriptable : ScriptableObject
     [Space(5)]
     [Header("Swiming Race")]
     public GameObject[] SwimingFileldField;
-
+    public GameObject[] SwimingObstackleToSpawn;
 
 
 
