@@ -199,6 +199,7 @@ public class GameManager : MonoBehaviour
                     pos = new Vector3(pos.x+30, pos.y, pos.z);
                     GameObject obj = Instantiate(AutoLevelMaking.SwimingFileldField[FieldID], new Vector3(pos.x, pos.y - 2, pos.z), Quaternion.identity, SpawnHolder.GetChild(0));
                     Road.Add(obj);
+                    obj.transform.localScale = new Vector3(1, 1, Size);
                     pos = obj.GetComponent<Filed>().pos.position;
                     for (int k = 0; k < Road.Count; k++)
                     {
@@ -236,14 +237,20 @@ public class GameManager : MonoBehaviour
                 else if (AutoLevelMaking.LevelState[j] == PlayerState.Swiming)
                 {
                     FieldID = Random.Range(0, AutoLevelMaking.SwimingFileldField.Length);
-                    
-                   
-                      //  pos = new Vector3(pos.x + 30, pos.y, Size + 100 / 2);
-                        GameObject obj = Instantiate(AutoLevelMaking.SwimingFileldField[FieldID], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity, SpawnHolder.GetChild(0));
+                    SwimingField();
+                    Size = AutoLevelMaking.MaxDistance * AutoLevelMaking.ObstacleCount[1];
+                    pos = new Vector3(40, pos.y, pos.z);
+                    //  pos = new Vector3(pos.x + 30, pos.y, Size + 100 / 2);
+                    GameObject obj = Instantiate(AutoLevelMaking.SwimingFileldField[FieldID], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity, SpawnHolder.GetChild(0));
+
                     Road.Add(obj);
+                    obj.transform.localScale = new Vector3(1, 1, Size);
                     pos = obj.GetComponent<Filed>().pos.position;
                     // obj.transform.localScale = new Vector3(10, 0.5f, newplatformsize);
-
+                    for (int k = 0; k < Road.Count; k++)
+                    {
+                        obj.GetComponent<Filed>().curentRotation += Road[k].GetComponent<Filed>().Roration;
+                    }
                     //Size = newplatformsize + Size;
                 }
                 else if (AutoLevelMaking.LevelState[j] == PlayerState.cycling)

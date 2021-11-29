@@ -84,7 +84,7 @@ MonoBehaviour:
   groundcheck: {fileID: 1905694133669559987}
   jumpHight: 4
   insarface: 0
-  swiminggravity: -12.75
+  swiminggravity: 2
   Watermask:
     serializedVersion: 2
     m_Bits: 16

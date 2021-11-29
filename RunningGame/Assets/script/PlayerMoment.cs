@@ -90,7 +90,7 @@ public class PlayerMoment : MonoBehaviour
         }
         else if (state == PlayerState.Swiming)
         {
-            velocity.y = -7;
+         //   velocity.y = -7;
 
             anime.SetBool("Swiming",true);
             anime.SetBool("Running", false);
@@ -100,19 +100,29 @@ public class PlayerMoment : MonoBehaviour
                speed += acc;
             
 #endif
-            if (clicked == false)
+            //if (clicked == false)
+            //{
+            //    speed -= acc * Time.deltaTime;
+            //    if (speed < 0)
+            //        speed = 0;
+            //}
+
+            //Go inside The water.
+            if(transform.localPosition.y > -5)
             {
-                speed -= acc * Time.deltaTime;
-                if (speed < 0)
-                    speed = 0;
+                velocity.y = -7;
+                controler.Move(velocity * Time.deltaTime);
+                return;
+
             }
-            if (transform.localPosition.y < -9)
+            else if (transform.localPosition.y <-5 && transform.localPosition.y > -8)
             {
-                velocity.y = 2;
+                velocity.y = -1;
+                
             }
-            else
+            else if (transform.localPosition.y < -5.5)
             {
-                velocity.y = -2;
+                velocity.y += 3*Time.deltaTime;
             }
             //else if(transform.position.y < -9)
             //{
@@ -233,12 +243,16 @@ public class PlayerMoment : MonoBehaviour
         {
             float FILL = (float)speed / maxspeed;
             //  float FILL = (float)speed / maxspeed;
-      
-            if (speed < maxspeed)
-            {
-                if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-                    speed += acc;
-            }
+            //if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+            //    velocity.y = -swiminggravity*5;
+
+            if (Input.GetKeyDown(KeyCode.Space))
+                velocity.y = -5 ;
+            //if (speed < maxspeed)
+            //{
+            //    if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+            //        speed += acc;
+            //}
             Fill.GetComponent<Image>().fillAmount = FILL;
           //  velocity.y -= Mathf.Sqrt(diveforce * -2f * swiminggravity);
         }
@@ -440,6 +454,7 @@ public class PlayerMoment : MonoBehaviour
        else if (other.CompareTag("ChnageToSwimer"))
         {
             state = PlayerState.Swiming;
+            velocity.y = -7;
             if (Type == PlayerType.Player)
             {
                 oxygenbar.gameObject.SetActive(true);
