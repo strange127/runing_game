@@ -236,6 +236,7 @@ MonoBehaviour:
   india: {fileID: 0}
   pinpointloc: {fileID: 0}
   regn: 0
+  text: {fileID: 4119209327823798189}
   gamemanager: {fileID: 0}
   big: 0
   pressed: 0

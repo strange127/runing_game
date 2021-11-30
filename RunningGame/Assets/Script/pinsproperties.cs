@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Animations;
+using TMPro;
 public enum state { active, deactive, current }
 public enum region { north,south,west,east}
 public enum map { worldmap,india }
@@ -20,6 +21,7 @@ public class pinsproperties : MonoBehaviour {
     [SerializeField] private Image india;
     [SerializeField]private Transform pinpointloc;
     [SerializeField] private region regn;
+    [SerializeField] TextMeshProUGUI text;
     [SerializeField] LoadingScreen gamemanager;
     public bool big = false;
    public int pressed;
@@ -38,7 +40,7 @@ public class pinsproperties : MonoBehaviour {
     }
     private void Start()
     {
-      
+        text.text = level.ToString();
         
     }
     private void Update()
