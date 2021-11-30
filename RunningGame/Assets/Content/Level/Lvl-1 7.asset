@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 4
   PlayerSpawnPos: {x: 10, y: 0, z: 0}
-  MinDistance: 30
-  MaxDistance: 50
+  MinDistance: 20
+  MaxDistance: 24
   LevelState: 01000000000000000100000000000000020000000200000002000000020000000200000002000000
   ObstacleCount: 1000000016000000
   RunningObstackleToSpawn:

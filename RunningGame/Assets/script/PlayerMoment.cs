@@ -63,8 +63,8 @@ public class PlayerMoment : MonoBehaviour
             Fill = GameObject.Find("Canvas/oxybar/Fill");
             oxygenbar.gameObject.SetActive(false);
         }
-        GameManager.instance.UI.leftbutton.onClick.AddListener(() => click());
-        GameManager.instance.UI.rightbutton.onClick.AddListener(() => click());
+        //GameManager.instance.UI.leftbutton.onClick.AddListener(() => click());
+        //GameManager.instance.UI.rightbutton.onClick.AddListener(() => click());
         sensorLenth = Random.Range(35, 50);
         sensourAngle = Random.Range(35, 45);
         //GameManager.instance.UI.leftbutton.gameObject.SetActive(false);
@@ -163,10 +163,7 @@ public class PlayerMoment : MonoBehaviour
 
         }
         SpeedControler();
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            GameManager.instance.congratspanel.SetActive(true);
-        }
+     
 
         if (Target)
             transform.LookAt(Target.position);
@@ -243,11 +240,12 @@ public class PlayerMoment : MonoBehaviour
         {
             float FILL = (float)speed / maxspeed;
             //  float FILL = (float)speed / maxspeed;
-            //if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-            //    velocity.y = -swiminggravity*5;
-
+            if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+                velocity.y = -3;
+#if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.Space))
-                velocity.y = -5 ;
+                velocity.y = -3 ;
+#endif
             //if (speed < maxspeed)
             //{
             //    if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
@@ -258,17 +256,24 @@ public class PlayerMoment : MonoBehaviour
         }
         else if (Type == PlayerType.AirtificialInteligence)
         {
-            int rang = Random.Range(0, 1000);
+            
            
-           if (rang < inteligent)
-           {
-                clicked = true;
-                if (speed < maxspeed)
+               RaycastHit hit;
+            if (Physics.Raycast(RayCastPostion.position, Vector3.forward, out hit, 5f))
+            {
+                if (hit.collider.gameObject.CompareTag("Obstakle"))
                 {
-                    speed += acc;
-
+                    int rang = Random.Range(0, 1000);
+                    if (rang < inteligent)
+                    {
+                        anime.SetBool("Jump", true);
+                        velocity.y = -5;
+                        StartCoroutine(jumpstop());
+                    }
                 }
-           }
+
+
+            }
                 //if (curotrineconnect)
                 //    StartCoroutine(NPCDivingSpeed());   
             
@@ -277,29 +282,30 @@ public class PlayerMoment : MonoBehaviour
     void Sensour()
     {
         RaycastHit hit;
-  
 
-        //if ((Physics.Raycast(startingpos, Quaternion.AngleAxis(0, transform.up) * transform.forward, out hit, sensorLenth)))
-        //{
-        //    if (!hit.collider.CompareTag("Coin"))
-        //    {
-                
-        //        if (Physics.Raycast(startingpos, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
-        //        {
 
-        //            controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
-        //            return;
-        //        }
-        //        else if (Physics.Raycast(startingpos, Quaternion.AngleAxis(-sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
-        //        {
-        //            controler.transform.Rotate(0, angleofrotation * Time.deltaTime, 0);
-        //            return;
 
-        //        }
-        //        controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
+        if ((Physics.Raycast(RayCastPostion.position, Quaternion.AngleAxis(0, transform.up) * transform.forward, out hit, sensorLenth)))
+        {
+            if (!hit.collider.CompareTag("Coin"))
+            {
 
-        //    }
-        //}
+                if (Physics.Raycast(RayCastPostion.position, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
+                {
+
+                    controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
+                    return;
+                }
+                else if (Physics.Raycast(RayCastPostion.position, Quaternion.AngleAxis(-sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
+                {
+                    controler.transform.Rotate(0, angleofrotation * Time.deltaTime, 0);
+                    return;
+
+                }
+                controler.transform.Rotate(0, -angleofrotation * Time.deltaTime, 0);
+
+            }
+        }
 
 
         if (Physics.Raycast(RayCastPostion.position, Quaternion.AngleAxis(sensourAngle, transform.up) * transform.forward, out hit, sensorLenth))
@@ -343,7 +349,7 @@ public class PlayerMoment : MonoBehaviour
                 {
                     speed += acc;
                 }
-                if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended  )
+                else if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended  )
                 {
                     speed -= acc;
                 }
@@ -454,20 +460,22 @@ public class PlayerMoment : MonoBehaviour
        else if (other.CompareTag("ChnageToSwimer"))
         {
             state = PlayerState.Swiming;
+            controler.height = 1;
             velocity.y = -7;
             if (Type == PlayerType.Player)
             {
                 oxygenbar.gameObject.SetActive(true);
-                GameManager.instance.UI.leftbutton.gameObject.SetActive(false);
-                GameManager.instance.UI.rightbutton.gameObject.SetActive(false);
+              //  GameManager.instance.UI.leftbutton.gameObject.SetActive(false);
+              //  GameManager.instance.UI.rightbutton.gameObject.SetActive(false);
             }
 
         }
         else if (other.CompareTag("ChangeToCycling"))
         {
-            if(state != PlayerState.cycling)
+            controler.height = 2;
+            if (state != PlayerState.cycling)
             {
-
+               
                 state = PlayerState.cycling;
                 speed = 0;
                 GameObject obj= Instantiate(Cyclingobj, transform.position, Quaternion.identity, this.transform);
@@ -477,8 +485,8 @@ public class PlayerMoment : MonoBehaviour
                 {
                     //make player color green
                     oxygenbar.gameObject.SetActive(false);
-                    GameManager.instance.UI.leftbutton.gameObject.SetActive(true);
-                    GameManager.instance.UI.rightbutton.gameObject.SetActive(true);
+                  //  GameManager.instance.UI.leftbutton.gameObject.SetActive(true);
+                //    GameManager.instance.UI.rightbutton.gameObject.SetActive(true);
                 }
             }
           
@@ -487,25 +495,26 @@ public class PlayerMoment : MonoBehaviour
         }
         else if (other.CompareTag("ChangeToRunner"))
         {
+            controler.height = 2;
             state = PlayerState.Running;
             if (Type == PlayerType.Player)
             {
 
                 oxygenbar.gameObject.SetActive(false);
-                GameManager.instance.UI.leftbutton.gameObject.SetActive(false);
-                GameManager.instance.UI.rightbutton.gameObject.SetActive(false);
+            //    GameManager.instance.UI.leftbutton.gameObject.SetActive(false);
+             //   GameManager.instance.UI.rightbutton.gameObject.SetActive(false);
             }
         }else if (other.CompareTag("Finished"))
         {
             GameManager.instance.Posstion++;
             if(Type== PlayerType.Player)
             {
-                PlayerPrefs.SetInt("SaveGame", PlayerPrefs.GetInt("SaveGame")+1);
+             //   PlayerPrefs.SetInt("SaveGame", PlayerPrefs.GetInt("SaveGame")+1);
                 GameManager.instance.congratspanel.SetActive(true);
                 PlayerPrefs.SetInt("Coin", GameManager.instance.coin);
                 //play Animation
-                GameManager.instance.UI.leftbutton.gameObject.SetActive(false);
-                GameManager.instance.UI.rightbutton.gameObject.SetActive(false);
+              //  GameManager.instance.UI.leftbutton.gameObject.SetActive(false);
+              //  GameManager.instance.UI.rightbutton.gameObject.SetActive(false);
             }
         }
     }
