@@ -481,9 +481,16 @@ public class PlayerMoment : MonoBehaviour
                 GameObject obj= Instantiate(Cyclingobj, transform.position, Quaternion.identity, this.transform);
            //     transform.rotation = Quaternion.Euler(Vector3.zero);
                 transform.GetChild(0).gameObject.SetActive(false);
+               if (Type == PlayerType.AirtificialInteligence)
+                {
+                    //make player color green
+                    gameObject.GetComponentInChildren<SkinnedMeshRenderer>().materials[2].color = Color.red;
+                    
+                }
                 if (Type == PlayerType.Player)
                 {
                     //make player color green
+                    gameObject.GetComponentInChildren<SkinnedMeshRenderer>().materials[2].color = Color.green;
                     oxygenbar.gameObject.SetActive(false);
                   //  GameManager.instance.UI.leftbutton.gameObject.SetActive(true);
                 //    GameManager.instance.UI.rightbutton.gameObject.SetActive(true);
